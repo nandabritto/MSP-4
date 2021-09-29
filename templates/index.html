@@ -1,0 +1,27 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% title content %}
+{% endtitle content %}
+
+<!-- The following is the unique content for this page -->
+{% block content %}
+
+<main role="main">
+    <!-- First section (jumbotron) of the websites landing page -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4 text-center"> Hello Developers!</h1>
+            <p class="text-center"> Welcome to studyWorld. A centralised library of resources for software development</p>
+            <p><a class="btn btn-info btn-lg mr-20 float-right" href="#" role="button">Join</a></p>
+        </div>
+    </div>
+
+
+
+
+</main>
