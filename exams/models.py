@@ -34,7 +34,7 @@ class Exam(models.Model):
 
 # Database model for the exam questions
 # Links back to the exam model
-class Questions(model.Model):
+class Question(models.Model):
     test = models.CharField(max_length=400)
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
@@ -57,7 +57,7 @@ class Answer(models.Model):
         return f"question: {self.question.text}, answer: {self.text}, correct: {self.correct}"
 
 # Database model for the results
-class Results(models.Model):
+class Result(models.Model):
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     score = models.FloatField()
