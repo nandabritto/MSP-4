@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'exams',
 ]
 
 MIDDLEWARE = [
@@ -110,6 +112,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIR = (
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'exam/static')
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
