@@ -9,6 +9,6 @@ app_name = 'exams'
 # Exam app specific urls
 
 urlpatterns = [
-    path('examlist', ExamListView.as_view(), name='main-view'),
+    path('examlist', ExamListView.as_view(), name='exam-view'),
     path('examlist<pk>/', exam_view, name='exam_view')
 ]

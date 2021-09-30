@@ -1,9 +1,17 @@
 {% extends "base.html" %}
+
+<!-- Loads the static items -->
 {% load static %}
 
+{% block scripts %}
+    <script src="{% static 'exams/display.js %}" defer></script>
+{% endblock scripts %}
+
+<!-- Updates the title section of the html -->
 {% block title %}
 Exam List
 {% endblock title %}
+
 
 {% block content %}
 Exam List placeholder text
