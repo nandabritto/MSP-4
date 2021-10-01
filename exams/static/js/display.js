@@ -36,3 +36,38 @@ $.ajax({
         console.log(error)
     }
 })
+
+const examForm = document.getElementById('exam-form')
+const csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+// The following code will display the results
+const sendData = () => {
+    const data = {}
+    data['csrfmiddlewaretoken'] = csrf[0].value
+    const elements = [...document.getElementsByClassName('ans')]
+    elements.forEach(el=>{
+        if (el.checked) {
+            //compares the question to the answer
+            data[el.name] = el.value
+        } else {
+            //checks if answer was not given by user
+            if (!data[el.name]) {
+                data[el.name] = null
+            }
+        }
+
+    })
+
+    $.ajax({
+        type: 'POST',
+        url:`${url}save/`,
+        data: data,
+        success: function(response){
+            console.log(response)
+        },
+    	  error: function(error){
+            console.log(error)
+        }
+
+    })
+}
