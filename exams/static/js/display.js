@@ -4,6 +4,23 @@ console.log(url)
 const examBox = document.getElementById('exam-box')
 const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultdisplay')
+const timerDisplay = document.getElementById('timerDisplay')
+
+
+
+// Activating the countdown timer
+const activateTimer = (time) => {
+    console.log(time)
+
+    if (time.toString().length < 2) {
+        timerDisplay.innerHTML = `<b>0${time}:00</b>`
+    } else {
+        timerDisplay.innerHTML = `<b>0${time}:00</b>`
+    }
+
+    let minutes = time -1
+    console.log(minutes)
+}
 
 
 
