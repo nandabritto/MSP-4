@@ -10,7 +10,6 @@ $.ajax({
     type: 'GET',
     url: `${url}data`,
     success: function(response){
-        console.log(response)
         const data = response.data
         data.forEach(el => {
             for (const [question, answers] of Object.entries(el)){
@@ -28,9 +27,10 @@ $.ajax({
                         </div>
                     `
                 })
-
             }
-        })
+        });
+        
+        
     },
     error: function(error){
         console.log(error)
@@ -71,3 +71,9 @@ const sendData = () => {
 
     })
 }
+
+examForm.addEventListener('submit', e=>{
+    e.preventDefault()
+
+    sendData()
+})
