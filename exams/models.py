@@ -35,7 +35,7 @@ class Exam(models.Model):
 # Database model for the exam questions
 # Links back to the exam model
 class Question(models.Model):
-    test = models.CharField(max_length=400)
+    text = models.CharField(max_length=400)
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
     created = models.DateTimeField(auto_now_add=True)
 
