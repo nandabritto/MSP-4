@@ -3,7 +3,7 @@ const url = window.location.href
 const examBox = document.getElementById('exam-box')
 const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultsdisplay')
-const timerBox = document.getElementById('timer-box')
+const timerBox = document.getElementById('timerdisplay')
 
 
 const activateTimer = (time) => {
@@ -71,7 +71,7 @@ $.ajax({
                 })
             }
         });
-        // activateTimer(response.time)
+        activateTimer(response.time)
         
     },
     error: function(error){
@@ -115,21 +115,33 @@ const sendData = () => {
                     const cls = ['container', 'p-3', 'text-light', 'h6']
                     resDiv.classList.add(...cls)
 
+                    // if no repose received - red
                     if (resp=='not answered') {
-                        resDiv.innerHTML += '- not answered'
-                        resDiv.classList.add('bg-danger')
+                        resDiv.innerHTML += `<div class="alert alert-warning" role="alert">
+                        <h4 class="alert-heading">You didn't respond</h4>
+                        <p> "Nothing" is not the correct answer for ${question} </p>
+                        <p> Back to the books for you</p>
+                      </div>`
                     }
+                    // if response received
                     else {
                         const answer = resp['answered']
                         const correct = resp['correct_answer']
-
+                        console.log(answer, correct)
+                        // If the answer was correct
                         if (answer == correct) {
-                            resDiv.classList.add('bg-success')
-                            resDiv.innerHTML += ` answered: ${answer}`
+                            resDiv.innerHTML += `<div class="alert alert-success" role="alert">
+                            <h4 class="alert-heading">Well Done</h4>
+                            <p> You are correct, the answer to ${question} </p>
+                            <p> is :${answer}</p>
+                          </div>`
+                        // If the answer was incorrect
                         } else {
-                            resDiv.classList.add('bg-danger')
-                            resDiv.innerHTML += ` | correct answer: ${correct}`
-                            resDiv.innerHTML += ` | answered: ${answer}`
+                            resDiv.innerHTML += `<div class="alert alert-danger" role="alert">
+                            <h4 class="alert-heading">Not this time</h4>
+                            <p> That's not the correct answer for ${question} </p>
+                            <p> The correct answer is :${answer}</p>
+                          </div>`
                         }
                     }
                 }
