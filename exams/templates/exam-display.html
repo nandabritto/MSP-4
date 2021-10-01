@@ -11,10 +11,16 @@ Exam Display
 {% endblock title %}
 
 {% block content %}
-<b>{{obj.name}}</b>
-<p>Score to Pass: {{obj.required_score_to_pass}}%</p>
+<div class="row">
+    <div class="col">
+        <b>{{obj.name}}</b>
+        <p>Score to Pass: {{obj.required_score_to_pass}}%</p>
+    </div>
+    <div class="col text-right">Countdown</div>
+</div>
 
-<hr>
+<a href="{% url 'exams:list-view' %}" class="btn btn-danger"> Go Back</a>
+
 <form id="exam-form" class="mt-3 mb-3">
     {% csrf_token %}
     <!-- Below div will be populated by the JavaScript -->
