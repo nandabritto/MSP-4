@@ -2,6 +2,9 @@ const url = window.location.href
 console.log(url)
 
 const examBox = document.getElementById('exam-box')
+const scoreDisplay = document.getElementById('scoredisplay')
+const resultDisplay = document.getElementById('resultdisplay')
+
 
 
 //The following will get the data required to display the available exams
@@ -68,6 +71,8 @@ const sendData = () => {
             console.log(results)
             examForm.classList.add('not-visible')
 
+            scoreBox.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops... Not this time'} Your result is ${response.score}%`
+
             results.forEach(res=>{
                 const resDiv = document.createElement("div")
                 for (const [question, resp] of Object.entries(res)){
@@ -98,11 +103,11 @@ const sendData = () => {
                         }
                     }
                 }
-                const body = document.getElementsByTagName('BODY')[0]
-                body.append(resDiv)
+                // const body = document.getElementsByTagName('BODY')[0]
+                resultDisplay.append(resDiv)
             })
         },
-    	  error: function(error){
+    	error: function(error){
             console.log(error)
         }
 
