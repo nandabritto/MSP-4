@@ -23,3 +23,8 @@ def exam_data_view(request, pk):
         'data': questions,
         'time': exam.time,
     })
+
+# Displays the results
+def save_exam_view(request, ph):
+    print(request.POST)
+    return JsonResponse({'text': 'works'})
