@@ -1,7 +1,7 @@
 const modalTitle = document.getElementById('exampleModalLabel')
 const modalBtns = [...document.getElementsByClassName('modal-button')]
-const modalBody = document.getElementsById('modal-body-confirm')
-const startBtn = document.getElementsById('start-button')
+const modalBody = document.getElementById('modal-body-confirm')
+const startBtn = document.getElementById('start-button')
 
 const url = window.location.href
 
