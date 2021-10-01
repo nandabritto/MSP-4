@@ -36,7 +36,28 @@ Exam list to appear here
   </div>
 </div>
 
-<div class="h1">Exam List</div>
+<div class="h1">Exams Available</div>
 
-
+<div class="card-deck">
+    {% for obj in object_list %}
+    <div class="card text-center" style="width: 18rem;">
+      <img class="card-img-top" src="../static/images/{{obj.topic}}.png" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{obj.name}}</h5>
+        <p class="card-text">{{obj.description}}</p>
+        <a href="#" class="btn btn-outline-primary btn-link modal-button"
+            data-pk="{{obj.pk}}"
+            data-exam="{{obj.name}}"
+            data-questions="{{obj.number_of_questions}}"
+            data-difficulty="{{obj.difficulty}}"
+            data-time="{{obj.time}}"
+            data-pass = "{{obj.required_score_to_pass}}"
+            data-toggle="modal"
+            data-target="#examStartModal">
+            Take the Exam
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
 {% endblock content %}
