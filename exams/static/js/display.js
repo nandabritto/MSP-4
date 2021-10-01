@@ -10,7 +10,8 @@ $.ajax({
     type: 'GET',
     url: `${url}data`,
     success: function(response){
-        const data = response.data
+        let data = response.data
+        console.log(data)
         data.forEach(el => {
             for (const [question, answers] of Object.entries(el)){
                 examBox.innerHTML += `
@@ -63,7 +64,43 @@ const sendData = () => {
         url:`${url}save/`,
         data: data,
         success: function(response){
-            console.log(response)
+            const results = response.results
+            console.log(results)
+            examForm.classList.add('not-visible')
+
+            results.forEach(res=>{
+                const resDiv = document.createElement("div")
+                for (const [question, resp] of Object.entries(res)){
+
+                    resDiv.innerHTML += question
+                    const cls = ['container', 'p-3', 'text-light', 'h3']
+                    resDiv.classList.add(...cls)
+
+                    // if no response recieved - red
+                    if (resp=='not answered') {
+                        resDiv.innerHTML += '- not answered'
+                        resDive.classList.add('bg-danger')
+                    }
+                    // if response received
+                    else {
+                        const answer = resp['answered']
+                        const correct = resp['correct answer']
+                        console.log(answer, correct)
+                        // if the answer is correct
+                        if (answer == correct) {
+                            resDiv.classList.add('bg-success')
+                            resDiv.innerHTML += `answered: ${answer}`
+                        // if the answer was incorrect
+                        } else {
+                            resDiv.classList.add('bg-danger')
+                            resDiv.innerHTML += ` | correct answer: ${correct}`
+                            resDiv.innerHTML += ` | answered: ${answer}`
+                        }
+                    }
+                }
+                const body = document.getElementsByTagName('BODY')[0]
+                body.append(resDiv)
+            })
         },
     	  error: function(error){
             console.log(error)
