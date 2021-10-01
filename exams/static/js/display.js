@@ -44,7 +44,10 @@ const activateTimer = (time) => {
             }, 500)
         }
 
-        timerBox.innerHTML = `<b>${displayMinutes}:${displaySeconds}</b>`
+        timerBox.innerHTML = `
+            <div class="btn btn-warning pr-4 pt-2">
+                <b>${displayMinutes}:${displaySeconds}</b>
+            </div>`
     }, 1000)
 }
 
@@ -64,7 +67,7 @@ $.ajax({
                 answers.forEach(answer=>{
                     examBox.innerHTML += `
                     <div class="container">
-                        <div class="col align-self-center">
+                        <div class="pl-5">
                             <input type="radio" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
                             <label for="${question}">${answer}</label>
                         </div>
