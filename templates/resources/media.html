@@ -1,0 +1,22 @@
+<!-- Extends from base template -->
+{% extends "../base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% block title %}
+Media Resources
+{% endblock title %}
+
+<!-- JavaScript link -->
+{% block scripts %}
+<sript src="{% static 'base.js' %}" defer></sript>
+{% endblock scripts %}
+
+<!-- The following is the unique content for this page -->
+{% block content %}
+
+
+
+{% endblock content %}
