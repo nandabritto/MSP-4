@@ -1,0 +1,22 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% block title %}
+Home Page
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+{% block content %}
+
+<div class="container pt-4">
+    <div>
+        <h4>Header placeholder</h4>
+        <p>IDE stands for Integrated Development Environment. This software is essentially a collection of developer tools squashed into a nice neat graphical user interface (GUI)</p>
+    </div>
+</div>
+
+{% endblock content %}
