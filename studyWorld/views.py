@@ -5,3 +5,6 @@ def index(request):
 
 def ide(request):
     return render(request, 'resources/ide.html')
+
+def media(request):
+    return render(request, 'resources/media.html')
