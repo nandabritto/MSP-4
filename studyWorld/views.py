@@ -15,3 +15,7 @@ def resourcesIDE(request):
 # View for displaying the media page of the resource section
 def resourcesMedia(request):
     return render(request, 'resources/media.html')
+
+# View for displaying the framework page of the resource section
+def resourcesFrameworks(request):
+    return render(request, 'resources/frameworks.html')

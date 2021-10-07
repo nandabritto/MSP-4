@@ -10,6 +10,7 @@ urlpatterns = [
     path('resources/', views.resourcesList, name='resources-list'),
     path('resources/media', views.resourcesMedia, name='resources-media'),
     path('resources/ide', views.resourcesIDE, name='resources-ide'),
+    path('resources/frameworks', views.resourcesFrameworks, name='resources-frameworks'),
     path('', include('exams.urls', namespace='exams')),
 ]
 

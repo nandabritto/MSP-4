@@ -66,3 +66,19 @@ class ResourceIDETests(SimpleTestCase):
         response = self.client.get(reverse('resources-ide'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/ide.html')
+
+# Status check of the Frameworks page for the resources section of the site
+class ResourceFrameworksTests(SimpleTestCase):
+
+    def test_frameworks_status(self):
+        response = self.client.get('/resources/frameworks')
+        self.assertEquals(response.status_code, 200)
+
+    def test_frameworks_by_name(self):
+        response = self.client.get(reverse('resources-frameworks'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_frameworks_template(self):
+        response = self.client.get(reverse('resources-frameworks'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'resources/frameworks.html')
