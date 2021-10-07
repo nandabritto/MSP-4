@@ -7,8 +7,9 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('resources/media', views.media, name='resources-media'),
-    path('resources/ide', views.ide, name='resources-ide'),
+    path('resources/', views.resourcesList, name='resources-list'),
+    path('resources/media', views.resourcesMedia, name='resources-media'),
+    path('resources/ide', views.resourcesIDE, name='resources-ide'),
     path('', include('exams.urls', namespace='exams')),
 ]
 
