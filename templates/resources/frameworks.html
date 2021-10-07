@@ -1,0 +1,82 @@
+<!-- Extends from base template -->
+{% extends "../base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% block title %}
+Framework Resources
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+{% block content %}
+
+<div class="container pt-4">
+    <div>
+        <h4>Frameworks</h4>
+        <p>"There is no need to reinvent the wheel". This is the perfect reason for using a framework when developing.</p>
+        <p>Frameworks can be used to simplify the UX design and responsiveness on the front end of your project, or as a building block to begin expanding into the backend world of databases and templating.</p>
+        <p>Like with any form of tool/software used in development, there are numerous types of frameworks, each with their own benefits and disappointments.</p>
+        <p>Below is a list of a few frameworks (both front end and backend) to help you get started on your development journey</p>
+    </div>
+    <hr>
+    <h3>Front End Frameworks</h3>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">Bootstrap</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">Materialize</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">Tailwindcss</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">placeholder</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+    <h3>Back End Frameworks</h3>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">Flask</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="media">
+            <img src="#" class="mr-3" alt="...">
+            <div class="media-body">
+            <h5 class="mt-0">Django</h5>
+            <p>Give brief description of what the site offers</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

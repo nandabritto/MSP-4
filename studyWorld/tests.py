@@ -2,6 +2,8 @@ from django.test import SimpleTestCase, TestCase
 from django.urls import reverse, resolve
 from . import views
 
+
+# Status check of the websites landing page
 class HomePageTests(SimpleTestCase):
 
     def test_home_status(self):
@@ -17,6 +19,7 @@ class HomePageTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
+# Status check of the websites resources list page
 class ResourceListTests(SimpleTestCase):
 
     def test_resources_status(self):
@@ -32,6 +35,7 @@ class ResourceListTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/resources.html')
 
+# Status check of the media page for the resources section of the site
 class ResourceMediaTests(SimpleTestCase):
 
     def test_media_status(self):
@@ -47,6 +51,7 @@ class ResourceMediaTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/media.html')
 
+# Status check of the IDE page for the resources section of the site
 class ResourceIDETests(SimpleTestCase):
 
     def test_ide_status(self):
