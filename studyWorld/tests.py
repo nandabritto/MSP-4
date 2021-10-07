@@ -17,6 +17,21 @@ class HomePageTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
+class ResourceListTests(SimpleTestCase):
+
+    def test_resources_status(self):
+        response = self.client.get('/resources/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_resources_by_name(self):
+        response = self.client.get(reverse('resources-list'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_resources_template(self):
+        response = self.client.get(reverse('resources-list'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'resources/resources.html')
+
 class ResourceMediaTests(SimpleTestCase):
 
     def test_media_status(self):
