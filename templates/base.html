@@ -40,6 +40,19 @@
         </div>
     </nav>
     <body>
+        <div class="jumbotron" id="jumbotron-index">
+            <div class="container">
+                <h1 class="display-4 text-center"> 
+                    {% block jumbotronhead %}
+                    {% endblock jumbotronhead %}  
+                </h1>
+                <p class="text-center">
+                    {% block jumbotronbod %}
+                    {% endblock jumbotronbod %}  
+                </p>
+                <p><a class="btn btn-info btn-lg mr-20 float-right" href="#" role="button">Join</a></p>
+            </div>
+        </div>
     <!-- This is where the content from subsequent pages will be inserted -->
         {% block content %}
         {% endblock content %}
