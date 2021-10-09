@@ -16,6 +16,12 @@ body, html {
     display: none;
 }
 
+
+.resource-icon {
+    max-width: 200px;
+}
+
+
 /* Style tab links */
 .tablink {
     background-color: rgb(0, 0, 0);
