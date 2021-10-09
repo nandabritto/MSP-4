@@ -21,7 +21,6 @@ Framework Resources
         <p class="text-center">
             Welcome to studyWorld. A centralised library of all things software related...
         </p>
-        <p><a class="btn btn-info btn-lg mr-20 float-right" href="#" role="button">Join</a></p>
     </div>
 </div>
 
@@ -37,119 +36,121 @@ Framework Resources
     <div class="text-center pb-2">
         <h3>Front End Frameworks</h3>
     </div>
-    <div class="content px-5">
-        <div class="media py-2">
+    <div class="row">
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/angular.png' %}" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Angular</h5>
-                <p>Angular is a Type-Script-based web application framework that is free and open-source.</p>
-                <p>Angular is used as the frontend of a MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular itself and Node.js server runtime environment.</p>
-                <p>It uses hierarchy of components as its primary architectural characteristic and much of its core functionality is modular.</p>
-            </div>
+		</div>
+        <div class="col-md-8 pt-3 pl-4 content">
+            <h5 class="pt-2">Angular</h5>
+            <p>Angular is a Type-Script-based web application framework that is free and open-source.</p>
+            <p>Angular is used as the frontend of a MEAN stack, consisting of MongoDB database, Express.js web application server framework, Angular itself and Node.js server runtime environment.</p>
+            <p>It uses hierarchy of components as its primary architectural characteristic and much of its core functionality is modular.</p>
         </div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media py-2">
-
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">React</h5>
-                <p>React is a free and open-source front-end JavaScript library. It is primarily used for building user interfaces (UI) or components. React can be used as a base in the development of single-page or mobile applications.</p>
-                <p>React is only concerned with stat management and rendering that state to the DOM, so creating React Applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.</p>
-            </div>
+    <div class="row">
+        <div class="col-md-8 pt-3 content">
+            <h5 class="pt-2">React</h5>
+            <p>React is a free and open-source front-end JavaScript library. It is primarily used for building user interfaces (UI) or components. React can be used as a base in the development of single-page or mobile applications.</p>
+            <p>React is only concerned with stat management and rendering that state to the DOM, so creating React Applications usually requires the use of additional libraries for routing, as well as certain client-side functionality.</p>
+        </div>
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/react.png' %}" class="mr-3" alt="...">
-        </div>
+		</div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
+    <div class="row">
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/vuejs.png' %}" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Vue.js</h5>
-                <p>Vue.js is an open-source from end JavaScript framework for building user interfaces and single-page applications.</p>
+		</div>
+        <div class="col-md-8 pt-3 pl-4 content">
+            <h5 class="pt-2">Vue.js</h5>
+            <p>Vue.js is an open-source from end JavaScript framework for building user interfaces and single-page applications.</p>
                 <p>Vue.js features an incrementally adaptive architecture that focuses on declarative rendering and component composition. The core library is focussed on the view layer only. </p>
                 <p>Advanced features required for complex applications such as routing, state management and build tooling are offered via officially maintained supporting libraries and packages.</p>
                 <p>Vue.js allows for extending HTML with HTML attributes called directives. The directives offer functionality to HTML applications, and come as either built-in or user defined directives.</p>
-            </div>
         </div>
     </div>
     <hr>
     <div class="text-center pb-2">
         <h3>Back End Frameworks</h3>
     </div>
-    <div class="content px-5">
-        <div class="media">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Django</h5>
+    <div class="row">
+        <div class="col-md-8 pt-3 content">
+            <h5 class="pt-2">Django</h5>
                 <p>Django is a Python-based free and open-source web framework that follows the model–template–views (MTV) architectural pattern. It is considered as a "batteries included framework". It is maintained by the Django Software Foundation (DSF).</p>
                 <p>Django's primary goal is to ease the creation of complex, database-driven websites. The framework emphasizes reusability and "pluggability" of components, less code, low coupling, rapid development, and the principle of don't repeat yourself. Python is used throughout, even for settings, files, and data models. Django also provides an optional administrative create, read, update and delete interface that is generated dynamically through introspection and configured via admin models.</p>
-            </div>
-            <img src="{% static '/images/frameworkspage/django.png' %}" class="ml-3 pt-3" alt="...">
         </div>
+        <div class="col-md-4">
+            <img src="{% static '/images/frameworkspage/django.png' %}" class="mr-3" alt="...">
+		</div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
+    <div class="row">
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/rails.png' %}" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Rails</h5>
+		</div>
+        <div class="col-md-8 pt-3 pl-4 content">
+            <h5 class="pt-2">Rails</h5>
                 <p>Ruby on Rails, or Rails, is a server-side web application framework written in Ruby under the MIT License. Rails is a model–view–controller (MVC) framework, providing default structures for a database, a web service, and web pages. It encourages and facilitates the use of web standards such as JSON or XML for data transfer and HTML, CSS and JavaScript for user interfacing. In addition to MVC, Rails emphasizes the use of other well-known software engineering patterns and paradigms, including convention over configuration (CoC), don't repeat yourself (DRY), and the active record pattern.</p>
-            </div>
         </div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Laravel</h5>
+    <div class="row">
+        <div class="col-md-8 pt-3 content">
+            <h5 class="pt-2">Laravel</h5>
                 <p>Laravel is a free, open-source[3] PHP web framework, created by Taylor Otwell and intended for the development of web applications following the model–view–controller (MVC) architectural pattern and based on Symfony. Some of the features of Laravel are a modular packaging system with a dedicated dependency manager, different ways for accessing relational databases, utilities that aid in application deployment and maintenance, and its orientation toward syntactic sugar.</p>
-            </div>
+        </div>
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/laravel.png' %}" class="mr-3" alt="...">
-        </div>
+		</div>
     </div>
     <hr>
-    <h3>CSS Frameworks</h3>
-    <div class="content px-5">
-        <div class="media">
+    <div class="text-center pb-2">
+        <h3>CSS Frameworks</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/bootstrap.png' %}" class="mr-3" alt="...">
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Bootstrap</h5>
+		</div>
+        <div class="col-md-8 pt-3 pl-4 content">
+            <h5 class="pt-2">Bootstrap</h5>
                 <p>Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development. It contains CSS- and (optionally) JavaScript-based design templates for typography, forms, buttons, navigation, and other interface components.  </p>
-            </div>
         </div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
-            
-            <div class="media-body">
-                <h5 class="mt-3 pl-5">Tailwind CSS</h5>
+    <div class="row">
+        <div class="col-md-8 pt-3 content">
+            <h5 class="pt-2">Tailwind CSS</h5>
                 <p>Tailwind CSS is a utility-first CSS framework for rapidly building custom user interfaces. Tailwindcss contains a collection of beautiful, fully responsive UI components by the creators of Tailwind CSS. It's got hundreds of ready-to-use examples to choose from, and is guaranteed to help you find the perfect starting point for what you want to build.</p>
-            </div>
-            <img src="{% static '/images/frameworkspage/tailwind.PNG' %}" class="ml-3 pt-5" alt="...">
         </div>
+        <div class="col-md-4">
+            <img src="{% static '/images/frameworkspage/tailwind.PNG' %}" class="mr-3" alt="...">
+		</div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
+    <div class="row">
+        <div class="col-md-4">
             <img src="{% static '/images/frameworkspage/blueprint.PNG' %}" class="mr-3" alt="...">
-            <div class="media-body">
-            <h5 class="mt-3 pl-5">Blueprint</h5>
-            <p>Blueprint is a CSS framework designed to reduce development time and ensure cross-browser compatibility when working with Cascading Style Sheets (CSS). It also serves as a foundation for many tools designed to make CSS development easier and more accessible to beginners. Blueprint is released under a modified version of the MIT License, making it free software. It can be either used as is, or further adapted for use via a compression tool that is written in Ruby.</p>
-            </div>
+		</div>
+        <div class="col-md-8 pt-3 pl-4 content">
+            <h5 class="pt-2">Blueprint</h5>
+                <p>Blueprint is a CSS framework designed to reduce development time and ensure cross-browser compatibility when working with Cascading Style Sheets (CSS). It also serves as a foundation for many tools designed to make CSS development easier and more accessible to beginners. Blueprint is released under a modified version of the MIT License, making it free software. It can be either used as is, or further adapted for use via a compression tool that is written in Ruby.</p>
         </div>
     </div>
     <hr>
-    <div class="content px-5">
-        <div class="media">
-            
-            <div class="media-body">
-            <h5 class="mt-3 pl-5">Foundation</h5>
-            <p>Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.</p>
-            </div>
-            <img src="{% static '/images/frameworkspage/foundation.png' %}" class="mr-3" alt="...">
+    <div class="row">
+        <div class="col-md-8 pt-3 content">
+            <h5 class="pt-2">Foundation</h5>
+                <p>Foundation is a responsive front-end framework. Foundation provides a responsive grid and HTML and CSS UI components, templates, and code snippets, including typography, forms, buttons, navigation and other interface elements, as well as optional functionality provided by JavaScript extensions.</p>
         </div>
+        <div class="col-md-4">
+            <img src="{% static '/images/frameworkspage/foundation.png' %}" class="mr-3" alt="...">
+		</div>
     </div>
+    <br>
+    <p>*All descriptions have been obtained from each Frameworks wiki page or Official website*</p>
 </div>
+
 
 {% endblock content %}
