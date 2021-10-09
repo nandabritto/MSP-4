@@ -14,15 +14,23 @@ Media Resources
 <sript src="{% static 'js/base.js' %}" defer></sript>
 {% endblock scripts %}
 
-{% block jumbotronhead %}
-Pictures Sound and Videos!
-{% endblock jumbotronhead %}  
-{% block jumbotronbod %}
-This is your one stop shop for all things media, and all for the low low price of ..... FREE!!!
-{% endblock jumbotronbod %}  
 
 <!-- The following is the unique content for this page -->
 {% block content %}
+
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4 text-center"> 
+            Pictures Sound and Videos! 
+        </h1>
+        <p class="text-center">
+            This is your one stop shop for all things media, and all for the low low price of ..... FREE!!!
+        </p>
+        <p><a class="btn btn-info btn-lg mr-20 float-right" href="#" role="button">Join</a></p>
+    </div>
+</div>
+
+
 <div class="resource-list px-5">
     <div class="row">
         <div class="col-md-4 py-3">
