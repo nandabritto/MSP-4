@@ -48,3 +48,7 @@ body, html {
   #audio {background-color: blue;}
   #spinners {background-color: orange;}
   #templates {background-color: red;}
+
+  .item-name {
+    text-decoration: underline;
+  }
