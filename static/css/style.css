@@ -40,7 +40,9 @@ body, html {
     padding: 100px 20px;
     height: 100%;
   }
-  
+  #resourcemedia {
+      padding-left: 20%;
+  }
   #images {background-color: red;}
   #animations {background-color: green;}
   #audio {background-color: blue;}
