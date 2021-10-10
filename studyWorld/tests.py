@@ -82,3 +82,19 @@ class ResourceFrameworksTests(SimpleTestCase):
         response = self.client.get(reverse('resources-frameworks'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/frameworks.html')
+
+# Status check of the badges page for the resources section of the site
+class ResourceBadgesTests(SimpleTestCase):
+
+    def test_badges_status(self):
+        response = self.client.get('/resources/badges')
+        self.assertEquals(response.status_code, 200)
+
+    def test_badges_by_name(self):
+        response = self.client.get(reverse('resources-badges'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_badges_template(self):
+        response = self.client.get(reverse('resources-badges'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'resources/badges.html')
