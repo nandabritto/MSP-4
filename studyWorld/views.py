@@ -20,3 +20,6 @@ def resourcesMedia(request):
 def resourcesFrameworks(request):
     return render(request, 'resources/frameworks.html')
 
+# View for displaying the framework page of the resource section
+def resourcesBadges(request):
+    return render(request, 'resources/badges.html')
