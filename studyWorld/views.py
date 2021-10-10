@@ -19,3 +19,4 @@ def resourcesMedia(request):
 # View for displaying the framework page of the resource section
 def resourcesFrameworks(request):
     return render(request, 'resources/frameworks.html')
+
