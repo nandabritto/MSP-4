@@ -3,25 +3,16 @@ body, html {
     margin: 0;
     font-family: Arial;
   }
-
-
-/* body {
-    background: rgb(39, 39, 39);
-    background: white;
-    background: linear-gradient(to right, #0062E6, #33AEFF);
-} */
-
    
 .not-visible {
     display: none;
 }
 
-
 .resource-icon {
     max-width: 200px;
 }
 
-
+/* Styling required for the media page within the resources section */
 /* Style tab links */
 .tablink {
     background-color: rgb(0, 0, 0);
@@ -59,38 +50,44 @@ body, html {
     text-decoration: underline;
   }
 
-  .navbar {
-    background-color:rgb(49, 49, 49);
-  }
+  /* Formatting for the Mid navigation bar */
+.navbar {
+  background-color:rgb(49, 49, 49);
+}
 
-  .navbar-nav {
-    margin:auto;
-  }
-  .nav-link {
-    margin:10px 25px;
-    color:#fff;
-  }
+.navbar-nav {
+  margin:auto;
+}
+.nav-link {
+  margin:5px 25px;
+  color:#fff;
+}
   .nav-link:hover {
-    color:yellow;
+    color:rgb(14, 122, 0);
   }
-  .box {
-    width:100%;
-    background-color:rgb(0, 0, 0);
-    position:relative;
-  }
-  .box-1 {
-    width:50%;
-    background-color:#fff;
-    height:100%;
-    /* border-radius:0px 40px 0px 0px; */
-    border-top:5px solid yellow;
-    border-right:5px solid yellow;
-  }
-  .box-2 {
-    position:absolute;
-    background-color:#fff;
-    height:100%;
-    width:50%;
-    border-top:5px solid yellow;
-    border-left:5px solid yellow;
-  }
+.box {
+  width:100%;
+  background-color:rgb(0, 0, 0);
+  position:relative;
+}
+.box-1 {
+  width:50%;
+  background-color:rgb(49, 49, 49);
+  height:100%;
+}
+.box-2 {
+  position:absolute;
+  background-color:rgb(49, 49, 49);
+  height:100%;
+  width:50%;
+}
+/* dropdown menu specific settings */
+.library {
+  color:#fff;
+  background-color:rgb(49, 49, 49);
+  padding-left: 0.5em;
+}
+.library:hover {
+  color:rgb(14, 122, 0);
+}
+

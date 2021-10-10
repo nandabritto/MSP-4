@@ -1,6 +1,6 @@
 <!-- loads all the static resources -->
 {% load static %}
-<nav class="navbar navbar-expand">
+<nav class="navbar navbar-expand t-0">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
     <span class="navbar-toggler-icon">Menu</span>
   </button>
@@ -15,8 +15,17 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'resources-list' %}">Resources</a>
+        <li class="nav-item dropdown">
+          <a class="dropdown-toggle nav-link" data-toggle="dropdown">Library<span class="caret"></span></a>
+          <ul class="dropdown-menu library">
+            <li><a class="library" href="{% url 'resources-media' %}">Media</a></li>
+            <li><a class="library" href="{% url 'resources-frameworks' %}">Frameworks</a></li>
+            <li><a class="library" href="{% url 'resources-ide' %}">IDE</a></li>
+            <li><a class="library" href="#">Testing</a></li>
+            <li><a class="library" href="#">Tools</a></li>
+            <li><a class="library" href="#">Learning</a></li>
+            <li><a class="library" href="{% url 'resources-badges' %}">Badges</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">placeh</a>
