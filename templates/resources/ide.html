@@ -1,10 +1,10 @@
-<!-- Extends from base template -->
+<!-- Obtains the base.html template and extends -->
 {% extends "../base.html" %}
 
-<!-- loads all the static resources -->
+<!-- Loads the available static file(s) -->
 {% load static %}
 
-<!-- Updates the page title -->
+<!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
 IDE Resources
 {% endblock title %}
@@ -12,6 +12,8 @@ IDE Resources
 <!-- The following is the unique content for this page -->
 {% block content %}
 
+<!-- Unique jumbotron for this page 
+    (page specific text and background image) -->
 <div class="jumbotron" id="jumbotron-ide">
     <div class="container">
         <h1 class="display-4 text-center"> 
@@ -23,9 +25,11 @@ IDE Resources
     </div>
 </div>
 
+<!-- Includes the navbar.html -->
 {% include "navbar.html" %}
 
 <div class="container">
+    <!-- Page "header" and description of page purpose -->
     <div class="container py-4">
         <div class="text-center pb-2">
             <h2><strong>IDE? What on earth is that?!?!</strong></h2>
@@ -35,6 +39,7 @@ IDE Resources
             <p>Below is a list of a few IDEs to help you get started on your development journey</p>
         </div>
         <hr>
+        <!-- IDE provider one - VS Code -->
         <div class="row">
             <div class="col-md-5 mx-auto">
                 <img src="{% static '/images/ide/vscode.png' %}" class="mr-3" alt="vscode logo">
@@ -49,6 +54,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider two - PyCharm -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/pycharm.png' %}" class="mr-3" alt="pycharm logo">
@@ -62,6 +68,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider three - Atom -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/atom.png' %}" class="mr-3" alt="atom logo">
@@ -74,6 +81,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider four - Bluefish -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/bluefish.png' %}" class="mr-3" alt="bluefish logo">
@@ -87,6 +95,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider five - Eclipse -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/eclipse.PNG' %}" class="mr-3" alt="eclipse logo">
@@ -100,6 +109,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider six - Ninja-IDE -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/ninja.png' %}" class="mr-3" alt="ninja logo">
@@ -112,6 +122,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider seven - Komodo Edit -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/komodo.png' %}" class="mr-3" alt="komodo logo">
@@ -124,6 +135,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- IDE provider eight - spyder -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/ide/spyder.png' %}" class="mr-3" alt="spyder logo">
@@ -135,8 +147,9 @@ IDE Resources
             </div>
         </div>
     </div>
+    <!-- Disclaimer to be displayed as all <p> information has been obtained 
+        from either wikipedia or the providers official website -->
     <p class="disclaimer text-center">*All descriptions have been obtained from each IDEs wiki page or Official website*</p>    
 </div>
-
 
 {% endblock content %}
