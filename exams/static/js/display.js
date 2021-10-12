@@ -4,6 +4,7 @@ const examBox = document.getElementById('exam-box')
 const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultsdisplay')
 const timerBox = document.getElementById('timerdisplay')
+const endButton = document.getElementById('endbutton')
 
 
 const activateTimer = (time) => {
@@ -60,8 +61,10 @@ $.ajax({
             for (const [question, answers] of Object.entries(el)){
                 examBox.innerHTML += `
                     <hr>
-                    <div class="row pl-5">
-                        <h5><b>${question}</b></h5>
+                    <div class="container"
+                        <div class="row pl-5">
+                            <h5><b>Question: ${question}</b></h5>
+                        </div>
                     </div>
                 `
                 answers.forEach(answer=>{
@@ -106,8 +109,16 @@ const sendData = () => {
         url: `${url}save/`,
         data: data,
         success: function(response){
+            endButton.innerHTML += `
+                <hr>
+                <div class="container"
+                    <div class="row pl-5">
+                        <a href="{% url 'exams:list-view' %}" class="btn btn-danger">Go Back</a>
+                        <button class="btn btn-success float-right" onClick="window.location.reload();">Try Again</button>
+                    </div>
+                </div>
+                `
             const results = response.results
-            console.log(results)
             examForm.classList.add('not-visible')
 
             scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
@@ -132,13 +143,11 @@ const sendData = () => {
                     else {
                         const answer = resp['answered']
                         const correct = resp['correct_answer']
-                        console.log(answer, correct)
                         // If the answer was correct
                         if (answer == correct) {
                             resDiv.innerHTML += `<div class="alert alert-success" role="alert">
                             <h4 class="alert-heading">Well Done</h4>
-                            <p> You are correct, the answer to ${question} </p>
-                            <p> is :${answer}</p>
+                            <p> You are correct, the answer to ${question} is :${answer}</p>
                           </div>`
                         // If the answer was incorrect
                         } else {
@@ -161,6 +170,5 @@ const sendData = () => {
 
 examForm.addEventListener('submit', e=>{
     e.preventDefault()
-
     sendData()
 })
