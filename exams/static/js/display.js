@@ -9,7 +9,6 @@ const endButton = document.getElementById('endbutton')
 
 const activateTimer = (time) => {
     if (time.toString().length < 2) {
-        console.log(`${time}`)
         timerBox.innerHTML = `<b>0${time}:00</b>`
     } else {
         timerBox.innerHTML = `<b>${time}:00</b>`
@@ -19,7 +18,6 @@ const activateTimer = (time) => {
     let seconds = 60
     let displaySeconds
     let displayMinutes
-    console.log(`${time}`)
     const timer = setInterval(()=>{
         seconds --
         if (seconds < 0) {
@@ -37,7 +35,6 @@ const activateTimer = (time) => {
             displaySeconds = seconds
         }
         if (minutes === 0 && seconds === 0) {
-            timerBox.innerHTML = "<b>00:00</b>"
             setTimeout(()=>{
                 clearInterval(timer)
                 alert('Time over')
@@ -46,7 +43,7 @@ const activateTimer = (time) => {
         }
 
         timerBox.innerHTML = `
-            <div class="btn btn-warning pr-4 pt-2">
+            <div>
                 <b>${displayMinutes}:${displaySeconds}</b>
             </div>`
     }, 1000)
@@ -123,11 +120,13 @@ const sendData = () => {
             examForm.classList.add('not-visible')
 
             scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
+            
+            // The below will populate the results for each question
             results.forEach(res=>{
                 const resDiv = document.createElement("div")
                 for (const [question, resp] of Object.entries(res)){
 
-                    // if no repose received - red
+                    // if no repose received - Correct answer is not displayed
                     if (resp=='not answered') {
                         resDiv.innerHTML += `
                         <div class="row justify-content-center">
@@ -144,7 +143,7 @@ const sendData = () => {
                     else {
                         const answer = resp['answered']
                         const correct = resp['correct_answer']
-                        // If the answer was correct
+                        // If the answer received was correct
                         if (answer == correct) {
                             resDiv.innerHTML += `
                             <div class="row justify-content-center">
@@ -156,7 +155,7 @@ const sendData = () => {
                                     </div>
                                 </div>
                           </div>`
-                        // If the answer was incorrect
+                        // If the answer received was incorrect
                         } else {
                             resDiv.innerHTML += `
                             <div class="row justify-content-center">

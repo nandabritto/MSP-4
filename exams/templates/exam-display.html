@@ -1,26 +1,35 @@
+<!-- Obtains the base.html template to extend -->
 {% extends "base.html" %}
+
+<!-- Loads the available static file(s) -->
 {% load static %}
 
+<!-- Loads specified JavaScript file(s) -->
 {% block scripts %}
     <script src="{% static 'js/display.js' %}" defer></script> 
 {% endblock scripts %}
 
-
+<!-- Updates the title appearing in the window tab -->
 {% block title %}
-Exam Display
+Exam {{obj.name}}
 {% endblock title %}
 
+<!-- Unique content for the exam display pages -->
 {% block content %}
 
+<!-- Header noteing the Exam Name and required pass mark -->
 <div class="container">
     <div class="container py-4">
         <div class="text-center pb-2">
             <h2><strong>{{obj.name}}</strong></h2>
             <p>Score to Pass: {{obj.required_score_to_pass}}%</p>
         </div>
+        <!-- Display timer box -->
         <div class="col text-right" id="timerdisplay"></div>
     </div>
 </div>
+
+<!-- Section which will display the individual exam questions and applicable answers for that question -->
 <div class="row justify-content-center">
     <div class="col-7">
         <form id="exam-form">
@@ -28,6 +37,7 @@ Exam Display
             <!-- Below div will be populated by the JavaScript -->
             <div id="exam-box"></div>
             <hr>
+            <!-- Buttons at page base for back and submit -->
             <div class="container py-3">
                 <a href="{% url 'exams:list-view' %}" class="btn btn-danger">Go Back</a>
                 <button type="submit" class="btn btn-success float-right">Submit</button>
@@ -35,7 +45,7 @@ Exam Display
         </form>
     </div>
 </div>
-
+<!-- Divs required for the population of results once exam has been submitted -->
 <div id="scoredisplay"></div>
 <div id="resultsdisplay"></div>
 <div id="endbutton"></div>
