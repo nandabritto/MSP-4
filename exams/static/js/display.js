@@ -109,6 +109,7 @@ const sendData = () => {
         url: `${url}save/`,
         data: data,
         success: function(response){
+            // Populates the reset and back to exam list buttons once answers have been submitted
             endButton.innerHTML += `
                 <hr>
                 <div class="container"
@@ -122,22 +123,22 @@ const sendData = () => {
             examForm.classList.add('not-visible')
 
             scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
-
             results.forEach(res=>{
                 const resDiv = document.createElement("div")
                 for (const [question, resp] of Object.entries(res)){
 
-                    resDiv.innerHTML += question
-                    const cls = ['container', 'p-3', 'text-light', 'h6']
-                    resDiv.classList.add(...cls)
-
                     // if no repose received - red
                     if (resp=='not answered') {
-                        resDiv.innerHTML += `<div class="alert alert-warning" role="alert">
-                        <h4 class="alert-heading">You didn't respond</h4>
-                        <p> "Nothing" is not the correct answer for ${question} </p>
-                        <p> Back to the books for you</p>
-                      </div>`
+                        resDiv.innerHTML += `
+                        <div class="row justify-content-center">
+                            <div class="col-7">
+                                <div class="alert alert-warning" role="alert">
+                                <h4 class="alert-heading">You didn't respond</h4>
+                                <p> "Nothing" is not the correct answer for <b>${question}</b> </p>
+                                <p> Back to the books for you</p>
+                                </div>
+                            </div>
+                        </div>`
                     }
                     // if response received
                     else {
@@ -145,17 +146,28 @@ const sendData = () => {
                         const correct = resp['correct_answer']
                         // If the answer was correct
                         if (answer == correct) {
-                            resDiv.innerHTML += `<div class="alert alert-success" role="alert">
-                            <h4 class="alert-heading">Well Done</h4>
-                            <p> You are correct, the answer to ${question} is :${answer}</p>
+                            resDiv.innerHTML += `
+                            <div class="row justify-content-center">
+                                <div class="col-7">
+                                    <div class="alert alert-success" role="alert">
+                                        <h4 class="alert-heading">Well Done</h4>
+                                        <p> You are correct, the answer to <b>${question}</b></p>
+                                        <p> is: <b>${answer}</b></p>
+                                    </div>
+                                </div>
                           </div>`
                         // If the answer was incorrect
                         } else {
-                            resDiv.innerHTML += `<div class="alert alert-danger" role="alert">
-                            <h4 class="alert-heading">Not this time</h4>
-                            <p> That's not the correct answer for ${question} </p>
-                            <p> The correct answer is :${answer}</p>
-                          </div>`
+                            resDiv.innerHTML += `
+                            <div class="row justify-content-center">
+                                <div class="col-7">
+                                    <div class="alert alert-danger" role="alert">
+                                        <h4 class="alert-heading">Not this time</h4>
+                                        <p><b>${answer}</b> is not the correct answer for <b>${question}</b> </p>
+                                        <p> The correct answer is : <b>${correct}</b></p>
+                                    </div>
+                                </div>
+                            </div>`
                         }
                     }
                 }
