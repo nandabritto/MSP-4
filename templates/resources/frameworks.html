@@ -1,10 +1,10 @@
-<!-- Extends from base template -->
+<!-- Obtains the base.html template and extends -->
 {% extends "../base.html" %}
 
-<!-- loads all the static resources -->
+<!-- Loads the available static file(s) -->
 {% load static %}
 
-<!-- Updates the page title -->
+<!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
 Framework Resources
 {% endblock title %}
@@ -13,6 +13,8 @@ Framework Resources
 <!-- The following is the unique content for this page -->
 {% block content %}
 
+<!-- Unique jumbotron for this page 
+    (page specific text and background image) -->
 <div class="jumbotron" id="jumbotron-frameworks">
     <div class="container">
         <h1 class="display-4 text-center"> 
@@ -24,8 +26,10 @@ Framework Resources
     </div>
 </div>
 
+<!-- Includes the navbar.html -->
 {% include "navbar.html" %}
 
+<!-- Page "header" and description of page purpose -->
 <div class="container py-4">
     <div class="text-center pb-2">
         <h2><strong>Frameworks</strong></h2>
@@ -35,8 +39,10 @@ Framework Resources
     </div>
     <hr>
     <div class="text-center pb-2">
+        <!-- Section Header -->
         <h3><b>Front End Frameworks</b></h3>
     </div>
+    <!-- Framework provider one - Angular -->
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% static '/images/frameworkspage/angular.png' %}" class="mr-3" alt="Angular official logo">
@@ -50,6 +56,7 @@ Framework Resources
         </div>
     </div>
     <hr>
+    <!-- Framework provider two - React -->
     <div class="row">
         <div class="col-md-8 pt-3 content">
             <h5 class="pt-2 text-center item-name">React</h5>
@@ -62,6 +69,7 @@ Framework Resources
 		</div>
     </div>
     <hr>
+    <!-- Framework provider three - Vue.js -->
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% static '/images/frameworkspage/vuejs.png' %}" class="mr-3" alt="Vue.js official logo">
@@ -77,8 +85,10 @@ Framework Resources
     </div>
     <hr>
     <div class="text-center pb-2">
+        <!-- Section header -->
         <h3><b>Back End Frameworks</b></h3>
     </div>
+    <!-- Framework provider four - Django -->
     <div class="row">
         <div class="col-md-8 pt-3 content">
             <h5 class="pt-2 text-center item-name">Django</h5>
@@ -91,6 +101,7 @@ Framework Resources
 		</div>
     </div>
     <hr>
+    <!-- Framework provider five - Rails -->
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% static '/images/frameworkspage/rails.png' %}" class="mr-3" alt="Rails official logo">
@@ -102,6 +113,7 @@ Framework Resources
         </div>
     </div>
     <hr>
+    <!-- Framework provider six - Laravel -->
     <div class="row">
         <div class="col-md-8 pt-3 content">
             <h5 class="pt-2 text-center item-name">Laravel</h5>
@@ -114,8 +126,10 @@ Framework Resources
     </div>
     <hr>
     <div class="text-center pb-2">
+        <!-- Section Header -->
         <h3><b>CSS Frameworks</b></h3>
     </div>
+    <!-- Framework provider seven - Bootstrap -->
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% static '/images/frameworkspage/bootstrap.png' %}" class="mr-3" alt="Bootstrap official logo">
@@ -127,6 +141,7 @@ Framework Resources
         </div>
     </div>
     <hr>
+    <!-- Framework provider eight - Tailwind CSS -->
     <div class="row">
         <div class="col-md-8 pt-3 content">
             <h5 class="pt-2 text-center item-name">Tailwind CSS</h5>
@@ -138,6 +153,7 @@ Framework Resources
 		</div>
     </div>
     <hr>
+    <!-- Framework provider nine - Blueprint -->
     <div class="row">
         <div class="col-md-4 text-center">
             <img src="{% static '/images/frameworkspage/blueprint.PNG' %}" class="mr-3" alt="Blueprint official logo">
@@ -149,6 +165,7 @@ Framework Resources
         </div>
     </div>
     <hr>
+    <!-- Framework provider ten - Foundation -->
     <div class="row">
         <div class="col-md-8 pt-3 content">
             <h5 class="pt-2 text-center item-name">Foundation</h5>
@@ -160,8 +177,9 @@ Framework Resources
 		</div>
     </div>
     <br>
+    <!-- Disclaimer to be displayed as all <p> information has been obtained 
+        from either wikipedia or the providers official website -->
     <p class="disclaimer text-center">*All descriptions have been obtained from each Frameworks wiki page or Official website*</p>
 </div>
-
 
 {% endblock content %}
