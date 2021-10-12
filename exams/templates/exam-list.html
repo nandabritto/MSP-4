@@ -1,35 +1,41 @@
+<!-- Obtains the base.html template and extends -->
 {% extends "base.html" %}
 
+<!-- Loads the available static file(s) -->
 {% load static %}
 
+<!-- Loads specified JavaScript file(s) -->
 {% block scripts %}
     <script src="{% static 'js/examlist.js' %}" defer></script> 
 {% endblock scripts %}
 
-<!-- Updates the title section of the html -->
+<!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
 Exam List
 {% endblock title %}
 
 
-<!-- Displays the available exams as cards on the page -->
+
 {% block content %}
+
+<!-- Header Jumbotron for page, Text and background picture specific to this page -->
 Exam list to appear here
 <div class="jumbotron" id="jumbotron-resources">
   <div class="container">
       <h1 class="display-4 text-center"> 
-          Pictures Sound and Videos! 
+          Exam exams exams! 
       </h1>
       <p class="text-center">
-          This is your one stop shop for all things media, and all for the low low price of ..... FREE!!!
+          Placeholder text placeholder text placeholde text!!!
       </p>
   </div>
 </div>
 
+<!-- Includes the navbar.html -->
 {% include "navbar.html" %}
 <hr>
 
-<!-- Modal -->
+<!-- Modal which confirms the exam specifics to the User -->
 <div class="modal fade" id="examStartModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -48,8 +54,8 @@ Exam list to appear here
   </div>
 </div>
 
-<div class="h1">Exams Available</div>
-
+<!-- Displays the available exams as cards on the page -->
+<!-- Will display single card for each exam -->
 <div class="card-deck">
     {% for obj in object_list %}
     <div class="card text-center" style="width: 18rem;">

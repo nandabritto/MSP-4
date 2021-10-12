@@ -1,4 +1,4 @@
-<!-- Obtains the base.html template to extend -->
+<!-- Obtains the base.html template and extends -->
 {% extends "base.html" %}
 
 <!-- Loads the available static file(s) -->
@@ -9,7 +9,7 @@
     <script src="{% static 'js/display.js' %}" defer></script> 
 {% endblock scripts %}
 
-<!-- Updates the title appearing in the window tab -->
+<!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
 Exam {{obj.name}}
 {% endblock title %}
