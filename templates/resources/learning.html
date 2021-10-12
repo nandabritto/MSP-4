@@ -1,10 +1,10 @@
-<!-- Extends from base template -->
+<!-- Obtains the base.html template and extends -->
 {% extends "../base.html" %}
 
-<!-- loads all the static resources -->
+<!-- Loads the available static file(s) -->
 {% load static %}
 
-<!-- Updates the page title -->
+<!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
 IDE Resources
 {% endblock title %}
@@ -12,6 +12,7 @@ IDE Resources
 <!-- The following is the unique content for this page -->
 {% block content %}
 
+<!-- Unique jumbotron for this page (page specific text and background image) -->
 <div class="jumbotron" id="jumbotron-ide">
     <div class="container">
         <h1 class="display-4 text-center"> 
@@ -23,8 +24,10 @@ IDE Resources
     </div>
 </div>
 
+<!-- Includes the navbar.html -->
 {% include "navbar.html" %}
 
+<!-- Page "header" and description of page purpose -->
 <div class="container">
     <div class="container py-4">
         <div class="text-center pb-2">
@@ -35,6 +38,7 @@ IDE Resources
             <p></p>
         </div>
         <hr>
+        <!-- Learning point one - codecademy -->
         <div class="row">
             <div class="col-md-5 mx-auto">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="codecademy logo">
@@ -48,6 +52,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- Learning point two - freecodecamp -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="freecodecamp logo">
@@ -61,6 +66,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- Learning point three - w3schools -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="w3schools logo">
@@ -74,6 +80,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- Learning point four - code.org -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="code.org  logo">
@@ -86,6 +93,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- Learning point five - Code Wars -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="code.org  logo">
@@ -98,6 +106,7 @@ IDE Resources
             </div>
         </div>
         <hr>
+        <!-- Learning point six - Coder Byte -->
         <div class="row">
             <div class="col-md-5 text-center">
                 <img src="{% static '/images/.png' %}" class="mr-3" alt="code.org  logo">
@@ -111,8 +120,9 @@ IDE Resources
         </div>
         <hr>
     </div>
+    <!-- Disclaimer to be displayed as all <p> information has been obtained 
+        from either wikipedia or the providers official website -->
     <p class="disclaimer text-center">*All descriptions have been obtained from each school/organisations Official website*</p>    
 </div>
-
 
 {% endblock content %}
