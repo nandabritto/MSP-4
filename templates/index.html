@@ -15,7 +15,7 @@ Home Page
 <!-- Jumbotron image included in HTML as it will be different on each page -->
 <div class="jumbotron" style="background-image: url('../static/images/jumbotron/study3.PNG');">
     <div class="container">
-        <h1 class="display-4 text-center"> 
+        <h1 class="display-3 text-center"> 
             Hello Developers! 
         </h1>
         <p class="text-center">
@@ -80,7 +80,7 @@ Home Page
                 <div class="card custom-card">
                     <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="certificate icon">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><b>Certifications</b></h5>
+                        <h5 class="card-title text-center"><strong><u>Certifications</u></strong></h5>
                         <p class="card-text">Information on Companies that provide industry standard certifications to help progress your career in development</p>
                         <a href="#" class="btn btn-secondary rounded mx-auto d-block">View details &raquo;</a>
                     </div>
@@ -91,7 +91,7 @@ Home Page
                 <div class="card custom-card">
                     <img src="{% static '/images/resources/library.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="library icon">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><b>Resources</b></h5>
+                        <h5 class="card-title text-center"><strong><u>Resources</u></strong></h5>
                         <p class="card-text">A handy little library of hints, tips and tricks to help you simplify your development process and create your projects</p>
                         <a href="{% url 'resources-list' %}" class="btn btn-secondary rounded mx-auto d-block">View details &raquo;</a>
                     </div>
@@ -102,7 +102,7 @@ Home Page
                 <div class="card custom-card">
                     <img src="{% static '/images/resources/testing.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="test icon">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><b>Practise Exams</b></h5>
+                        <h5 class="card-title text-center"><strong><u>Practise Exams</u></strong></h5>
                         <p class="card-text">Use these mini exams to help reinforce your knowledge, understand your limitations and prepare for the real thing</p>
                         <a href="{% url 'exams:list-view' %}" class="btn btn-secondary rounded mx-auto d-block">View details &raquo;</a>
                     </div>
