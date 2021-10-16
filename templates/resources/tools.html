@@ -1,0 +1,138 @@
+<!-- Obtains the base.html template and extends -->
+{% extends "../base.html" %}
+
+<!-- Loads the available static file(s) -->
+{% load static %}
+
+<!-- Updates the title appearing in the window/browser tab -->
+{% block title %}
+Earn Badges
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+{% block content %}
+
+<!-- Unique jumbotron for this page 
+    (page specific text and background image) -->
+<div class="jumbotron" id="jumbotron-badges">
+    <div class="container">
+        <h1 class="display-4 text-center"> 
+            Show off what you have learnt with badges
+        </h1>
+        <h5 class="text-center">
+            Learning is all well and good. But earning a badge, having a goal, is even better...
+        </h5>
+    </div>
+</div>
+
+<!-- Includes the navbar.html -->
+{% include "navbar.html" %}
+
+<!-- Page "header" and description of page purpose -->
+<div class="container pt-4">
+    <div class="container py-4">
+        <div class="text-center pb-2">
+            <h2><strong>Tools</strong></h2>
+            <p></p>
+            <p></p>
+        </div>
+        <hr>
+        <!-- Tool one -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool two -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool three -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool four -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool five -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool six -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.PNG' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name"></h5>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+        <!-- Tool seven -  -->
+        <div class="row">
+            <div class="col-md-5 text-center">
+                <img src="{% static '/images/badges/.png' %}" class="mr-3" alt=" logo">
+            </div>
+            <div class="col-md-7 pt-3 pl-4 content">
+                <h5 class="pt-2 text-center item-name">edx.org</h5>
+                <p></p>
+                <p></p>
+                <p></p>
+                <a href="" target="_blank" class="btn btn-light float-right">Learn More...</a>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- Disclaimer to be displayed as all <p> information has been obtained 
+        from either wikipedia or the providers official website -->
+    <p class="disclaimer text-center">*All descriptions are obtained from each tools official website*</p>    
+</div>
+
+{% endblock content %}
