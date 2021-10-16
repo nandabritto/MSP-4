@@ -12,6 +12,15 @@ body, html {
     max-width: 200px;
 }
 
+/* Jumbotron settings */
+.jumbotron {
+  color: white;
+  text-shadow: 2px 2px 8px #797979;
+
+  margin-bottom: 0 !important; /* added important to over-ride the bootstap default */
+}
+
+
 /* Styling required for the media page within the resources section */
 /* Style tab links */
 .tablink {
