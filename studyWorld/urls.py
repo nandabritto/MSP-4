@@ -13,6 +13,7 @@ urlpatterns = [
     path('resources/frameworks', views.resourcesFrameworks, name='resources-frameworks'),
     path('resources/badges', views.resourcesBadges, name='resources-badges'),
     path('resources/learning', views.resourcesLearning, name='resources-learning'),
+    path('resources/tools', views.resourcesTools, name='resources-tools'),
     path('', include('exams.urls', namespace='exams')),
 ]
 

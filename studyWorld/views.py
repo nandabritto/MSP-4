@@ -27,3 +27,7 @@ def resourcesBadges(request):
 # View for displaying the learning page of the resource section
 def resourcesLearning(request):
     return render(request, 'resources/learning.html')
+
+# View for displaying the tools page of the resource section
+def resourcesTools(request):
+    return render(request, 'resources/tools.html')
