@@ -114,3 +114,19 @@ class ResourceLearningTests(SimpleTestCase):
         response = self.client.get(reverse('resources-learning'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/learning.html')
+
+# Status check of the tools page for the resources section of the site
+class ResourceToolsTests(SimpleTestCase):
+
+    def test_tools_status(self):
+        response = self.client.get('/resources/tools')
+        self.assertEquals(response.status_code, 200)
+
+    def test_tools_by_name(self):
+        response = self.client.get(reverse('resources-tools'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_tools_template(self):
+        response = self.client.get(reverse('resources-tools'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'resources/tools.html')
