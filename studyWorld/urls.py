@@ -15,6 +15,7 @@ urlpatterns = [
     path('resources/learning', views.resourcesLearning, name='resources-learning'),
     path('resources/tools', views.resourcesTools, name='resources-tools'),
     path('', include('exams.urls', namespace='exams')),
+    path('', include('providers.urls', namespace='providers')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

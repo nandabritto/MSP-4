@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'exams',
+    'providers',
 ]
 
 MIDDLEWARE = [
@@ -112,6 +113,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'exams/static'),
+    os.path.join(BASE_DIR, 'providers/static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
