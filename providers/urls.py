@@ -10,7 +10,7 @@ app_name = 'providers'
 # Exam app specific urls
 
 urlpatterns = [
-    path('providers', ExamListView.as_view(), name='list-view'),
+    path('providers/update/', views.providerUpdate, name='provider-update'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
