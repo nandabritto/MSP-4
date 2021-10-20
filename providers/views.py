@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import ListView
 from django.http import JsonResponse
-from .models import Question, Answer, Result, Exam
+from .models import Providers
 from django.contrib.auth.models import User
 
 

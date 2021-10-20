@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 # Model for the provider section
-class Provider(models.Model):
+class Providers(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     url = models.CharField(max_length=50)
