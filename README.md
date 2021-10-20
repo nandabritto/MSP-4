@@ -221,6 +221,9 @@ Exam Category images
 - https://unsplash.com/
 - 
 
+## Django third party apps
+- django-decouple
+- Pillow
 
 ## Development/Testing Validators
 GitPod IDE
