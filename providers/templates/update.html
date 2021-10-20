@@ -27,6 +27,25 @@ Home Page
 
 {% include "navbar.html" %}
 
+<div class="container">
+
+    <!--Simple Form-->
+    <h2 class="my-4">Add a new provider</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+            <label for="name">Provider name:</label><br>
+            <input type="text" id="name"><br>
+            <label for="description">Provider Description:</label><br>
+            <input type="text" id="description"><br>
+            <label for="url">Provider URL</label><br>
+            <input type="text" id="url"><br>
+            <label for="logo">Provider logo</label><br>
+            <input type="file" id="logo" name="upload" accept="image/*">
+            <br>
+            <button class="btn btn-dark my-4" type="submit">Submit</button>
+      </form>
+
+</div>
 
 {% endblock content %}
 <!-- FOOTER details are obtained from base template and inserted here-->
