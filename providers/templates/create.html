@@ -13,7 +13,7 @@ Home Page
 
 {% block content %}
 <!-- Jumbotron image included in HTML as it will be different on each page -->
-<div class="jumbotron" style="background-image: url('../static/images/jumbotron/index.png');">
+<div class="jumbotron" style="background-image: url('#');">
     <div class="container">
         <h1 class="display-3 text-center"> 
             <strong>Hello Developers!</strong>
@@ -33,7 +33,9 @@ Home Page
     <h2 class="my-4">Add a new provider</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-            <label for="name">Provider name:</label><br>
+        {{form.as_p}}
+
+            <!-- <label for="name">Provider name:</label><br>
             <input type="text" id="name"><br>
             <label for="description">Provider Description:</label><br>
             <input type="text" id="description"><br>
@@ -42,8 +44,8 @@ Home Page
             <label for="logo">Provider logo</label><br>
             <input type="file" id="logo" name="upload" accept="image/*">
             <br>
-            <button class="btn btn-dark my-4" type="submit">Submit</button>
-      </form>
+            <button class="btn btn-dark my-4" type="submit">Submit</button> -->
+    </form>
 
 </div>
 

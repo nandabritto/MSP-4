@@ -3,14 +3,25 @@ from django.views.generic import ListView
 from django.http import JsonResponse
 from .models import Providers
 from django.contrib.auth.models import User
+from .forms import providerCreateForm
 
 
+# View for displaying the framework page of the resource section
+# def providersCreate(request):
+#     return render(request, 'create.html')
 
-def upload(request):
-    if request.method == 'POST' and request.FILES['upload']:
-        upload = request.FILES['upload']
-        fss = FileSystemStorage()
-        file = fss.save(upload.name, upload)
-        file_url = fss.url(file)
-        return render(request, 'main/upload.html', {'file_url': file_url})
-    return render(request, 'main/upload.html')
+def providers_create(request):
+  
+    if request.method == 'POST':
+        form = providerCreateForm(request.POST, request.FILES)
+  
+        if form.is_valid():
+            form.save()
+            return redirect('success')
+    else:
+        form = providerCreateForm()
+    return render(request, 'create.html', {'form' : form})
+  
+  
+def success(request):
+    return HttpResponse('successfully uploaded')

@@ -3,8 +3,8 @@ from .models import Providers
 
 
 # Create your forms here.
-class providerForm(forms.ModelForm):
+class providerCreateForm(forms.ModelForm):
 
     class Meta:
         model = Providers
-        fields = ('name', 'description', 'url', 'image')
+        fields = ['name', 'description', 'url', 'logo']
