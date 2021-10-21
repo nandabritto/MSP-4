@@ -2,7 +2,8 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from .views import (
-    providers_create
+    providers_create,
+    ProvidersListView
 )
 
 app_name = 'providers'
@@ -10,7 +11,7 @@ app_name = 'providers'
 # Exam app specific urls
 
 urlpatterns = [
-    path('providers/', ProviderListView.as_view(), name='providers-list'),
+    path('providers/', ProvidersListView.as_view(), name='providers-list'),
     path('providers/create/', providers_create, name='providers-create'),
 ]
 

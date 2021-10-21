@@ -4,14 +4,15 @@
 <!-- Loads the available static file(s) -->
 {% load static %}
 
-<!-- Loads specified JavaScript file(s) -->
+<!-- Loads customised JS and CSS file(s) -->
 {% block scripts %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
     <script src="{% static 'js/providerlist.js' %}" defer></script> 
 {% endblock scripts %}
 
 <!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
-Exam List
+Provider List
 {% endblock title %}
 
 
@@ -37,17 +38,22 @@ Exam list to appear here
 
 <!-- Displays the available providers as cards on the page -->
 <!-- Will display single card for provider exam -->
-<div class="card-deck">
-    {% for obj in object_list %}
-    <div class="card text-center" style="width: 18rem;">
-      <img class="card-img-top" src="{{obj.logo}}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{obj.name}}</h5>
-        <p class="card-text">{{obj.description}}</p>
-        <a href="{{obj.url}}" class="btn btn-outline-primary btn-link modal-button">Visit Site</a>
-        </a>
-      </div>
+<div class="resource-list px-5">
+    <div class="row px-5">
+        {% for obj in object_list %}
+        <div class="col-lg-4 py-3">
+            <div class="card alert alert-dark h-100 px-1">
+                <img class="card-img-top providerlogo rounded mx-auto d-block" src="{{ obj.logo.url }}" alt="Provider Logo">
+                <div class="card-body">
+                    <h5 class="card-title text-center"><strong><u>{{obj.name}}</u></strong></h5>
+                    <p class="card-text">{{obj.description}}</p>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{obj.url}}" class="btn btn-dark">Visit Site</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    </div>
+</div>
 {% endblock content %}
