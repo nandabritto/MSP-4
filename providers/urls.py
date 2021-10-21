@@ -10,6 +10,7 @@ app_name = 'providers'
 # Exam app specific urls
 
 urlpatterns = [
+    path('providers/', ProviderListView.as_view(), name='providers-list'),
     path('providers/create/', providers_create, name='providers-create'),
 ]
 

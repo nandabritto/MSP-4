@@ -6,6 +6,11 @@ from django.contrib.auth.models import User
 from .forms import providerCreateForm
 
 
+# Displays all currently available exams
+class ProvidersListView(ListView):
+    model = Providers
+    template_name = 'provider-list.html'
+
 # View for displaying the framework page of the resource section
 # def providersCreate(request):
 #     return render(request, 'create.html')
@@ -25,3 +30,4 @@ def providers_create(request):
   
 def success(request):
     return HttpResponse('successfully uploaded')
+
