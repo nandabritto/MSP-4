@@ -1,0 +1,53 @@
+<!-- Obtains the base.html template and extends -->
+{% extends "base.html" %}
+
+<!-- Loads the available static file(s) -->
+{% load static %}
+
+<!-- Loads specified JavaScript file(s) -->
+{% block scripts %}
+    <script src="{% static 'js/providerlist.js' %}" defer></script> 
+{% endblock scripts %}
+
+<!-- Updates the title appearing in the window/browser tab -->
+{% block title %}
+Exam List
+{% endblock title %}
+
+
+
+{% block content %}
+
+<!-- Header Jumbotron for page, Text and background picture specific to this page -->
+Exam list to appear here
+<div class="jumbotron" id="jumbotron-resources">
+  <div class="container">
+      <h1 class="display-4 text-center"> 
+          Providers 
+      </h1>
+      <p class="text-center">
+          Placeholder text placeholder text placeholde text!!!
+      </p>
+  </div>
+</div>
+
+<!-- Includes the navbar.html -->
+{% include "navbar.html" %}
+<hr>
+
+<!-- Displays the available providers as cards on the page -->
+<!-- Will display single card for provider exam -->
+<div class="card-deck">
+    {% for obj in object_list %}
+    <div class="card text-center" style="width: 18rem;">
+      <img class="card-img-top" src="{{obj.logo}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{obj.name}}</h5>
+        <p class="card-text">{{obj.description}}</p>
+        <a href="{{obj.url}}" class="btn btn-outline-primary btn-link modal-button">Visit Site</a>
+        </a>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+{% endblock content %}
