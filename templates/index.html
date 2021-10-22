@@ -80,9 +80,9 @@ Home Page
                 <div class="card custom-card">
                     <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="certificate icon">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><strong><u>Certifications</u></strong></h5>
+                        <h5 class="card-title text-center"><strong><u>Cert. Providers</u></strong></h5>
                         <p class="card-text">Information on Companies that provide industry standard certifications to help progress your career in development</p>
-                        <a href="#" class="btn btn-secondary rounded mx-auto d-block">View details &raquo;</a>
+                        <a href="{% url 'providers:providers-list' %}" class="btn btn-secondary rounded mx-auto d-block">View details &raquo;</a>
                     </div>
                 </div>
             </div>

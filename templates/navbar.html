@@ -10,7 +10,7 @@
           <a class="nav-link" href="{% url 'index' %}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Certifications</a>
+          <a class="nav-link" href="{% url 'providers:providers-list' %}">Certifications</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
@@ -21,7 +21,7 @@
             <li><a class="library" href="{% url 'resources-media' %}">Media</a></li>
             <li><a class="library" href="{% url 'resources-frameworks' %}">Frameworks</a></li>
             <li><a class="library" href="{% url 'resources-ide' %}">IDE</a></li>
-            <li><a class="library" href="#">Tools</a></li>
+            <li><a class="library" href="{% url 'resources-tools' %}">Tools</a></li>
             <li><a class="library" href="{% url 'resources-learning' %}">Learning</a></li>
             <li><a class="library" href="{% url 'resources-badges' %}">Badges</a></li>
           </ul>
