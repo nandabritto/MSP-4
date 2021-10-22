@@ -22,6 +22,7 @@ body, html {
   text-shadow: 3px 3px 8px #000000;
   margin-bottom: 0 !important; /* added important to over-ride the bootstap default */
   background: black;
+  background-size: cover;
 }
 
 /* Styling required for the media page within the resources section */
