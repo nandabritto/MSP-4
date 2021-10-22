@@ -8,6 +8,10 @@ body, html {
     display: none;
 }
 
+.studyworld {
+  color: white;
+}
+
 .resource-icon {
     max-width: 200px;
 }
