@@ -4,10 +4,9 @@
 <!-- Loads the available static file(s) -->
 {% load static %}
 
-<!-- Loads customised JS and CSS file(s) -->
+<!-- Loads page specific customised JS and CSS file(s) -->
 {% block scripts %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-    <script src="{% static 'js/providerlist.js' %}" defer></script> 
 {% endblock scripts %}
 
 <!-- Updates the title appearing in the window/browser tab -->
@@ -15,12 +14,9 @@
 Provider List
 {% endblock title %}
 
-
-
 {% block content %}
 
 <!-- Header Jumbotron for page, Text and background picture specific to this page -->
-Exam list to appear here
 <div class="jumbotron" id="jumbotron-resources">
   <div class="container">
       <h1 class="display-4 text-center"> 
@@ -54,6 +50,24 @@ Exam list to appear here
             </div>
         </div>
         {% endfor %}
+        <!-- the following implemements pagination. Current level is 6 Providers -->
+        <div class="pagination">
+            <span class="step-links">
+                {% if page_obj.has_previous %}
+                    <a href="?page=1">&laquo; first</a>
+                    <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+                {% endif %}
+        
+                <span class="current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+        
+                {% if page_obj.has_next %}
+                    <a href="?page={{ page_obj.next_page_number }}">next</a>
+                    <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+                {% endif %}
+            </span>
+        </div>
     </div>
 </div>
 {% endblock content %}
