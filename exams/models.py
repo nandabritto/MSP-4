@@ -26,7 +26,7 @@ TOPIC_CHOICES = (
 
 class Exam(models.Model):
     name = models.CharField(max_length=50)
-    topic = models.CharField(max_length=50, choices=TOPIC_CHOICES)
+    topic = models.CharField(max_length=20, choices=TOPIC_CHOICES)
     description = models.CharField(max_length=200)
     difficulty = models.CharField(max_length=10, choices=DIFF_CHOICES)
     number_of_questions = models.IntegerField()
