@@ -2,6 +2,9 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial;
+    /* background-image: url('../images/mediapage/backgrounds/storm.png');
+    background-repeat: none;
+    background-size: cover; */
   }
    
 .not-visible {
@@ -31,7 +34,7 @@ body, html {
 /* Styling required for the media page within the resources section */
 /* Style tab links */
 .tablink {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(65, 65, 65);
     color: white;
     float: left;
     border: none;
@@ -56,11 +59,27 @@ body, html {
   #resourcemedia {
       padding-left: 20%;
   }
-  #images {background-color: red;}
-  #animations {background-color: green;}
-  #audio {background-color: blue;}
-  #spinners {background-color: orange;}
-  #templates {background-color: red;}
+  /* Background details for the expanded Media Tabs */
+  #images {
+    /* background-color: rgba(49, 31, 31, 0.6); */
+    background-image: url('../images/mediapage/backgrounds/plank.png');
+  }
+  #animations {
+    background-color: green;
+    background-image: url('../images/mediapage/backgrounds/storm.png');
+  }
+  #audio {
+    background-color: blue;
+    background-image: url('../images/mediapage/backgrounds/redcanvas.png');
+  }
+  #spinners {
+    background-color: orange;
+    background-image: url('../images/mediapage/backgrounds/bluishpaper.png');
+  }
+  #templates {
+    background-color: red;
+    background-image: url('../images/mediapage/backgrounds/rocks.png');
+  }
 
   .item-name {
     text-decoration: underline;
