@@ -17,7 +17,7 @@ Provider List
 {% block content %}
 
 <!-- Header Jumbotron for page, Text and background picture specific to this page -->
-<div class="jumbotron" id="jumbotron-resources">
+<div class="jumbotron jumbotron-fluid" id="jumbotron-resources">
   <div class="container">
       <h1 class="display-4 text-center"> 
           Providers 
@@ -32,9 +32,17 @@ Provider List
 {% include "navbar.html" %}
 <hr>
 
+<!-- Create New Provider button, only visible to Admin User -->
+<div class="row justify-content-center">
+    <div class="col-lg-9">
+        <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">Add New Provider</a>
+    </div>
+</div>
+
+
 <!-- Displays the available providers as cards on the page -->
 <!-- Will display single card for provider exam -->
-<div class="resource-list px-5">
+<div class="provider-list px-5">
     <div class="row px-5">
         {% for obj in object_list %}
         <div class="col-lg-4 py-3">
