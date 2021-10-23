@@ -13,7 +13,7 @@ Home Page
 
 {% block content %}
 <!-- Jumbotron image included in HTML as it will be different on each page -->
-<div class="jumbotron" style="background-image: url('#');">
+<div class="jumbotron jumbotron-fluid" style="background-image: url('#');">
     <div class="container">
         <h1 class="display-3 text-center"> 
             <strong>Hello Developers!</strong>
@@ -43,24 +43,49 @@ Home Page
 <div class="container">
 
     <!--Simple Form-->
-    <h2 class="my-4">Add a new provider</h2>
+    <h2 class="my-4 text-center">Add a new provider</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{form.as_p}}
-
-            <!-- <label for="name">Provider name:</label><br>
-            <input type="text" id="name"><br>
-            <label for="description">Provider Description:</label><br>
-            <input type="text" id="description"><br>
-            <label for="url">Provider URL</label><br>
-            <input type="text" id="url"><br>
-            <label for="logo">Provider logo</label><br>
-            <input type="file" id="logo" name="upload" accept="image/*"> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider name:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider Description:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.description }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider URL:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.url }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider logo:</p>
+                </div>
+                <div class="col-md-4 pt-3">
+                    {{ form.logo }}
+                </div>
+            </div>
             <br>
+        </div>  
+        <div class="text-right pr-5">
             <button class="btn btn-dark my-4" type="submit">Submit</button>
             <strong>{{message}}</strong>
+        </div> 
     </form>
-
 </div>
 
 {% endblock content %}
