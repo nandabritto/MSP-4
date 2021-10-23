@@ -55,28 +55,35 @@ Exam List
 
 <!-- Displays the available exams as cards on the page -->
 <!-- Will display single card for each exam -->
-<div class="card-deck">
-  {% for obj in object_list %}
-  <div class="card text-center" style="width: 18rem;">
-    <img class="card-img-top" src="../static/images/{{obj.topic}}.png" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{obj.name}}</h5>
-      <p class="card-text">{{obj.description}}</p>
-      <a href="#" class="btn btn-outline-primary btn-link modal-button"
-          data-pk="{{obj.pk}}"
-          data-exam="{{obj.name}}"
-          data-questions="{{obj.number_of_questions}}"
-          data-difficulty="{{obj.difficulty}}"
-          data-time="{{obj.time}}"
-          data-pass = "{{obj.required_score_to_pass}}"
-          data-toggle="modal"
-          data-target="#examStartModal">
-          Take the Exam
-      </a>
-    </div>
+<div class="provider-list px-5">
+  <div class="row px-5">
+      {% for obj in object_list %}
+      <div class="col-lg-4 py-3">
+          <div class="card alert alert-dark h-100 px-1">
+              <img class="card-img-top providerlogo rounded mx-auto d-block" src="{{ obj.logo.url }}" alt="Provider Logo">
+              <div class="card-body">
+                  <h5 class="card-title text-center"><strong><u>{{obj.name}}</u></strong></h5>
+                  <p class="card-text">{{obj.description}}</p>
+                  <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-outline-primary btn-link modal-button"
+                    data-pk="{{obj.pk}}"
+                    data-exam="{{obj.name}}"
+                    data-questions="{{obj.number_of_questions}}"
+                    data-difficulty="{{obj.difficulty}}"
+                    data-time="{{obj.time}}"
+                    data-pass = "{{obj.required_score_to_pass}}"
+                    data-toggle="modal"
+                    data-target="#examStartModal">
+                    Take the Exam
+                </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      {% endfor %}
   </div>
-  {% endfor %}
 </div>
+
 <!-- the following implemements pagination. Current level is 6 Providers per page -->
 <div class="container">
   <div class="row justify-content-center">
