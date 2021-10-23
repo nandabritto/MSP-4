@@ -13,13 +13,13 @@ DIFF_CHOICES = (
 )
 
 TOPIC_CHOICES = (
-    ('language', 'Laguages'),
-    ('computers', 'Computers'),
-    ('testing', 'Testing'),
-    ('mathematics', 'Mathematics'),
-    ('blockchain', 'Blockchain'),
-    ('scrum', 'Scrum'),
-    ('hacking', 'Hacking'),
+    ('language', 'laguages'),
+    ('computers', 'computers'),
+    ('testing', 'testing'),
+    ('mathematics', 'mathematics'),
+    ('blockchain', 'blockchain'),
+    ('scrum', 'scrum'),
+    ('hacking', 'hacking'),
 )
 
 # add in choices for the topic (to align with the pictures.)
