@@ -19,3 +19,19 @@ class ProvidersListPageTests(TestCase):
         response = self.client.get(reverse('providers:providers-list'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'provider-list.html')
+
+# Testes to confirm Providers create page loads
+class ProvidersCreatPageTests(TestCase):
+
+    def test_provider_create_page_status_code(self):
+        response = self.client.get('/providers/create/')
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_create_page_url_by_name(self):
+        response = self.client.get(reverse('providers:providers-list'))
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_create_page_uses_correct_template(self):
+        response = self.client.get(reverse('providers:providers-create'))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'create.html')
