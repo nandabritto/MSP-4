@@ -10,7 +10,6 @@ app_name = 'providers'
 urlpatterns = [
     path('providers/', ProvidersListView.as_view(), name='providers-list'),
     path('providers/create/', providers_create, name='providers-create'),
-    path('success', providers_success, name='providers-success'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

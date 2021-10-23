@@ -26,7 +26,20 @@ Home Page
 </div>
 
 {% include "navbar.html" %}
-
+<!-- Confirmation button for successfully creating a new provider  -->
+{% if messages %}
+<div class="container">
+    <div class="row">
+        <div class="col align-self-center pb-0">
+            <div class="alert alert-success messages" role="alert">
+                {% for message in messages %}
+                <p  {% if message.tags %} class=" {{ message.tags }} text-center" {% endif %}>{{ message }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
 <div class="container">
 
     <!--Simple Form-->
