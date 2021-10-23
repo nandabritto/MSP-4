@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import random
+from providers.models import Providers
 
 # Allowed difficulty selections
 DIFF_CHOICES = (
@@ -11,11 +12,21 @@ DIFF_CHOICES = (
     ('OMG!!!', 'OMG!!!'),
 )
 
+TOPIC_CHOICES = (
+    ('Language', 'Laguages'),
+    ('Computers', 'Computers'),
+    ('Testing', 'Testing'),
+    ('Mathematics', 'Mathematics'),
+    ('Blockchain', 'Blockchain'),
+    ('Scrum', 'Scrum'),
+    ('Hacking', 'Hacking'),
+)
+
 # add in choices for the topic (to align with the pictures.)
 
 class Exam(models.Model):
     name = models.CharField(max_length=50)
-    topic = models.CharField(max_length=50)
+    topic = models.CharField(max_length=50, choices=TOPIC_CHOICES)
     description = models.CharField(max_length=200)
     difficulty = models.CharField(max_length=10, choices=DIFF_CHOICES)
     number_of_questions = models.IntegerField()
