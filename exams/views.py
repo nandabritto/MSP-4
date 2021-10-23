@@ -8,6 +8,7 @@ from django.contrib.auth.models import User
 
 # Displays all currently available exams
 class ExamListView(ListView):
+    paginate_by = 6
     model = Exam 
     template_name = 'exam-list.html'
 

@@ -19,8 +19,7 @@ Exam List
 {% block content %}
 
 <!-- Header Jumbotron for page, Text and background picture specific to this page -->
-Exam list to appear here
-<div class="jumbotron" id="jumbotron-resources">
+<div class="jumbotron jumbotron-fluid" id="jumbotron-resources">
   <div class="container">
       <h1 class="display-4 text-center"> 
           Exam exams exams! 
@@ -57,25 +56,68 @@ Exam list to appear here
 <!-- Displays the available exams as cards on the page -->
 <!-- Will display single card for each exam -->
 <div class="card-deck">
-    {% for obj in object_list %}
-    <div class="card text-center" style="width: 18rem;">
-      <img class="card-img-top" src="../static/images/{{obj.topic}}.png" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{obj.name}}</h5>
-        <p class="card-text">{{obj.description}}</p>
-        <a href="#" class="btn btn-outline-primary btn-link modal-button"
-            data-pk="{{obj.pk}}"
-            data-exam="{{obj.name}}"
-            data-questions="{{obj.number_of_questions}}"
-            data-difficulty="{{obj.difficulty}}"
-            data-time="{{obj.time}}"
-            data-pass = "{{obj.required_score_to_pass}}"
-            data-toggle="modal"
-            data-target="#examStartModal">
-            Take the Exam
-        </a>
-      </div>
+  {% for obj in object_list %}
+  <div class="card text-center" style="width: 18rem;">
+    <img class="card-img-top" src="../static/images/{{obj.topic}}.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{obj.name}}</h5>
+      <p class="card-text">{{obj.description}}</p>
+      <a href="#" class="btn btn-outline-primary btn-link modal-button"
+          data-pk="{{obj.pk}}"
+          data-exam="{{obj.name}}"
+          data-questions="{{obj.number_of_questions}}"
+          data-difficulty="{{obj.difficulty}}"
+          data-time="{{obj.time}}"
+          data-pass = "{{obj.required_score_to_pass}}"
+          data-toggle="modal"
+          data-target="#examStartModal">
+          Take the Exam
+      </a>
     </div>
-    {% endfor %}
-    </div>
+  </div>
+  {% endfor %}
+</div>
+<!-- the following implemements pagination. Current level is 6 Providers per page -->
+<div class="container">
+  <div class="row justify-content-center">
+    <nav aria-label="Page navigation">
+      <ul class="pagination">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page=1" aria-label="Start">
+              <span aria-hidden="true">&laquo;</span>
+            </a>
+          </li>
+          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
+            {% else %}
+              <li class="page-item disabled">
+                <a class="page-link" href="?page=1" aria-label="Start">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+            {% endif %}
+          <li class="page-item active">
+            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+          </li>
+          {% if page_obj.has_next %}
+            <li class="page-item">
+              <a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+            </li>
+              <li class="page-item">
+                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            <!-- The below disables the "to end" button if there are no more pages -->
+            {% else %}
+              <li class="page-item disabled">
+                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+          {% endif %}
+      </ul>
+    </nav>
+  </div>
+</div>
 {% endblock content %}
