@@ -44,6 +44,7 @@ class Exam(models.Model):
         return questions[:self.number_of_questions]
 
     class Meta:
+        ordering = ['name']
         verbose_name_plural = 'Exams'
 
 # the following models are for the actual exam questions/answers

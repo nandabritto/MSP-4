@@ -103,7 +103,7 @@ const sendData = () => {
 
     $.ajax({
         type: 'POST',
-        url: `${url}save/`,
+        url: `${url}/save/`,
         data: data,
         success: function(response){
             // Populates the reset and back to exam list buttons once answers have been submitted

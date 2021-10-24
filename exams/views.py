@@ -40,8 +40,7 @@ def save_exam_view(request, pk):
         questions = []
         data = request.POST
         data_ = dict(data.lists())
-
-        data_.pop('csrfmiddlewaretoken')
+        # data_.pop('csrfmiddlewaretoken')
 
         for k in data_.keys():
             print('key: ', k)
