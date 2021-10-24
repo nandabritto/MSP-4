@@ -16,6 +16,7 @@ urlpatterns = [
     path('resources/tools', views.resourcesTools, name='resources-tools'),
     path('', include('exams.urls', namespace='exams')),
     path('', include('providers.urls', namespace='providers')),
+    path('', include('members.urls', namespace='members')),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
