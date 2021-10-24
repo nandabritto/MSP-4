@@ -29,6 +29,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'exams',
     'providers',
+    'members',
 ]
 
 MIDDLEWARE = [
@@ -114,6 +115,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'exams/static'),
     os.path.join(BASE_DIR, 'providers/static'),
+    os.path.join(BASE_DIR, 'members/static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
