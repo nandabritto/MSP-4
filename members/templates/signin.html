@@ -1,0 +1,49 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% block title %}
+Join
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+
+{% block content %}
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-9 mx-auto">
+        <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+          <div class="card-img-left d-none d-md-flex">
+            <!-- Left side image - set in style.css -->
+          </div>
+          <div class="card-body p-4 p-sm-5">
+            <h5 class="card-title text-center mb-5 fw-light fs-5">Become a member</h5>
+            <!-- form to collect the details of a new user -->
+            <form method = "post" action="{% url 'login' %}">
+              {% csrf_token %}
+              <div class="form-floating mb-3">
+                  <label for="usernameInput">Username:</label>
+                    <input type="text" class="form-control" id="usernameInput" placeholder="Username">
+              </div>
+              <div class="form-floating mb-3">
+                  <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+              <div class="d-grid mb-2 row justify-content-end">
+                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Log In</button>
+              </div>
+              <br>
+              <!-- link below to redirect user to sign in page -->
+              <a class="d-block text-center mt-2 small" href="#">Not a member? Register Today</a>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+      {% endblock content %}
+      <!-- FOOTER details are obtained from base template and inserted here-->

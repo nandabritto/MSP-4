@@ -9,4 +9,5 @@ app_name = 'members'
 
 urlpatterns = [
     path('members/', member_registration, name='member-register'),
+    path('members/signin', member_signin, name='member-signin'),
 ]
