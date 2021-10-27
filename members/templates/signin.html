@@ -25,16 +25,19 @@ Sign In
             <!-- form to collect the details of a new user -->
             <form method = "POST" action="">
               {% csrf_token %}
-              <div class="form-floating mb-3">
-                  <label for="usernameInput">Username:</label>
-                    <input type="text" class="form-control" id="usernameInput" placeholder="Username">
+              <div class="row input-group mb-3">
+                <div class="col-md-5 input-group-append">
+                  <span class="input-group-text form-control">Username: </span>
+                </div>
+                <input type="text" name="username" placeholder="Username..." class="form-control">
               </div>
-              <div class="form-floating mb-3">
-                  <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-              <div class="d-grid mb-2 row justify-content-end">
-                <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign In</button>
+              <div class="row input-group mb-3">
+                <div class="col-md-5 input-group-append">
+                  <span class="input-group-text form-control">Password: </span>
+                </div>
+                  <input type="password" name="password" placeholder="Password..." class="form-control" >
               </div>
+              <button class="btn btn-lg btn-primary btn-login fw-bold float-right" type="submit">Sign In</button>
               <br>
               {% for message in messages %}
                 <p>{{message}}</p>
