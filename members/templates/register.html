@@ -4,9 +4,14 @@
 <!-- loads all the static resources -->
 {% load static %}
 
+<!-- Loads specified JavaScript file(s) -->
+{% block scripts %}
+    <script src="{% static 'js/register.js' %}" defer></script> 
+{% endblock scripts %}
+
 <!-- Updates the page title -->
 {% block title %}
-Join
+Register
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
@@ -26,29 +31,36 @@ Join
                     <!-- form to collect the details of a new user -->
                     <form method = "POST" action="">
                     {% csrf_token %}
-                    {{form.as_p}}
-                        <!-- <div class="form-floating mb-3">
-                            <label for="usernameInput">Username:</label>
-                            <input type="text" class="form-control" id="usernameInput" placeholder="Username" required autofocus>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <label for="emailInput">Email address:</label>
-                            <input type="email" class="form-control" id="emailInput" placeholder="name@example.ie">
-                        </div>
-                        <div class="form-floating mb-3">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                        </div>
-                        <div class="form-floating mb-3">
-                            <label for="confirmPassword">Confirm Password</label>
-                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Password">
-                        </div>
+						<div class="row input-group mb-3">
+							<div class="col-md-5 input-group-append">
+								<span class="input-group-text form-control">Username: </span>
+							</div>
+							{{ form.username }}
+						</div>
+						<div class="row input-group mb-2">
+							<div class="col-md-5 input-group-append">
+								<span class="input-group-text form-control">Email: </span>
+							</div>
+							{{ form.email }}
+						</div>
+						<div class="row input-group mb-2">
+							<div class="col-md-5 input-group-append">
+								<span class="input-group-text form-control">Password: </span>
+							</div>
+							{{ form.password1 }}
+						</div>
+						<div class="row input-group mb-2">
+							<div class="col-md-5 input-group-append">
+								<span class="input-group-text form-control">Confirm Password: </span>
+							</div>
+							{{ form.password2 }}
+						</div>
                         <div class="d-grid mb-2 row justify-content-end">
-                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign Me Up!</button>
-                        </div> -->
+                            <input class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Sign Me Up!"></input>
+                        </div>
                         <br>
                     <!-- link below to redirect user to sign in page -->
-                        <input class="d-block text-center mt-2 small" type="submit">Already a member? Sign In</input>
+                        <a class="d-block text-center mt-2 small" href="#">Already a member? Sign In</a>
                     </form>
                 </div>
             </div>
