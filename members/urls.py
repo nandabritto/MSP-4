@@ -8,6 +8,6 @@ app_name = 'members'
 # Exam app specific urls
 
 urlpatterns = [
-    path('members/', member_registration, name='member-register'),
+    path('members/register', member_registration, name='member-register'),
     path('members/signin', member_signin, name='member-signin'),
 ]

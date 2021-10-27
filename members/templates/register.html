@@ -12,20 +12,7 @@ Join
 <!-- The following is the unique content for this page -->
 
 {% block content %}
-<!-- Jumbotron image included in HTML as it will be different on each page -->
-<div class="jumbotron jumbotron-fluid" style="background-image: url('#');">
-    <div class="container">
-        <h1 class="display-3 text-center"> 
-            <strong>Welcome Admin!</strong>
-        </h1>
-        <h5 class="text-center">
-            <strong>Use this page to add Certification Providers</strong>
-        </h5>
-        <p><a class="btn btn-info btn-lg mr-20 float-right" href="#" role="button">Join</a></p>
-    </div>
-</div>
 
-<!-- {% include "navbar.html" %} -->
 <!-- Form which enables a new member to register  -->
 <div class="container">
     <div class="row">
@@ -37,9 +24,10 @@ Join
                 <div class="card-body p-4 p-sm-5">
                     <h5 class="card-title text-center mb-5 fw-light fs-5">Become a member</h5>
                     <!-- form to collect the details of a new user -->
-                    <form method = "post">
+                    <form method = "POST" action="">
                     {% csrf_token %}
-                        <div class="form-floating mb-3">
+                    {{form.as_p}}
+                        <!-- <div class="form-floating mb-3">
                             <label for="usernameInput">Username:</label>
                             <input type="text" class="form-control" id="usernameInput" placeholder="Username" required autofocus>
                         </div>
@@ -57,10 +45,10 @@ Join
                         </div>
                         <div class="d-grid mb-2 row justify-content-end">
                             <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign Me Up!</button>
-                        </div>
+                        </div> -->
                         <br>
                     <!-- link below to redirect user to sign in page -->
-                        <a class="d-block text-center mt-2 small" href="#">Already a member? Sign In</a>
+                        <input class="d-block text-center mt-2 small" type="submit">Already a member? Sign In</input>
                     </form>
                 </div>
             </div>
