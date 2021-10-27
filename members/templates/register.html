@@ -54,6 +54,9 @@ Register
                             <input class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Sign Me Up!"></input>
                         </div>
                         <br>
+                        <!-- Formm Error handling -->
+                        {{ form.errors}}
+
                     <!-- link below to redirect user to sign in page -->
                         <a class="d-block text-center mt-2 small" href="{% url 'members:member-signin' %}">Already a member? Sign In</a>
                     </form>

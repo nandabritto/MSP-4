@@ -12,7 +12,9 @@ def member_registration(request):
         form = RegisterMemberForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('member-signin')
+            member = form.cleaned_data.get('username')
+            messages.success(request, 'Membership created for ' + member)
+            return redirect('members:member-signin')
 
     context = {'form':form}
     return render(request, 'register.html', context)

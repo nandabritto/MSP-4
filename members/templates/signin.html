@@ -36,6 +36,10 @@ Sign In
                 <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign In</button>
               </div>
               <br>
+              {% for message in messages %}
+                <p>{{message}}</p>
+              {% endfor %}
+
               <!-- link below to redirect user to sign in page -->
               <a class="d-block text-center mt-2 small" href="{% url 'members:member-register' %}">Not a member? Register Today</a>
               </form>
