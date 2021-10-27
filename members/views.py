@@ -12,10 +12,12 @@ def member_registration(request):
         form = RegisterMemberForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('member-signin')
 
     context = {'form':form}
     return render(request, 'register.html', context)
 
 # Placeholder View for basic display of the login page
 def member_signin(request):
-    return render(request, 'signin.html')
+    context = {}
+    return render(request, 'signin.html', context)
