@@ -6,9 +6,9 @@ from . import views
 # Create your tests here.
 # Tests the url for the exam list page
 class ExamListPageTests(TestCase):
-
+    
     def test_home_page_status_code(self):
-        response = self.client.get('/exams')
+        response = self.client.get('exams')
         self.assertEquals(response.status_code, 200)
 
     def test_view_url_by_name(self):

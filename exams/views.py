@@ -11,8 +11,8 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # Displays all currently available exams
-@login_required(login_url='members:member-signin')
-def ExamListView(ListView):
+
+class ExamListView(ListView):
     paginate_by = 6
     model = Exam 
     template_name = 'exam-list.html'

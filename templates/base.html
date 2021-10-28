@@ -30,7 +30,8 @@
           <div class="col-8"><a class="navbar-brand mx-2 my-1 studyworld" href="{% url 'index' %}">studyWorld</a></div>
           <div class="col-4">
               <span> Hello, {{request.user}}</span>
-            <a class="btn btn-md btn-primary btn-login fw-bold float-right" href="{% url 'members:member-signout' %}" type="submit">Logout</a>
+              <a class="btn btn-md btn-primary btn-login fw-bold float-right" href="{% url 'members:member-signin' %}" type="submit">Sign In</a>
+            <a class="btn btn-md btn-primary btn-login fw-bold float-right" href="{% url 'members:member-signout' %}" type="submit">Sign Out</a>
             <!-- <button class="btn btn-lg btn-primary btn-login fw-bold float-right" type="submit">Sign In</button> -->
           </div>
         </div>
