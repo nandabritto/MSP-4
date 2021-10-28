@@ -26,16 +26,10 @@ Sign In
             <form method = "POST" action="">
               {% csrf_token %}
               <div class="row input-group mb-3">
-                <div class="col-md-5 input-group-append">
-                  <span class="input-group-text form-control">Username: </span>
-                </div>
                 <input type="text" name="username" placeholder="Username..." class="form-control">
               </div>
               <div class="row input-group mb-3">
-                <div class="col-md-5 input-group-append">
-                  <span class="input-group-text form-control">Password: </span>
-                </div>
-                  <input type="password" name="password" placeholder="Password..." class="form-control" >
+                <input type="password" name="password" placeholder="Password..." class="form-control" >
               </div>
               <button class="btn btn-lg btn-primary btn-login fw-bold float-right" type="submit">Sign In</button>
               <br>

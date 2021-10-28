@@ -31,5 +31,7 @@ def member_signin(request):
         if user is not None:
             login(request, user)
             return redirect('index')
+        else:
+            messages.info(request, 'Username or Password is incorrect')
     context = {}
     return render(request, 'signin.html', context)
