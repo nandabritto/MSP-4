@@ -1,23 +1,30 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic import ListView
 from django.http import JsonResponse
 from .models import Question, Answer, Result, Exam
+from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login, logout
 
+from django.contrib.auth.decorators import login_required
 # Create your views here.
 
 # Displays all currently available exams
-class ExamListView(ListView):
+@login_required(login_url='members:member-signin')
+def ExamListView(ListView):
     paginate_by = 6
     model = Exam 
     template_name = 'exam-list.html'
 
 # displays the exam page to the user
+@login_required(login_url='members:member-signin')
 def exam_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     return render(request, 'exam-display.html', {'obj': exam})
 
 # shows each question that is available for that particular exam
+@login_required(login_url='members:member-signin')
 def exam_data_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     questions = []
@@ -32,6 +39,7 @@ def exam_data_view(request, pk):
     })
 
 # displays the results
+@login_required(login_url='members:member-signin')
 def save_exam_view(request, pk):
     # The following details the actual exam
     # Because of the use of randomisation in the models.py,
