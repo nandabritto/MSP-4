@@ -35,3 +35,7 @@ def member_signin(request):
             messages.info(request, 'Username or Password is incorrect')
     context = {}
     return render(request, 'signin.html', context)
+
+def member_signout(request):
+    logout(request)
+    return redirect('index')
