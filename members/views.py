@@ -6,6 +6,8 @@ from .forms import RegisterMemberForm
 
 from django.contrib.auth import authenticate, login, logout
 
+from django.contrib.auth.decorators import login_required
+
 # View for basic display of the registration page
 def member_registration(request):
     form = RegisterMemberForm()
