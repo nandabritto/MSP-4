@@ -1,0 +1,78 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Updates the page title -->
+{% block title %}
+Update Provider
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+
+{% block content %}
+<!-- Jumbotron image included in HTML as it will be different on each page -->
+<div class="jumbotron jumbotron-fluid" style="background-image: url('#');">
+    <div class="container">
+        <h1 class="display-3 text-center"> 
+            <strong>Welcome Admin!</strong>
+        </h1>
+        <h5 class="text-center">
+            <strong>Use this page to Edit Existing Certification Providers</strong>
+        </h5>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<div class="container">
+
+    <!--Simple Form-->
+    <h2 class="my-4 text-center">Add a new provider</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider name:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.name }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider Description:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.description }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider URL:</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    {{ form.url }}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 pt-3 text-center">
+                    <p>Provider logo:</p>
+                </div>
+                <div class="col-md-4 pt-3">
+                    {{ form.logo }}
+                </div>
+            </div>
+            <br>
+        </div>  
+        <div class="text-right pr-5">
+            <button class="btn btn-dark my-4" type="submit">Submit</button>
+            <strong>{{message}}</strong>
+        </div> 
+    </form>
+</div>
+
+{% endblock content %}
+<!-- FOOTER details are obtained from base template and inserted here-->
