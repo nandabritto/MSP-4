@@ -23,6 +23,7 @@ def providers_create(request):
             form.save()
             messages.success(request, 'New Provider Created Successfully')
             form = providerCreateForm()
+            return redirect('providers:providers-list')
     else:
         form = providerCreateForm()
     return render(request, 'create.html', {'form' : form})
