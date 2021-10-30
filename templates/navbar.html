@@ -1,34 +1,29 @@
 <!-- loads all the static resources -->
 {% load static %}
-<nav class="navbar navbar-expand t-0">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="toggle-navigation">
-    <span class="navbar-toggler-icon">Menu</span>
-  </button>
-    <div class="collapse navbar-collapse" id="navbar-content">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'index' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'providers:providers-list' %}">Certifications</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="dropdown-toggle nav-link" data-toggle="dropdown">Library<span class="caret"></span></a>
-          <ul class="dropdown-menu library">
-            <li><a class="library" href="{% url 'resources-media' %}">Media</a></li>
-            <li><a class="library" href="{% url 'resources-frameworks' %}">Frameworks</a></li>
-            <li><a class="library" href="{% url 'resources-ide' %}">IDE</a></li>
-            <li><a class="library" href="{% url 'resources-tools' %}">Tools</a></li>
-            <li><a class="library" href="{% url 'resources-learning' %}">Learning</a></li>
-            <li><a class="library" href="{% url 'resources-badges' %}">Badges</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Community Center</a>
-        </li>
-      </ul>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{% url 'index' %}">Home</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{% url 'providers:providers-list' %}">Certifications</a>
+          </li>
+          <li class="nav-item px-2">
+            <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
+          </li>
+          <li class="nav-item dropdown px-2">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Library</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="{% url 'resources-media' %}">Media</a>
+              <a class="dropdown-item" href="{% url 'resources-frameworks' %}">Frameworks</a>
+              <a class="dropdown-item" href="{% url 'resources-ide' %}">IDE</a>
+              <a class="dropdown-item" href="{% url 'resources-tools' %}">Tools</a>
+              <a class="dropdown-item" href="{% url 'resources-learning' %}">Learning</a>
+              <a class="dropdown-item" href="{% url 'resources-badges' %}">Badges</a>
+            </div>
+          </li>
+        </ul>
     </div>
   </nav>

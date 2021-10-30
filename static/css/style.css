@@ -93,43 +93,19 @@ body, html {
 
 
   /* Formatting for the Mid navigation bar */
-.navbar {
+ /* .navbar {
   background-color:rgb(49, 49, 49);
+} */
+
+.nav-link {
+  color: white !important;
 }
 
-.navbar-nav {
-  margin:auto;
+.nav-link:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black !important;
+  /* color:#fff; */
 }
-.nav-link {
-  margin:5px 25px;
-  color:#fff;
-}
-  .nav-link:hover {
-    color:rgb(14, 122, 0);
-  }
-.box {
-  width:100%;
-  background-color:rgb(0, 0, 0);
-  position:relative;
-}
-.box-1 {
-  width:50%;
-  background-color:rgb(49, 49, 49);
-  height:100%;
-}
-.box-2 {
-  position:absolute;
-  background-color:rgb(49, 49, 49);
-  height:100%;
-  width:50%;
-}
-/* dropdown menu specific settings */
-.library {
-  color:#fff;
-  background-color:rgb(49, 49, 49);
-  padding-left: 0.5em;
-}
-.library:hover {
-  color:rgb(14, 122, 0);
-}
+
+
 
