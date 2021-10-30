@@ -23,7 +23,7 @@ def member_registration(request):
         context = {'form':form}
         return render(request, 'register.html', context)
 
-# Placeholder View for basic display of the login page
+# View for basic display of the login page
 def member_signin(request):
     if request.user.is_authenticated:
         return redirect('index')
@@ -41,6 +41,8 @@ def member_signin(request):
         context = {}
         return render(request, 'signin.html', context)
 
+
+# View to enable member to signout
 def member_signout(request):
     logout(request)
     return redirect('index')

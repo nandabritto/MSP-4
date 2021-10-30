@@ -5,7 +5,7 @@ from .views import *
 
 app_name = 'members'
 
-# Exam app specific urls
+# Members app specific urls
 
 urlpatterns = [
     path('members/register', member_registration, name='member-register'),

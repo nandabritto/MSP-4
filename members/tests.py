@@ -19,17 +19,17 @@ class MemberRegistrationPageTests(TestCase):
         self.assertTemplateUsed(response, 'register.html')
 
 # Test for the signin page load
-class MemberSignupPageTests(TestCase):
+class MemberSigninPageTests(TestCase):
     
-    def test_signup_page_status_code(self):
+    def test_signin_page_status_code(self):
         response = self.client.get('member-signin')
         self.assertEquals(response.status_code, 200)
 
-    def test_signup_url_by_name(self):
+    def test_signin_url_by_name(self):
         response = self.client.get(reverse('members:member-signin'))
         self.assertEquals(response.status_code, 200)
 
-    def test_signup_uses_correct_template(self):
+    def test_signin_uses_correct_template(self):
         response = self.client.get(reverse('members:member-signin'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'signin.html')
