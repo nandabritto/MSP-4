@@ -97,14 +97,29 @@ body, html {
   background-color:rgb(49, 49, 49);
 } */
 
+/* Used important in order to override Bootstrap defaults */
 .nav-link {
   color: white !important;
+  font-size: large;
 }
 
+/* Used important in order to override Bootstrap defaults */
 .nav-link:hover {
   background-color: rgb(255, 255, 255, 0.5);
   color: black !important;
   /* color:#fff; */
+}
+.dropdown-item:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black !important;
+  /* color:#fff; */
+}
+.dropdown-menu {
+  background-color: rgb(52, 58, 64);
+  color: white !important;
+}
+.dropdown-item {
+  color: white !important;
 }
 
 
