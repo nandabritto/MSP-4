@@ -12,6 +12,7 @@ DIFF_CHOICES = (
     ('OMG!!!', 'OMG!!!'),
 )
 
+# Allowed topic selections
 TOPIC_CHOICES = (
     ('language', 'laguages'),
     ('computers', 'computers'),

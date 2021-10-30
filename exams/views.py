@@ -8,7 +8,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 
 from django.contrib.auth.decorators import login_required
-# Create your views here.
 
 # Displays all currently available exams
 
@@ -17,7 +16,7 @@ class ExamListView(ListView):
     model = Exam 
     template_name = 'exam-list.html'
 
-# displays the exam page to the user
+# displays the individual exam page to the user
 def exam_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     return render(request, 'exam-display.html', {'obj': exam})
