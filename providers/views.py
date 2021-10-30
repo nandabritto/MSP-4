@@ -28,6 +28,7 @@ def providers_create(request):
 
     return render(request, 'create.html', {'form' : form})
 
+# View for Updating an existing Provider
 def providers_update(request, pk):
 
     provider = Providers.objects.get(id=pk)
@@ -45,6 +46,7 @@ def providers_update(request, pk):
     context = {'form':form}
     return render(request, 'update.html', context)
 
+# Vie to delete an existing Provider
 def providers_delete(request, pk):
     provider = Providers.objects.get(id=pk)
     if request.method == "POST":
