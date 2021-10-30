@@ -123,4 +123,14 @@ body, html {
 }
 
 
+/* index page images */
+.indexpic {
+  max-width: 450px;
+  max-height: 450px;
+  box-shadow:  outset 5px 5px 5px 10px #acacac;
+  border-radius: 80% !important;
+  margin: 30px auto;
+  margin-left: 10%;
+}
+
 

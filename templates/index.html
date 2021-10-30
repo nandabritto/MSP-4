@@ -4,6 +4,11 @@
 <!-- loads all the static resources -->
 {% load static %}
 
+<!-- Loads page specific customised JS and CSS file(s) -->
+{% block scripts %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+{% endblock scripts %}
+
 <!-- Updates the page title -->
 {% block title %}
 Home Page
@@ -36,32 +41,42 @@ Home Page
                             <div class="p-3 text-center">
                                 <!-- First/Left Highlight -->
                                 <h2 class="text-gradient text-primary">
-                                    <span id="highlight1">one stop shop</span>
+                                    <span id="highlight1">One Stop Shop</span>
                                 </h2>
                                 <!-- <h5 class="mt-3">Providers</h5> -->
-                                <p class="text-sm">Everything you need to get you started all in a single location</p>
+                                <p class="text-sm">
+                                    Here you will find a wide selection of information to get you started as a software developer. 
+                                    Information on various IDE's, Frameworks, Programming Languages, Tools and various
+                                    Media Resources that can be used in any project.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 position-relative">
+                            <div class="p-3 text-center">
+                                <img src="{% static '/images/index/oneshop.jpeg' %}" class="indexpic img-fluid mt-2 icon rounded mx-auto d-block" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row py-5">
+                        <div class="col-md-6 position-relative">
+                            <div class="p-3 text-center">
+                                <!-- First/Left Highlight -->
+                                <img src="{% static '/images/index/guidance.jpeg' %}" class="indexpic img-fluid mt-2 icon rounded mx-auto d-block" alt="">
                             </div>
                         </div>
                         <div class="col-md-6 position-relative">
                             <div class="p-3 text-center">
                                 <!-- Second/Middle Highlight -->
                                 <h2 class="text-gradient text-primary">
-                                    <span id="highlight1">guidance</span>
+                                    <span id="highlight1">Guidance</span>
                                 </h2>
                                 <!-- <h5 class="mt-3">books</h5> -->
-                                <p class="text-sm">discover what qualifications are available for the career you want</p>
+                                <p class="text-sm">
+                                    Discover courses and career pathways to reinforce your knowledge, along with obtaining recognised skill badges.
+                                    Join the community to share information and communicate with like minded people.
+                                </p>
                             </div>
                         </div>
-                        <!-- <div class="col-md-4">
-                            <div class="p-3 text-center">
-                                Third/Right Highlight
-                                <h1 class="text-gradient text-primary">
-                                    <span id="highlight1">share</span>
-                                </h1>
-                                <h5 class="mt-3">people</h5>
-                                <p class="text-sm"> text w text text </p>
-                            </div>
-                        </div> -->
                     </div>
         </div>
     </section>
@@ -94,7 +109,7 @@ Home Page
                     <img src="{% static '/images/resources/testing.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="test icon">
                     <div class="card-body">
                         <a href="{% url 'exams:list-view' %}"><h5 class="card-title text-center text-dark"><strong><u>Practise Exams</u></strong></h5></a>
-                        <p class="card-text text-center">Use these mini exams to help reinforce your knowledge, understand your limitations and prepare for the real thing</p>
+                        <p class="card-text text-center">Use these mini tests to help reinforce your knowledge, understand your limitations and prepare for the real thing</p>
                     </div>
                 </div>
             </div>
