@@ -38,8 +38,8 @@ Home Page
                 <div class="col-md-6 pt-3 text-center">
                     <p>Provider name:</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    {{ form.name }}
+                <div class="col-md-4 text-left">
+                    {{ form.name.as_text }}
                 </div>
             </div>
             <div class="row">
@@ -47,14 +47,14 @@ Home Page
                     <p>Provider Description:</p>
                 </div>
                 <div class="col-md-4 text-center">
-                    {{ form.description }}
+                    {{ form.description.as_textarea }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 pt-3 text-center">
                     <p>Provider URL:</p>
                 </div>
-                <div class="col-md-4 text-center">
+                <div class="col-md-4 text-left">
                     {{ form.url }}
                 </div>
             </div>

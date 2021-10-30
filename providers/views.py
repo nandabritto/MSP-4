@@ -15,7 +15,6 @@ class ProvidersListView(ListView):
 # View for creating a New Provider on the site
 
 def providers_create(request):
-  
     if request.method == 'POST':
         form = providerCreateForm(request.POST, request.FILES)
   
@@ -26,9 +25,10 @@ def providers_create(request):
             return redirect('providers:providers-list')
     else:
         form = providerCreateForm()
+
     return render(request, 'create.html', {'form' : form})
 
-def providers_update(request, pk):
+def providers_update(request, name):
     form = providerCreateForm()
     context = {}
     return render(request, 'update.html', context)
