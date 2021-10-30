@@ -11,7 +11,7 @@
 
 <!-- Updates the title appearing in the window/browser tab -->
 {% block title %}
-Provider List
+Providers List
 {% endblock title %}
 
 {% block content %}
@@ -35,18 +35,24 @@ Provider List
 <!-- Create New Provider button, only visible to Admin User -->
 <div class="row justify-content-center">
     <div class="col-lg-9">
-        <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">Add New Provider</a>
+        <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">
+            Add New Provider
+        </a>
     </div>
 </div>
 <br>
-<!-- Confirmation button for successfully creating a new provider  -->
+
+<!-- Confirmation message will appear here after successfully creating a new provider  -->
+<!-- Error message will also appear if connectivity issues cause Creation to fail -->
 {% if messages %}
 <div class="container">
     <div class="row">
         <div class="col align-self-center pb-0">
             <div class="alert alert-success messages" role="alert">
                 {% for message in messages %}
-                <p  {% if message.tags %} class=" {{ message.tags }} text-center" {% endif %}>{{ message }}</p>
+                <p  {% if message.tags %} class=" {{ message.tags }} text-center" {% endif %}>
+                    {{ message }}
+                </p>
                 {% endfor %}
             </div>
         </div>
@@ -55,32 +61,47 @@ Provider List
 {% endif %}
 
 <!-- Displays the available providers as cards on the page -->
-<!-- Will display single card for provider exam -->
+<!-- Will display single card for each provider -->
 <div class="provider-list px-5">
     <div class="row px-5">
         {% for obj in object_list %}
-        <div class="col-lg-4 py-3">
-            <div class="card alert alert-dark h-100 px-1">
-                <img class="card-img-top providerlogo rounded mx-auto d-block" src="{{ obj.logo.url }}" alt="Provider Logo">
-                <div class="card-body">
-                    <h5 class="card-title text-center"><strong><u>{{obj.name}}</u></strong></h5>
-                    <p class="card-text">{{obj.description}}</p>
-                    <div class="d-flex justify-content-center">
-                        <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-dark">Visit Site</a>
-                    </div>
-                    <br>
-                    <div class="d-flex justify-content-center">
-                        <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="btn btn-dark m-2">Edit Provider</a>
-                        <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="btn btn-dark m-2">Delete Provider</a>
+            <div class="col-lg-4 py-3">
+                <div class="card alert alert-dark h-100 px-1">
+                    <img class="card-img-top providerlogo rounded mx-auto d-block" src="{{ obj.logo.url }}" alt="Provider Logo">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">
+                            <strong>
+                                <u>
+                                    {{obj.name}}
+                                </u>
+                            </strong>
+                        </h5>
+                        <p class="card-text">
+                            {{obj.description}}
+                        </p>
+                        <div class="d-flex justify-content-center">
+                            <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-dark">
+                                Visit Site
+                            </a>
+                        </div>
+                        <br>
+                        <!-- Buttons to allow Admin to Update/Delete existing provider -->
+                        <div class="d-flex justify-content-center">
+                            <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="btn btn-dark m-2">
+                                Edit Provider
+                            </a>
+                            <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="btn btn-dark m-2">
+                                Delete Provider
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         {% endfor %}
     </div>
 </div>
 
-        <!-- the following implemements pagination. Current level is 6 Providers per page -->
+<!-- the following implemements pagination. Current level is 6 Providers per page -->
 <div class="container">
     <div class="row justify-content-center">
         <nav aria-label="Page navigation">
@@ -88,30 +109,51 @@ Provider List
             {% if page_obj.has_previous %}
                 <li class="page-item">
                     <a class="page-link" href="?page=1" aria-label="Start">
-                        <span aria-hidden="true">&laquo;</span>
+                        <span aria-hidden="true">
+                            &laquo;
+                        </span>
                     </a>
                 </li>
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                        {{ page_obj.previous_page_number }}
+                    </a>
+                </li>
             {% else %}
-            <li class="page-item disabled">
-                <a class="page-link" href="?page=1" aria-label="Start">
-                    <span aria-hidden="true">&laquo;</span>
-                </a>
-            </li>
+                <!-- The below section disables the "to start" button if user is on first page -->
+                <li class="page-item disabled">
+                    <a class="page-link" href="?page=1" aria-label="Start">
+                        <span aria-hidden="true">
+                            &laquo;
+                        </span>
+                    </a>
+                </li>
             {% endif %}
-            <li class="page-item active"><a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a></li>
+                <li class="page-item active">
+                    <a class="page-link" href="?page={{ page_obj.number }}">
+                        {{ page_obj.number }}
+                    </a>
+                </li>
             {% if page_obj.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                        {{ page_obj.next_page_number }}
+                    </a>
+                </li>
                 <li class="page-item">
                     <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true">
+                            &raquo;
+                        </span>
                     </a>
                 </li>
                 <!-- The below disables the "to end" button if there are no more pages -->
             {% else %}
                 <li class="page-item disabled">
                     <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
+                        <span aria-hidden="true">
+                            &raquo;
+                        </span>
                     </a>
                 </li>
             {% endif %}
@@ -120,3 +162,4 @@ Provider List
     </div>
 </div>
 {% endblock content %}
+<!-- FOOTER details are obtained from base template and inserted here-->
