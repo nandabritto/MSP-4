@@ -29,7 +29,18 @@ def providers_create(request):
     return render(request, 'create.html', {'form' : form})
 
 def providers_update(request, pk):
+
     provider = Providers.objects.get(id=pk)
     form = providerCreateForm(instance=provider)
+
+    if request.method == 'POST':
+        form = providerCreateForm(request.POST, instance=provider)
+  
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Provider Updated Successfully')
+            form = providerCreateForm()
+            return redirect('providers:providers-list')
+
     context = {'form':form}
     return render(request, 'update.html', context)
