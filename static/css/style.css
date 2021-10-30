@@ -123,14 +123,17 @@ body, html {
 }
 
 
-/* index page images */
-.indexpic {
-  max-width: 450px;
-  max-height: 450px;
-  box-shadow:  outset 5px 5px 5px 10px #acacac;
-  border-radius: 80% !important;
-  margin: 30px auto;
-  margin-left: 10%;
+/* formatting of the images on the index page */
+.indexpic1, .indexpic2 {
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 70% !important;
+}
+/* remove extra image on index page on smaller devices */
+@media (max-width: 768px) {
+  .indexpic1 {
+    display: none;
+  }
 }
 
 
