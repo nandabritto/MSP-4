@@ -6,7 +6,7 @@ from .models import Providers
 from .forms import providerCreateForm
 
 
-# Displays all currently available exams
+# Displays all currently available Providers
 class ProvidersListView(ListView):
     paginate_by = 6
     model = Providers

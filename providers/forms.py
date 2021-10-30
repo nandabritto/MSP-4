@@ -2,7 +2,7 @@ from django import forms
 from .models import Providers
 
 
-# Create your forms here.
+# Form to Create a new provider
 class providerCreateForm(forms.ModelForm):
 
     class Meta:

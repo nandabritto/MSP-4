@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-# Model for the provider section
+# Model for Provider section
 class Providers(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200)

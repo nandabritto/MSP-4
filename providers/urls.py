@@ -5,7 +5,7 @@ from .views import *
 
 app_name = 'providers'
 
-# Exam app specific urls
+# Providers app specific urls
 
 urlpatterns = [
     path('providers/', ProvidersListView.as_view(), name='providers-list'),
