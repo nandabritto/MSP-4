@@ -4,11 +4,6 @@
 <!-- loads all the static resources -->
 {% load static %}
 
-<!-- Loads page specific customised JS and CSS file(s) -->
-<!-- {% block scripts %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-{% endblock scripts %} -->
-
 <!-- Updates the page title -->
 {% block title %}
 Update Provider
@@ -24,7 +19,7 @@ Update Provider
             <strong>Welcome Admin!</strong>
         </h1>
         <h5 class="text-center">
-            <strong>Use this page to Edit Existing Certification Providers</strong>
+            <strong>Use this page to Delete an Existing Certification Provider</strong>
         </h5>
     </div>
 </div>
@@ -32,16 +27,15 @@ Update Provider
 {% include "navbar.html" %}
 
 <div class="container">
-
-    <!--Simple Form-->
     <h2 class="my-4 text-center">Delete Provider Confirmation</h2>
+<!-- Confirmation message and Name of Provider -->
     <p>Are you sure you want to delete "{{ providers.name }}"?</p>
+    <!-- Form to delete or cancel -->
     <form method="post" action="{% url 'providers:providers-delete' pk=providers.pk %}" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="container">
             <a  href="{% url 'providers:providers-list' %}" class="btn btn-dark">Cancel</a>
             <input type="submit" name="Confirm">
-            <br>
         </div>  
     </form>
 </div>
