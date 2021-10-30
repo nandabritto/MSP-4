@@ -44,3 +44,12 @@ def providers_update(request, pk):
 
     context = {'form':form}
     return render(request, 'update.html', context)
+
+def providers_delete(request, pk):
+    provider = Providers.objects.get(id=pk)
+    if request.method == "POST":
+        provider.delete()
+        return redirect('providers:providers-list')
+    providers = providerCreateForm(instance=provider)
+    context = {'providers':provider}
+    return render(request, 'delete.html', context)

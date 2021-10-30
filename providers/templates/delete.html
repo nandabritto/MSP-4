@@ -1,0 +1,50 @@
+<!-- Extends from base template -->
+{% extends "base.html" %}
+
+<!-- loads all the static resources -->
+{% load static %}
+
+<!-- Loads page specific customised JS and CSS file(s) -->
+<!-- {% block scripts %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+{% endblock scripts %} -->
+
+<!-- Updates the page title -->
+{% block title %}
+Update Provider
+{% endblock title %}
+
+<!-- The following is the unique content for this page -->
+
+{% block content %}
+<!-- Jumbotron image included in HTML as it will be different on each page -->
+<div class="jumbotron jumbotron-fluid" style="background-image: url('#');">
+    <div class="container">
+        <h1 class="display-3 text-center"> 
+            <strong>Welcome Admin!</strong>
+        </h1>
+        <h5 class="text-center">
+            <strong>Use this page to Edit Existing Certification Providers</strong>
+        </h5>
+    </div>
+</div>
+
+{% include "navbar.html" %}
+
+<div class="container">
+
+    <!--Simple Form-->
+    <h2 class="my-4 text-center">Delete Provider Confirmation</h2>
+    <p>Are you sure you want to delete "{{ providers.name }}"?</p>
+    <form method="post" action="{% url 'providers:providers-delete' pk=providers.pk %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="container">
+            <a  href="{% url 'providers:providers-list' %}" class="btn btn-dark">Cancel</a>
+            <input type="submit" name="Confirm">
+            <br>
+        </div>  
+    </form>
+</div>
+
+{% endblock content %}
+<!-- FOOTER details are obtained from base template and inserted here-->
