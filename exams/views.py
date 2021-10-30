@@ -18,13 +18,11 @@ class ExamListView(ListView):
     template_name = 'exam-list.html'
 
 # displays the exam page to the user
-@login_required(login_url='members:member-signin')
 def exam_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     return render(request, 'exam-display.html', {'obj': exam})
 
 # shows each question that is available for that particular exam
-@login_required(login_url='members:member-signin')
 def exam_data_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     questions = []
@@ -39,7 +37,6 @@ def exam_data_view(request, pk):
     })
 
 # displays the results
-@login_required(login_url='members:member-signin')
 def save_exam_view(request, pk):
     # The following details the actual exam
     # Because of the use of randomisation in the models.py,
