@@ -4,11 +4,6 @@
 <!-- loads all the static resources -->
 {% load static %}
 
-<!-- Loads page specific customised JS and CSS file(s) -->
-<!-- {% block scripts %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
-{% endblock scripts %} -->
-
 <!-- Updates the page title -->
 {% block title %}
 Update Provider
@@ -21,10 +16,14 @@ Update Provider
 <div class="jumbotron jumbotron-fluid" style="background-image: url('#');">
     <div class="container">
         <h1 class="display-3 text-center"> 
-            <strong>Welcome Admin!</strong>
+            <strong>
+                Welcome Admin!
+            </strong>
         </h1>
         <h5 class="text-center">
-            <strong>Use this page to Edit Existing Certification Providers</strong>
+            <strong>
+                Use this page to Edit Existing Certification Providers
+            </strong>
         </h5>
     </div>
 </div>
@@ -34,7 +33,9 @@ Update Provider
 <div class="container">
 
     <!--Simple Form-->
-    <h2 class="my-4 text-center">Amend Provider Details</h2>
+    <h2 class="my-4 text-center">
+        Amend Provider Details
+    </h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="container">

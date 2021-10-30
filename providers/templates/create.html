@@ -11,7 +11,7 @@
 
 <!-- Updates the page title -->
 {% block title %}
-Home Page
+Create Page
 {% endblock title %}
 
 <!-- The following is the unique content for this page -->
@@ -33,9 +33,8 @@ Home Page
 {% include "navbar.html" %}
 
 <div class="container">
-
-    <!--Simple Form-->
     <h2 class="my-4 text-center">Add a new provider</h2>
+    <!-- Form to Add a New Provider to the site -->
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="container">
@@ -75,7 +74,6 @@ Home Page
         </div>  
         <div class="text-right pr-5">
             <button class="btn btn-dark my-4" type="submit">Submit</button>
-            <strong>{{message}}</strong>
         </div> 
     </form>
 </div>

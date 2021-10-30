@@ -21,7 +21,7 @@ class ProvidersListPageTests(TestCase):
         self.assertTemplateUsed(response, 'provider-list.html')
 
 # Testes to confirm Providers create page loads
-class ProvidersCreatPageTests(TestCase):
+class ProvidersCreatePageTests(TestCase):
 
     def test_provider_create_page_status_code(self):
         response = self.client.get('/providers/create/')
@@ -35,3 +35,26 @@ class ProvidersCreatPageTests(TestCase):
         response = self.client.get(reverse('providers:providers-create'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'create.html')
+
+# Tests the url for the page where a specific exam is displayed
+class ProviderAmendPageTests(TestCase):
+
+    def setUp(self):
+        Providers.objects.create(
+            name='Test Provider',
+            description='Test description for the providers for unit testing',
+            url='www.test.test',
+        )
+
+    def test_provider_update_status_code(self):
+        response = self.client.get('providers/update/<pk>',args=[1])
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_update_url_by_name(self):
+        response = self.client.get(reverse('providers:providers-update', args=[1]))
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_update_uses_correct_template(self):
+        response = self.client.get(reverse('providers:providers-update', args=[1]))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'update.html')
