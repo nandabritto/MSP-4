@@ -17,19 +17,25 @@ Exam {{obj.name}}
 <!-- Unique content for the exam display pages -->
 {% block content %}
 
-<!-- Header noteing the Exam Name and required pass mark -->
+<!-- Header noting the Exam Name and required pass mark -->
 <div class="container">
     <div class="container py-4">
         <div class="text-center pb-2">
-            <h2><strong>{{obj.name}}</strong></h2>
-            <p>Score to Pass: {{obj.required_score_to_pass}}%</p>
+            <h2>
+                <strong>
+                    {{obj.name}}
+                </strong>
+            </h2>
+            <p>
+                Score to Pass: {{obj.required_score_to_pass}}%
+            </p>
         </div>
-        <!-- Display timer box -->
+        <!-- Display countdown clock -->
         <div class="col text-right" id="timerdisplay"></div>
     </div>
 </div>
 
-<!-- Section which will display the individual exam questions and applicable answers for that question -->
+<!-- Section which will display the individual exam questions and answers for that question -->
 <div class="row justify-content-center">
     <div class="col-7">
         <form id="exam-form">
@@ -39,8 +45,12 @@ Exam {{obj.name}}
             <hr>
             <!-- Buttons at page base for back and submit -->
             <div class="container py-3">
-                <a href="{% url 'exams:list-view' %}" class="btn btn-danger">Go Back</a>
-                <button type="submit" class="btn btn-success float-right">Submit</button>
+                <a href="{% url 'exams:list-view' %}" class="btn btn-danger">
+                    Go Back
+                </a>
+                <button type="submit" class="btn btn-success float-right">
+                    Submit
+                </button>
             </div>
         </form>
     </div>
