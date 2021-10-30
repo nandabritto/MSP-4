@@ -67,6 +67,7 @@ Provider List
                     <p class="card-text">{{obj.description}}</p>
                     <div class="d-flex justify-content-center">
                         <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-dark">Visit Site</a>
+                        <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="btn btn-dark">Edit Provider</a>
                     </div>
                 </div>
             </div>

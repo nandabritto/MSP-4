@@ -28,3 +28,7 @@ def providers_create(request):
         form = providerCreateForm()
     return render(request, 'create.html', {'form' : form})
 
+def providers_update(request, pk):
+    form = providerCreateForm()
+    context = {}
+    return render(request, 'update.html', context)
