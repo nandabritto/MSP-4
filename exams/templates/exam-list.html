@@ -41,13 +41,19 @@ Exam List
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+          <span aria-hidden="true">
+            &times;
+          </span>
         </button>
       </div>
       <div class="modal-body" id="modal-body-confirm"></div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-dismiss="modal">Quit</button>
-        <button type="button" id="start-button" class="btn btn-success">Start</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          Quit
+        </button>
+        <button type="button" id="start-button" class="btn btn-success">
+          Start
+        </button>
       </div>
     </div>
   </div>
@@ -57,30 +63,36 @@ Exam List
 <!-- Will display single card for each exam -->
 <div class="provider-list px-5">
   <div class="row px-5">
-      {% for obj in object_list %}
+    {% for obj in object_list %}
       <div class="col-lg-4 py-3">
-          <div class="card alert alert-dark h-100 px-1">
-            <img class="card-img-top" src="../static/images/examtopics/{{obj.topic}}.png" alt="Card image cap">
-              <div class="card-body">
-                  <h5 class="card-title text-center"><strong><u>{{obj.name}}</u></strong></h5>
-                  <p class="card-text">{{obj.description}}</p>
-                  <div class="d-flex justify-content-center">
-                    <a href="#" class="btn btn-outline-primary btn-link modal-button"
-                    data-pk="{{obj.pk}}"
-                    data-exam="{{obj.name}}"
-                    data-questions="{{obj.number_of_questions}}"
-                    data-difficulty="{{obj.difficulty}}"
-                    data-time="{{obj.time}}"
-                    data-pass = "{{obj.required_score_to_pass}}"
-                    data-toggle="modal"
-                    data-target="#examStartModal">
-                    Take the Exam
-                </a>
-                  </div>
-              </div>
+        <div class="card alert alert-dark h-100 px-1">
+          <img class="card-img-top" src="../static/images/examtopics/{{obj.topic}}.png" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title text-center">
+              <strong>
+                <u>
+                  {{obj.name}}
+                </u>
+              </strong>
+            </h5>
+            <p class="card-text">{{obj.description}}</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn-outline-primary btn-link modal-button"
+                data-pk="{{obj.pk}}"
+                data-exam="{{obj.name}}"
+                data-questions="{{obj.number_of_questions}}"
+                data-difficulty="{{obj.difficulty}}"
+                data-time="{{obj.time}}"
+                data-pass = "{{obj.required_score_to_pass}}"
+                data-toggle="modal"
+                data-target="#examStartModal">
+                Take the Exam
+              </a>
+            </div>
           </div>
+        </div>
       </div>
-      {% endfor %}
+    {% endfor %}
   </div>
 </div>
 
@@ -92,37 +104,53 @@ Exam List
         {% if page_obj.has_previous %}
           <li class="page-item">
             <a class="page-link" href="?page=1" aria-label="Start">
-              <span aria-hidden="true">&laquo;</span>
+              <span aria-hidden="true">
+                &laquo;
+              </span>
             </a>
           </li>
-          <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a></li>
-            {% else %}
-              <li class="page-item disabled">
-                <a class="page-link" href="?page=1" aria-label="Start">
-                  <span aria-hidden="true">&laquo;</span>
-                </a>
-              </li>
-            {% endif %}
-          <li class="page-item active">
-            <a class="page-link" href="?page={{ page_obj.number }}">{{ page_obj.number }}</a>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+              {{ page_obj.previous_page_number }}
+            </a>
           </li>
-          {% if page_obj.has_next %}
-            <li class="page-item">
-              <a class="page-link" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
-            </li>
-              <li class="page-item">
-                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-            <!-- The below disables the "to end" button if there are no more pages -->
-            {% else %}
-              <li class="page-item disabled">
-                <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
-                  <span aria-hidden="true">&raquo;</span>
-                </a>
-              </li>
-          {% endif %}
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="?page=1" aria-label="Start">
+              <span aria-hidden="true">
+                &laquo;
+              </span>
+            </a>
+          </li>
+        {% endif %}
+        <li class="page-item active">
+          <a class="page-link" href="?page={{ page_obj.number }}">
+            {{ page_obj.number }}
+          </a>
+        </li>
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+              {{ page_obj.next_page_number }}
+            </a>
+          </li>
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+              <span aria-hidden="true">
+                &raquo;
+              </span>
+            </a>
+          </li>
+  <!-- The below disables the "to end" button if there are no more pages -->
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+              <span aria-hidden="true">
+                &raquo;
+              </span>
+            </a>
+          </li>
+        {% endif %}
       </ul>
     </nav>
   </div>
