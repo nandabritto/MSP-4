@@ -4,7 +4,7 @@ from .models import Providers
 from . import views
 
 # Create your tests here.
-# Tests the url for the exam list page
+# Tests the url for the Providers list page
 class ProvidersListPageTests(TestCase):
 
     def test_provider_list_page_status_code(self):
@@ -36,7 +36,7 @@ class ProvidersCreatePageTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'create.html')
 
-# Tests the url for the page where a specific exam is displayed
+# Tests the url for the page where a specific Provider is displayed for amendment
 class ProviderAmendPageTests(TestCase):
 
     def setUp(self):
@@ -58,3 +58,26 @@ class ProviderAmendPageTests(TestCase):
         response = self.client.get(reverse('providers:providers-update', args=[1]))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'update.html')
+
+# Tests the url for the Provider delete confirmation page
+class ProviderDeletePageTests(TestCase):
+
+    def setUp(self):
+        Providers.objects.create(
+            name='Test Provider delete',
+            description='Test delete description for the providers for unit testing',
+            url='www.test.test',
+        )
+
+    def test_provider_update_status_code(self):
+        response = self.client.get('providers/delete/<pk>',args=[1])
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_update_url_by_name(self):
+        response = self.client.get(reverse('providers:providers-delete', args=[1]))
+        self.assertEquals(response.status_code, 200)
+
+    def test_provider_update_uses_correct_template(self):
+        response = self.client.get(reverse('providers:providers-delete', args=[1]))
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'delete.html')
