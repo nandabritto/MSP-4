@@ -28,7 +28,8 @@ def providers_create(request):
 
     return render(request, 'create.html', {'form' : form})
 
-def providers_update(request, name):
-    form = providerCreateForm()
-    context = {}
+def providers_update(request, pk):
+    provider = Providers.objects.get(id=pk)
+    form = providerCreateForm(instance=provider)
+    context = {'form':form}
     return render(request, 'update.html', context)
