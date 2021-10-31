@@ -20,13 +20,22 @@ Home Page
 <!-- Jumbotron image included in HTML as it will be different on each page -->
 <div class="jumbotron jumbotron-fluid">
     <div class="container">
-        <h1 class="display-4 text-center"> 
-            <strong>Hello Developers!</strong>
-        </h1>
-        <h5 class="text-center">
-            <strong>Welcome to studyWorld. A centralised library of all things software related...</strong>
-        </h5>
-        <p><a class="btn btn-info btn-lg mr-20 float-right" href="{% url 'members:member-register' %}" role="button">Join</a></p>
+        {% if user.is_authenticated %}
+            <h1 class="display-4 text-center"> 
+                <strong>Hello {{request.user}}!</strong>
+            </h1>
+            <h5 class="text-center">
+                <strong>Welcome back to studyWorld. A centralised library of all things software related...</strong>
+            </h5>
+        {% else %}
+            <h1 class="display-4 text-center"> 
+                <strong>Hello Developers!</strong>
+            </h1>
+            <h5 class="text-center">
+                <strong>Welcome to studyWorld. A centralised library of all things software related...</strong>
+            </h5>
+            <p><a class="btn btn-info btn-lg mr-20 float-right" href="{% url 'members:member-register' %}" role="button">Join</a></p>
+        {% endif %}
     </div>
 </div>
 

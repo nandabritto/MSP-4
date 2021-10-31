@@ -29,7 +29,10 @@ body, html {
   padding: 5rem 3rem;
 }
 
-
+/* User Greeting */
+#greeting {
+  color: white;
+}
 
 
 /* Styling required for the media page within the resources section */
