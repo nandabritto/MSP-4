@@ -2,9 +2,7 @@
 /* Formatting for the uploaded Provider logos */
 /* To ensure uniform display of images */
 .providerlogo {
-    /* border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px; */
-    max-width: 8em;
+    width: 150px;
+    height: 200px;
+    object-fit: contain;
 }
-
