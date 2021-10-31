@@ -24,8 +24,9 @@ body, html {
   color: white;
   text-shadow: 3px 3px 8px #000000;
   margin-bottom: 0 !important; /* added important to over-ride the bootstap default */
-  background: black;
+  background-image: url('/static/images/jumbotron/resource.png');
   background-size: cover;
+  padding: 5rem 3rem;
 }
 
 

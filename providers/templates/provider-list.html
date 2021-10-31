@@ -17,7 +17,7 @@ Providers List
 {% block content %}
 
 <!-- Header Jumbotron for page, Text and background picture specific to this page -->
-<div class="jumbotron jumbotron-fluid" id="jumbotron-resources">
+<div class="jumbotron jumbotron-fluid">
   <div class="container">
       <h1 class="display-4 text-center"> 
           Providers 
@@ -68,7 +68,7 @@ Providers List
             <div class="col-lg-4 py-3">
                 <div class="card alert alert-dark h-100 px-1">
                     <img class="card-img-top providerlogo rounded mx-auto d-block" src="{{ obj.logo.url }}" alt="Provider Logo">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title text-center">
                             <strong>
                                 <u>
@@ -80,17 +80,17 @@ Providers List
                             {{obj.description}}
                         </p>
                         <div class="d-flex justify-content-center">
-                            <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-dark">
+                            <a  href="https://{{ obj.url }}" target="_blank" class="align-self-end btn btn-lg btn-block btn-primary">
                                 Visit Site
                             </a>
                         </div>
                         <br>
                         <!-- Buttons to allow Admin to Update/Delete existing provider -->
-                        <div class="d-flex justify-content-center">
-                            <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="btn btn-dark m-2">
+                        <div class=" p-0">
+                            <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="align-self-end btn btn-dark mt-auto m-2">
                                 Edit Provider
                             </a>
-                            <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="btn btn-dark m-2">
+                            <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="align-self-end btn btn-dark mt-auto m-2">
                                 Delete Provider
                             </a>
                         </div>
