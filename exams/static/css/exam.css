@@ -2,3 +2,7 @@
 .examimage {
     max-height: 180px;
   }
+
+.exambutton {
+  color: white;
+}

@@ -88,8 +88,6 @@ body, html {
     background-color: rgb(65, 65, 65);
     color: white;
     float: left;
-    border: none;
-    outline: none;
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
@@ -109,27 +107,29 @@ body, html {
   }
   #resourcemedia {
       padding-left: 20%;
+      border-style: dotted;
+      border-width: 0px 0px 2px 0px;
   }
   /* Background details for the expanded Media Tabs */
   #images {
-    /* background-color: rgba(49, 31, 31, 0.6); */
-    background-image: url('../images/mediapage/backgrounds/plank.png');
+    background-color: rgba(49, 31, 31, 0.6);
+    background-image: url('../images/backgrounds/triangles.png');
   }
   #animations {
-    background-color: green;
-    background-image: url('../images/mediapage/backgrounds/storm.png');
+    background-color: rgba(49, 31, 31, 0.6);
+    background-image: url('../images/backgrounds/honeycomb.png');
   }
   #audio {
-    background-color: blue;
-    background-image: url('../images/mediapage/backgrounds/redcanvas.png');
+    background-color: rgba(49, 31, 31, 0.6);
+    background-image: url('../images/backgrounds/binding.png');
   }
   #spinners {
-    background-color: orange;
-    background-image: url('../images/mediapage/backgrounds/bluishpaper.png');
+    background-color: rgba(49, 31, 31, 0.6);
+    background-image: url('../images/backgrounds/tire.png');
   }
   #templates {
-    background-color: red;
-    background-image: url('../images/mediapage/backgrounds/rocks.png');
+    background-color: rgba(49, 31, 31, 0.6);
+    background-image: url('../images/backgrounds/escheresque_ste.png');
   }
 
   .item-name {
