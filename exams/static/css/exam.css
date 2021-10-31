@@ -1,0 +1,4 @@
+/* Ensure uniform display of exam topic images */
+.examimage {
+    max-height: 180px;
+  }

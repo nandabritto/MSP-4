@@ -2,20 +2,25 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial;
-    background-image: url('../images/index/double-bubble-outline.png');
-    /* background-size: cover; */
+    background-image: url('../images/backgrounds/bubble.png');
   }
    
 .not-visible {
     display: none;
 }
-
-.studyworld {
-  color: white;
+/* Formatting for the index/home page */
+/* remove extra image on index page on smaller devices */
+@media (max-width: 760px) {
+  .indexpic1 {
+    display: none;
+  }
 }
 
-.resource-icon {
-    max-width: 200px;
+/* formatting of the images on the index page */
+.indexpic1, .indexpic2 {
+  max-width: 350px;
+  max-height: 350px;
+  border-radius: 70% !important;
 }
 
 /* Jumbotron settings */
@@ -26,13 +31,56 @@ body, html {
   background-image: url('/static/images/jumbotron/resource.png');
   background-size: cover;
   padding: 5rem 3rem;
+  background-color: rgb(65, 65, 65);
 }
 
 /* User Greeting */
 #greeting {
   color: white;
 }
+.indexcard {
+  color: white !important;
+}
 
+/* Changes the background for all card displays */
+/* This includes, Home page, Providers, Exams */
+.card {
+  color: white;
+  background-image: url('/static/images/backgrounds/spiration.png');
+  background-size: cover;
+  background-color: rgb(65, 65, 65);
+}
+
+/* Formatting for the Mid navigation bar */
+
+/* Used important in order to override Bootstrap defaults */
+.nav-link {
+  color: white !important;
+  font-size: large;
+}
+
+.nav-link:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black !important;
+  /* color:#fff; */
+}
+.dropdown-item:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  color: black !important;
+  /* color:#fff; */
+}
+.dropdown-menu {
+  background-color: rgb(52, 58, 64);
+  color: white !important;
+}
+.dropdown-item {
+  color: white !important;
+}
+
+/* Ensure uniform display of resource images */
+.resource-icon {
+    max-width: 200px;
+}
 
 /* Styling required for the media page within the resources section */
 /* Style tab links */
@@ -95,48 +143,10 @@ body, html {
 
 
 
-  /* Formatting for the Mid navigation bar */
- /* .navbar {
-  background-color:rgb(49, 49, 49);
-} */
-
-/* Used important in order to override Bootstrap defaults */
-.nav-link {
-  color: white !important;
-  font-size: large;
-}
-
-/* Used important in order to override Bootstrap defaults */
-.nav-link:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: black !important;
-  /* color:#fff; */
-}
-.dropdown-item:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: black !important;
-  /* color:#fff; */
-}
-.dropdown-menu {
-  background-color: rgb(52, 58, 64);
-  color: white !important;
-}
-.dropdown-item {
-  color: white !important;
-}
+ 
 
 
-/* formatting of the images on the index page */
-.indexpic1, .indexpic2 {
-  max-width: 350px;
-  max-height: 350px;
-  border-radius: 70% !important;
-}
-/* remove extra image on index page on smaller devices */
-@media (max-width: 768px) {
-  .indexpic1 {
-    display: none;
-  }
-}
+
+
 
 

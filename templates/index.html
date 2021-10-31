@@ -6,7 +6,7 @@
 
 <!-- Loads page specific customised JS and CSS file(s) -->
 {% block scripts %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
 {% endblock scripts %}
 
 <!-- Updates the page title -->
@@ -22,7 +22,7 @@ Home Page
     <div class="container">
         {% if user.is_authenticated %}
             <h1 class="display-4 text-center"> 
-                <strong>Hello {{request.user}}!</strong>
+                <strong class="greeting">Hello {{request.user}}!</strong>
             </h1>
             <h5 class="text-center">
                 <strong>Welcome back to studyWorld. A centralised library of all things software related...</strong>
@@ -60,9 +60,9 @@ Home Page
                         </p>
                     </div>
                 </div>
-                <div class="col-md-4 my-auto">
+                <div class="col-md-6 my-auto">
                     <div class="p-3 text-center">
-                        <img src="{% static '/images/index/oneshop.jpeg' %}" class="indexpic1" alt="">
+                        <img src="{% static '/images/backgrounds/oneshop.jpeg' %}" class="indexpic1" alt="">
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ Home Page
                 <div class="col-md-6 my-auto">
                     <div class="p-3 text-center">
                         <!-- First/Left Highlight -->
-                        <img src="{% static '/images/index/guidance.jpeg' %}" class="indexpic2 img-fluid" alt="">
+                        <img src="{% static '/images/backgrounds/guidance.jpeg' %}" class="indexpic2 img-fluid" alt="">
                     </div>
                 </div>
                 <div class="col-md-6 my-auto">
@@ -98,7 +98,7 @@ Home Page
                 <div class="card custom-card border-0">
                     <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="certificate icon">
                     <div class="card-body">
-                        <a href="{% url 'providers:providers-list' %}"><h5 class="card-title text-center text-dark"><strong><u>Certification</u></strong></h5></a>
+                        <a href="{% url 'providers:providers-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Certification</u></strong></h5></a>
                         <p class="card-text text-center">Information on Companies that provide industry standard certifications to help progress your career in development</p>
                     </div>
                 </div>
@@ -108,7 +108,7 @@ Home Page
                 <div class="card custom-card border-0">
                     <img src="{% static '/images/resources/library.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="library icon">
                     <div class="card-body">
-                        <a href="{% url 'resources-list' %}"><h5 class="card-title text-center text-dark"><strong><u>Resources</u></strong></h5></a>
+                        <a href="{% url 'resources-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Resources</u></strong></h5></a>
                         <p class="card-text text-center">A handy little library of hints, tips and tricks to help you simplify your development process and create your projects</p>
                     </div>
                 </div>
@@ -118,7 +118,7 @@ Home Page
                 <div class="card custom-card border-0">
                     <img src="{% static '/images/resources/testing.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="test icon">
                     <div class="card-body">
-                        <a href="{% url 'exams:list-view' %}"><h5 class="card-title text-center text-dark"><strong><u>Practise Exams</u></strong></h5></a>
+                        <a href="{% url 'exams:list-view' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Practise Exams</u></strong></h5></a>
                         <p class="card-text text-center">Use these mini tests to help reinforce your knowledge, understand your limitations and prepare for the real thing</p>
                     </div>
                 </div>
