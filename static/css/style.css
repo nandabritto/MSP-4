@@ -2,9 +2,8 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial;
-    /* background-image: url('../images/mediapage/backgrounds/storm.png');
-    background-repeat: none;
-    background-size: cover; */
+    background-image: url('../images/index/double-bubble-outline.png');
+    /* background-size: cover; */
   }
    
 .not-visible {
