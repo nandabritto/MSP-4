@@ -1,3 +1,4 @@
+// Obtaining the applicable html elements
 const modalTitle = document.getElementById('exampleModalLabel')
 const modalBtns = [...document.getElementsByClassName('modal-button')]
 const modalBody = document.getElementById('modal-body-confirm')
@@ -5,6 +6,7 @@ const startBtn = document.getElementById('start-button')
 
 const url = window.location.href
 
+// initiates the modal when an exxam is selected
 modalBtns.forEach(modalBtn=> modalBtn.addEventListener('click', ()=>{
     const pk = modalBtn.getAttribute('data-pk')
     const name = modalBtn.getAttribute('data-exam')
