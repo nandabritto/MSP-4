@@ -37,6 +37,7 @@ def exam_data_view(request, pk):
 
 # displays the results
 def save_exam_view(request, pk):
+    print("please work ", request)
     # The following details the actual exam
     # Because of the use of randomisation in the models.py,
     # we need to create a list for the questions here to easily obtain actual results
@@ -44,13 +45,13 @@ def save_exam_view(request, pk):
         questions = []
         data = request.POST
         data_ = dict(data.lists())
-        # data_.pop('csrfmiddlewaretoken')
+        data_.pop('csrfmiddlewaretoken')
 
         for k in data_.keys():
             print('key: ', k)
             question = Question.objects.get(text=k)
             questions.append(question)
-        print(questions)
+            print(questions)
 
         user = request.user
         exam = Exam.objects.get(pk=pk)

@@ -101,9 +101,11 @@ const sendData = () => {
         }
     })
 
+    console.log("data", data);
+
     $.ajax({
         type: 'POST',
-        url: `${url}/save/`,
+        url: `${url}save`,
         data: data,
         success: function(response){
             // Populates the reset and back to exam list buttons once answers have been submitted
@@ -118,9 +120,10 @@ const sendData = () => {
                 `
             const results = response.results
             examForm.classList.add('not-visible')
+            console.log("on-success", response);
 
             scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
-            
+
             // The below will populate the results for each question
             results.forEach(res=>{
                 const resDiv = document.createElement("div")
@@ -174,6 +177,7 @@ const sendData = () => {
             })
         },
         error: function(error){
+            console.log('error')
             console.log(error)
         }
     })
