@@ -6,7 +6,7 @@ from . import views
 class MemberRegistrationPageTests(TestCase):
     
     def test_registration_page_status_code(self):
-        response = self.client.get('member-register')
+        response = self.client.get('/members/register')
         self.assertEquals(response.status_code, 200)
 
     def test_registration_url_by_name(self):
@@ -22,7 +22,7 @@ class MemberRegistrationPageTests(TestCase):
 class MemberSigninPageTests(TestCase):
     
     def test_signin_page_status_code(self):
-        response = self.client.get('member-signin')
+        response = self.client.get('/members/signin')
         self.assertEquals(response.status_code, 200)
 
     def test_signin_url_by_name(self):
