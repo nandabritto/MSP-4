@@ -47,7 +47,7 @@ class ProviderAmendPageTests(TestCase):
         )
 
     def test_provider_update_status_code(self):
-        response = self.client.get('providers/update/<pk>',args=[1])
+        response = self.client.get('/providers/update/1',args=[1])
         self.assertEquals(response.status_code, 200)
 
     def test_provider_update_url_by_name(self):
@@ -69,15 +69,15 @@ class ProviderDeletePageTests(TestCase):
             url='www.test.test',
         )
 
-    def test_provider_update_status_code(self):
-        response = self.client.get('providers/delete/<pk>',args=[1])
+    def test_provider_delete_status_code(self):
+        response = self.client.get('/providers/delete/1',args=[1])
         self.assertEquals(response.status_code, 200)
 
-    def test_provider_update_url_by_name(self):
+    def test_provider_delete_url_by_name(self):
         response = self.client.get(reverse('providers:providers-delete', args=[1]))
         self.assertEquals(response.status_code, 200)
 
-    def test_provider_update_uses_correct_template(self):
+    def test_provider_delete_uses_correct_template(self):
         response = self.client.get(reverse('providers:providers-delete', args=[1]))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'delete.html')

@@ -5,9 +5,9 @@ from . import views
 
 # Tests the url for the exam list page
 class ExamListPageTests(TestCase):
-    
+
     def test_exam_list_page_status_code(self):
-        response = self.client.get('exams')
+        response = self.client.get('/exams')
         self.assertEquals(response.status_code, 200)
 
     def test_exam_list_url_by_name(self):
@@ -20,7 +20,7 @@ class ExamListPageTests(TestCase):
         self.assertTemplateUsed(response, 'exam-list.html')
 
 # Tests the url for the page when a specific exam is selected
-# And the questions have been displayed
+# And the questions have been displayed and/or submitted
 class ExamDisplayPageTests(TestCase):
 
     def setUp(self):
