@@ -1,5 +1,7 @@
+// setting the window url for use in the ajax queries
 const url = window.location.href
 
+// Setting the const for the html elements to be updated
 const examBox = document.getElementById('exam-box')
 const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultsdisplay')
@@ -7,6 +9,7 @@ const timerBox = document.getElementById('timerdisplay')
 const endButton = document.getElementById('endbutton')
 let timer;
 
+// Setting up the timer which counts down based on each individual exam limit
 const activateTimer = (time) => {
     if (time.toString().length < 2) {
         timerBox.innerHTML = `<b>0${time}:00</b>`
@@ -18,7 +21,6 @@ const activateTimer = (time) => {
     let seconds = 60
     let displaySeconds
     let displayMinutes
-    // const timer = setInterval(()=>{
     timer = setInterval(()=>{
         seconds --
         if (seconds < 0) {
@@ -42,7 +44,7 @@ const activateTimer = (time) => {
                 sendData()
             }, 500)
         }
-
+        // Actual countdown display
         timerBox.innerHTML = `
             <div>
                 <b>${displayMinutes}:${displaySeconds}</b>
@@ -50,6 +52,7 @@ const activateTimer = (time) => {
     }, 1000)
 }
 
+// Automatically obtains the exam questions/answers on page load
 $.ajax({
     type: 'GET',
     url: `${url}data`,
@@ -57,6 +60,7 @@ $.ajax({
         const data = response.data
         data.forEach(el => {
             for (const [question, answers] of Object.entries(el)){
+                // Populates the question being asked
                 examBox.innerHTML += `
                     <hr>
                     <div class="container"
@@ -65,6 +69,7 @@ $.ajax({
                         </div>
                     </div>
                 `
+                // Populates the answers which are matched to the previously chosen question
                 answers.forEach(answer=>{
                     examBox.innerHTML += `
                     <div class="container">
@@ -77,6 +82,7 @@ $.ajax({
                 })
             }
         });
+        // Activates the countdown timer once the questions have loaded
         activateTimer(response.time)
         
     },
@@ -88,6 +94,7 @@ $.ajax({
 const examForm = document.getElementById('exam-form')
 const csrf = document.getElementsByName('csrfmiddlewaretoken')
 
+// Gets the Users answers and holds them to be compared with the correct answers in the DB
 const sendData = () => {
     const elements = [...document.getElementsByClassName('ans')]
     const data = {}
@@ -102,8 +109,7 @@ const sendData = () => {
         }
     })
 
-    console.log("data", data);
-
+    // Functions to provide the "grading" of the submitted answers
     $.ajax({
         type: 'POST',
         url: `${url}save`,
@@ -115,17 +121,18 @@ const sendData = () => {
                 <hr>
                 <div class="container"
                     <div class="row pl-5">
-                        <a href="{% url 'list-view' %}" class="btn btn-danger">Go Back</a>
+                        <a href="{% url 'exams:list-view' %}" class="btn btn-danger">Go Back</a>
                         <button class="btn btn-success float-right" onClick="window.location.reload();">Try Again</button>
                     </div>
                 </div>
                 `
             const results = response.results
+            // Once answers have been submitted, timer and questions will disappear
             examForm.classList.add('not-visible')
             timerBox.classList.add('not-visible')
-            console.log("on-success", response);
 
-            scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
+            // prints out the overall score results
+            scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops..:( '}Your result is ${response.score.toFixed(2)}%`
 
             // The below will populate the results for each question
             results.forEach(res=>{
@@ -176,16 +183,17 @@ const sendData = () => {
                         }
                     }
                 }
+                // Collates all question/answer results to single print
                 resultDisplay.append(resDiv)
             })
         },
         error: function(error){
-            console.log('error')
             console.log(error)
         }
     })
 }
 
+// Triggers the results event based on mouse click of Submit button
 examForm.addEventListener('submit', e=>{
     e.preventDefault()
     sendData()

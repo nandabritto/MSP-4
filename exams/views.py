@@ -39,7 +39,6 @@ def exam_data_view(request, pk):
 def save_exam_view(request, pk):
     # The following details the actual exam
     # Because of the use of randomisation in the models.py,
-    # we need to create a list for the questions here to easily obtain actual results
     if request.is_ajax():
         questions = []
         data = request.POST
