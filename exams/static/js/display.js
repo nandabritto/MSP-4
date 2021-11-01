@@ -5,7 +5,7 @@ const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultsdisplay')
 const timerBox = document.getElementById('timerdisplay')
 const endButton = document.getElementById('endbutton')
-
+let timer;
 
 const activateTimer = (time) => {
     if (time.toString().length < 2) {
@@ -18,7 +18,8 @@ const activateTimer = (time) => {
     let seconds = 60
     let displaySeconds
     let displayMinutes
-    const timer = setInterval(()=>{
+    // const timer = setInterval(()=>{
+    timer = setInterval(()=>{
         seconds --
         if (seconds < 0) {
             seconds = 59
@@ -108,6 +109,7 @@ const sendData = () => {
         url: `${url}save`,
         data: data,
         success: function(response){
+            clearInterval(timer);
             // Populates the reset and back to exam list buttons once answers have been submitted
             endButton.innerHTML += `
                 <hr>
@@ -120,6 +122,7 @@ const sendData = () => {
                 `
             const results = response.results
             examForm.classList.add('not-visible')
+            timerBox.classList.add('not-visible')
             console.log("on-success", response);
 
             scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Ups..:( '}Your result is ${response.score.toFixed(2)}%`
