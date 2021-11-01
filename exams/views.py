@@ -46,20 +46,19 @@ def save_exam_view(request, pk):
         data_.pop('csrfmiddlewaretoken')
 
         for k in data_.keys():
-            print('key: ', k)
             question = Question.objects.get(text=k)
             questions.append(question)
 
         user = request.user
         exam = Exam.objects.get(pk=pk)
 
-    # The following will confirm the results    
+    # The following will confirm the overall results    
         score = 0
         multiplier = 100 / exam.number_of_questions
         results = []
         correct_answer = None
 
-        # compares the answer provided to the correct one
+        # obtains the users selected answer
         for q in questions:
             a_selected = request.POST.get(str(q))
             
