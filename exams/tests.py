@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase, TestCase
 from django.urls import reverse, resolve
-from .models import Question, Answer, Result, Exam
+from .models import *
 from . import views
 
 # Tests the url for the exam list page
@@ -19,7 +19,8 @@ class ExamListPageTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'exam-list.html')
 
-# Tests the url for the page where a specific exam is displayed
+# Tests the url for the page when a specific exam is selected
+# And the questions have been displayed
 class ExamDisplayPageTests(TestCase):
 
     def setUp(self):
