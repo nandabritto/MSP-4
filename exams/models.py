@@ -23,8 +23,7 @@ TOPIC_CHOICES = (
     ('hacking', 'hacking'),
 )
 
-# add in choices for the topic (to align with the pictures.)
-
+# DB Model for Exam details
 class Exam(models.Model):
     name = models.CharField(max_length=50)
     topic = models.CharField(max_length=20, choices=TOPIC_CHOICES)
@@ -38,7 +37,8 @@ class Exam(models.Model):
     def __str__(self):
         return f"{self.name}-{self.topic}"
 
-    # Function enables randomised selection of questions from exam (with max)
+    # Function enables randomised selection of questions
+    # within the number_of_questions
     def get_questions(self):
         questions = list(self.question_set.all())
         random.shuffle(questions)
@@ -48,9 +48,8 @@ class Exam(models.Model):
         ordering = ['name']
         verbose_name_plural = 'Exams'
 
-# the following models are for the actual exam questions/answers
 
-# Model for the question
+# Model for each question
 class Question(models.Model):
     text = models.CharField(max_length=400)
     exam = models.ForeignKey(Exam, on_delete=models.CASCADE)
@@ -62,7 +61,7 @@ class Question(models.Model):
     def get_answers(self):
         return self.answer_set.all()
 
-# Model for the answer
+# Model for each answer pair to a question
 class Answer(models.Model):
     text = models.CharField(max_length=400)
     correct = models.BooleanField(default=False)

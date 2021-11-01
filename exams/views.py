@@ -76,7 +76,9 @@ def save_exam_view(request, pk):
                         if a.correct:
                             correct_answer = a.text
 
-                results.append({str(q): {'correct_answer': correct_answer, 'answered': a_selected}})
+                results.append({str(q): {
+                    'correct_answer': correct_answer,
+                     'answered': a_selected}})
             # Response if no answer received from user
             else:
                 results.append({str(q): 'not answered'})
@@ -86,6 +88,12 @@ def save_exam_view(request, pk):
 
         # Pass exam logic
         if score_ >= exam.required_score_to_pass:
-            return JsonResponse({'passed': True, 'score': score_, 'results': results})
+            return JsonResponse({
+                'passed': True, 
+                'score': score_, 
+                'results': results})
         else:
-            return JsonResponse({'passed': False, 'score': score_, 'results': results})
+            return JsonResponse({
+                'passed': False, 
+                'score': score_, 
+                'results': results})
