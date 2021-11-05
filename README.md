@@ -4,10 +4,10 @@ The purpose of Milestone Project 4 is to create a Full-Stack web application bas
 
 # Project Summary
 
-The goal of this web application is to develop an centralised reserviour of information for new software developers. A "one stop shop" for the basics on tools, languages, certifications etc. 
+The goal of this web application is to develop an centralised reserviour of information for new (and not so new) software developers. A "one stop shop" for the basics on tools, languages, certifications etc. 
 
 
-## Benefits and Rational
+# Benefits and Rational
 
 At a High level this site will provide:
 - Information on industry standard certification providers (and links to official sites)
@@ -18,24 +18,23 @@ At a High level this site will provide:
 - Details of handy tools (and links to official sites)
   - Agile Management tools
   - Code validators and beautifiers
+  - Testing tools
 - Practise Exams based on Industry standard certificates
-- (potentially) Random Project idea generator
-- (potentially) User viewing previous results
-- (potentially) discussion boards for newbies
+
 
 ## User Stories and Functional Requirements
 
-The planning and maintenance of all significant functionality will be managed within the JIRA.
+The planning and maintenance of all significant functionality will be managed within the following JIRA.
 	https://sphere42.atlassian.net/jira/software/projects/MSP04/boards
 	*Credentials to this management tool will be provided to Code Institute during submission
 
-A breakdown of the Agile project structure (Epics, User Stories(with points), and tasks) can be found within the agile.md document.
+A copy of the Agile project structure (Epics, User Stories(with points), and tasks) can be found within the agile.md document.
 
 All project wireframes and UX design details are included within the applicable EPIC/ User story ticket.
 There is the potential for variance between the initial UX design and the final product as the design will be adjusted based on feedback from User Acceptance Testing (both alpha and beta cycles).
 
 Notes:
-This project will progress utilising the Agile Scrum methodolgy. 
+This project will progress utilising the Agile methodolgy. 
 Development cycles (sprints) will be 7 days in length.
 Initial Epics to be created for the project will be:
 - Project Initial Setup
@@ -43,19 +42,19 @@ Initial Epics to be created for the project will be:
 - Resources
 - User Registration/Login/Logout
 - Certification Providers
-- Message Board
+
 
 At the begining of each sprint, there will be a planning session to determine the sprint goal, and the planned tickets to be included in the sprint.
 
 Twice a sprint there will be a short refinement session to which current tickets are refined and additional Epics/User stories are added/refined to the backlog.
 
-At the end of each sprint there will be a review session to show what has been developed during the sprint.
+At the end of each sprint there will be a review session to demo what has been developed during the sprint.
 
 Development progress is visible in the JIRA board and history of the tickets.
 
 All defects will also be maintained within JIRA. Highlevel details will be contained within the Testing.md file.
 
-Development of the MVP (Resources HTML and Practise Exams sections) will be conducted on the Master branch. Once the MVP is viable all further development will be conducted on separate branches before being merged to the Master.
+Development of the MVP (Resources HTML and Practise Exams sections) will be conducted on the local dev environment. Once a stable MVP is available, initial deployment to heroku will occur. From there development will continue alongside User Testing.
 
 
 # Final/Existing Feature Outcomes
@@ -138,6 +137,15 @@ place holder text ...
 - Creation of a User profile section
 	- Ability to review previous practise exam results
 	- Ability to analyse practise exam results (progress graph)
+- Creation of an Admin/Staff Portal
+    - Enables a staff member to view all users of the site
+    - Enables a staff member to delete a particular user
+    - Enables a staff member to add/edit/remove an exam
+- Creation of a message board
+    - Ability to start conversation threads
+    - Like messages
+    - Reply to messages
+    - Close conversation threads
 
 
 # Testing 
@@ -146,9 +154,9 @@ Full details and evidence of testing conducted throughout the software developme
 
 At a high level testing will include:
 - Automated JavaScript Unit Tests
-- Automated Python Unit tests (within Django)
+- Automated Python Unit Tests 
 - Automated functional tests using Cypress
-- Manual exploratory test sessions 
+- Manual exploratory test sessions (with Test Charters) 
 - User Acceptance testing (both Alpha and Beta test cycles)
 - Performance Testing
 - Security Review
@@ -170,7 +178,7 @@ The site was deployed to Heroku.
 The steps to deploy are as follows: 
   - 
 
-The deployment link for this web apllication is 
+The deployment link for this web apllication is :
 
 ## Copying the Repository
 
@@ -194,14 +202,14 @@ To obtain a copy of the code for this project, complete the following steps:
 This project could not have been created without the following:
 
 ## Code Guidance
- The basis of the Quizz application would not have been possible without guidence from Pyplane
+The basis of the Quizz application would not have been possible without guidence from Pyplane
  - https://www.youtube.com/c/Pyplane/videos
  
- Django Understanding would not have been possible without JustDjango
+Django Understanding would not have been possible without JustDjango
  - https://www.youtube.com/channel/UCRM1gWNTDx0SHIqUJygD-kQ
 
 What is the Head in HTML
-- https://htmlhead.dev/#:~:text=Valid%20elements%20include%20meta,search%20engines%2C%20bots%2C%20etc.
+- [htmlhead](https://htmlhead.dev/#:~:text=Valid%20elements%20include%20meta,search%20engines%2C%20bots%2C%20etc)
 
 Navigation bar based on the following example
 - https://codepen.io/kesavaraj/pen/MWWPXLa

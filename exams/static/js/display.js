@@ -121,7 +121,7 @@ const sendData = () => {
                 <hr>
                 <div class="container"
                     <div class="row pl-5">
-                        <a href="{% url 'exams:list-view' %}" class="btn btn-danger">Go Back</a>
+                        <a href="{% url 'index' %}" class="btn btn-danger">Go Back</a>
                         <button class="btn btn-success float-right" onClick="window.location.reload();">Try Again</button>
                     </div>
                 </div>
