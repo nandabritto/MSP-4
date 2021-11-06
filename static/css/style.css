@@ -1,108 +1,145 @@
 body, html {
-    height: 100%;
+	height: 100%;
     margin: 0;
     font-family: Arial;
     background-color: white;
     /* background-image: url('../images/backgrounds/bubble.png'); */
-  }
-  
+}
+
+
+/* ------------------------------ */
+/* Generic class to hide features */
+/* ------------------------------ */
+
 /* Used when an atem needs to disappear after user interaction */
 /* Used for exam questions when results are displayed */
 .not-visible {
     display: none;
 }
-/* Formatting for the index/home page */
-/* remove extra image on index page on smaller devices */
+
+
+/* ----------------------------- */
+/* Formatting of the Top Nav Bar */
+/* ----------------------------- */
+
+/* Ensures the top left site name remains white */
+.studyworld {
+	color:white
+}
+
+.headpanel {
+	background-color: rgb(40, 40, 40);
+}
+
+/* Formats the User Greeting text*/
+#greeting {
+	color: white;
+	font-size: large;
+}
+
+/* Removing the default text underline on username */
+#greeting:hover {
+	text-decoration: none;
+}
+
+
+/* ----------------------------- */
+/* Jumbotron customised settings */
+/* ----------------------------- */
+
+.jumbotron {
+	color: white;
+	text-shadow: 3px 3px 8px #000000;
+	margin-bottom: 0 !important; /* added important to over-ride the bootstap default */
+	background-image: url('/static/images/jumbotron/resource.png');
+	background-size: cover;
+	padding: 5rem 3rem;
+	background-color: rgb(65, 65, 65);
+}
+
+
+/* ------------------------------ */
+/* Middle Navigation bar settings */
+/* ------------------------------ */
+
+/* Used important in order to override Bootstrap default settings */
+
+.navbar {
+	background-color: rgb(40,40,40);
+}
+
+.nav-link {
+	color: white !important;
+	font-size: large;
+}
+
+.nav-link:hover {
+	background-color: rgb(255, 255, 255, 0.5);
+	color: black !important;
+}
+
+.dropdown-item:hover {
+	background-color: rgb(255, 255, 255, 0.5);
+	color: black !important;
+}
+
+.dropdown-menu {
+	background-color: rgb(40, 40, 40);
+	color: white !important;
+}
+
+.dropdown-item {
+	color: white !important;
+}
+
+
+/* ---------------------------------------------------- */
+/* Generic changes to all card classes to hide features */
+/* ---------------------------------------------------- */
+
+.indexcard {
+	color: white !important;
+}
+
+/* Changes the background for all card displays */
+/* This includes, Home page, Providers, Exams */
+.card {
+	color: white;
+	background-image: url('/static/images/backgrounds/escheresque_ste.png');
+    background-color: rgb(65, 65, 65);
+}
+
+
+/* ------------------- */
+/* Index Page specific */
+/* ------------------- */
+
+/* Determining Image size for the pictures on the Index Page */
+.indexpic1, .indexpic2 {
+	max-width: 350px;
+	max-height: 350px;
+	border-radius: 70% !important;
+}
+
+/* Remove additional image on the Index Page for smaller devices */
 @media (max-width: 760px) {
   .indexpic1 {
     display: none;
   }
 }
 
-/* Ensures the top left site name remains white */
-.studyworld {
-  color:white
-}
-.headpanel {
-  background-color: rgb(40, 40, 40);
-}
-
-/* formatting of the images on the index page */
-.indexpic1, .indexpic2 {
-  max-width: 350px;
-  max-height: 350px;
-  border-radius: 70% !important;
-}
-
-/* Jumbotron settings */
-.jumbotron {
-  color: white;
-  text-shadow: 3px 3px 8px #000000;
-  margin-bottom: 0 !important; /* added important to over-ride the bootstap default */
-  background-image: url('/static/images/jumbotron/resource.png');
-  background-size: cover;
-  padding: 5rem 3rem;
-  background-color: rgb(65, 65, 65);
-}
-
-/* User Greeting */
-#greeting {
-  color: white;
-  font-size: large;
-}
-
-/* Removing the default text underline on username */
-#greeting:hover {
-  text-decoration: none;
-}
-
-.indexcard {
-  color: white !important;
-}
-
-/* Changes the background for all card displays */
-/* This includes, Home page, Providers, Exams */
-.card {
-  color: white;
-  background-image: url('/static/images/backgrounds/escheresque_ste.png');
-  /* background-size: cover; */
-  background-color: rgb(65, 65, 65);
-}
-
-/* Formatting for the Mid navigation bar */
-
-/* Used important in order to override Bootstrap defaults */
-.navbar {
-  background-color: rgb(40,40,40);
-}
-
-.nav-link {
-  color: white !important;
-  font-size: large;
-}
-
-.nav-link:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: black !important;
-  /* color:#fff; */
-}
-.dropdown-item:hover {
-  background-color: rgb(255, 255, 255, 0.5);
-  color: black !important;
-  /* color:#fff; */
-}
-.dropdown-menu {
-  background-color: rgb(40, 40, 40);
-  color: white !important;
-}
-.dropdown-item {
-  color: white !important;
-}
+/* ----------------------------------------------------- */
+/* Generic size to all images on the resources list page */
+/* ----------------------------------------------------- */
 
 /* Ensure uniform display of resource images */
 .resource-icon {
     max-width: 200px;
 }
+
+/* ----------------------------------------------------- */
+/* Settings for the Media page of the resources section  */
+/* ----------------------------------------------------- */
 
 /* Styling required for the media page within the resources section */
 /* Style tab links */
@@ -114,61 +151,68 @@ body, html {
     padding: 14px 16px;
     font-size: 17px;
     width: 20%;
-  }
+}
   
-  .tablink:hover {
+.tablink:hover {
     background-color: #777;
-  }
+}
 
-  /* Media page of resources settings */
-  /* Height has been set to keep footer below content */
-  .mediabody {
+/* Media page of resources settings */
+/* Height has been set to keep footer below content */
+.mediabody {
     min-height: 59vh;
-  }
+}
   
-  /* Style the tab content (and add height:100% for full page content) */
-  .tabcontent {
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
     color: white;
     display: none;
     padding: 100px 20px;
     height: 100%;
-  }
+}
   
-  #resourcemedia {
-      padding-left: 20%;
-      border-style: dotted;
-      border-width: 0px 0px 2px 0px;
-  }
-  /* Background details for the expanded Media Tabs */
-  #images {
+#resourcemedia {
+    padding-left: 20%;
+    border-style: dotted;
+    border-width: 0px 0px 2px 0px;
+}
+
+/* Background details for the expanded Media Tabs */
+#images {
     background-color: rgba(49, 31, 31, 0.6);
     background-image: url('../images/backgrounds/triangles.png');
-  }
-  #animations {
+}
+
+#animations {
     background-color: rgba(49, 31, 31, 0.6);
     background-image: url('../images/backgrounds/honeycomb.png');
-  }
-  #audio {
+}
+
+#audio {
     background-color: rgba(49, 31, 31, 0.6);
     background-image: url('../images/backgrounds/binding.png');
-  }
-  #spinners {
+}
+
+#spinners {
     background-color: rgba(49, 31, 31, 0.6);
     background-image: url('../images/backgrounds/tire.png');
-  }
-  #templates {
+}
+
+#templates {
     background-color: rgba(49, 31, 31, 0.6);
     background-image: url('../images/backgrounds/escheresque_ste.png');
-  }
+}
 
-  .item-name {
+.item-name {
     text-decoration: underline;
-  }
+}
+
 /* Image size on the media page */
 .icon {
   max-width: 50%;
   max-height: 50%;
 }
+
 
 
 
