@@ -45,7 +45,14 @@ body, html {
 /* User Greeting */
 #greeting {
   color: white;
+  font-size: large;
 }
+
+/* Removing the default text underline on username */
+#greeting:hover {
+  text-decoration: none;
+}
+
 .indexcard {
   color: white !important;
 }
