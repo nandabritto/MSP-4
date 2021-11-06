@@ -133,6 +133,7 @@ body, html {
     padding: 100px 20px;
     height: 100%;
   }
+  
   #resourcemedia {
       padding-left: 20%;
       border-style: dotted;
@@ -163,7 +164,7 @@ body, html {
   .item-name {
     text-decoration: underline;
   }
-
+/* Image size on the media page */
 .icon {
   max-width: 50%;
   max-height: 50%;

@@ -55,8 +55,12 @@ The following list of tools have been utilised during the testing of this projec
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/01.10.21_1.png" width="600" height="400" />
 </p>
 
-### Exploratory Testing
-
+### Exploratory Test Session Goals
+- I want to confirm that the base templates load as expected
+- I want to confirm the exam list basic page load with modal
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
 
 ## Sprint 2 - 4th October - 10th October 2021
@@ -76,7 +80,17 @@ The following list of tools have been utilised during the testing of this projec
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/10.10.21_2.png" width="600" height="400" />
 </p>
 
-### Exploratory Testing
+### Exploratory Test Session Goals
+- I want to confirm that exams can be added/amended/delete via the Django admin portal
+- I want to confirm that questions can be added/amended/delete via the Django admin portal
+- I want to confirm that answers can be added/amended/delete via the Django admin portal
+- I want to confirm that the frameworks subpage of the resources section loads and contains required data
+- I want to confirm that the IDE subpage of the resources section loads and contains required data
+- I want to confirm that the Badges subpage of the resources section loads and contains required data
+- I want to confirm that all text is clearly visible for the user
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
 
 ## Sprint 3 - 11th October - 17th October 2021
@@ -89,8 +103,12 @@ The following list of tools have been utilised during the testing of this projec
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/16.10.21_1.png" width="600" height="400" />
 </p>
 
-### Exploratory Testing
-
+### Exploratory Test Session Goals
+- I want to confirm that the Learnings subpage of the resources section loads and contains required data
+- I want to confirm that all text is clearly visible for the user
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
 
 ## Sprint 4 - 18th October - 24th October 2021
@@ -111,9 +129,19 @@ The following list of tools have been utilised during the testing of this projec
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/23.10.21_1.png" width="600" height="400" />
 </p>
 
-### Exploratory Testing
+### Exploratory Test Session Goals
+- I want to confirm that a user can navigate between the resources subpages
+- I want to confirm that a provider can be added to the site via a specific page
+- I want to confirm that the Media subpage of the resources section loads and contains required data
+- I want to confirm that the Tools subpage of the resources section loads and contains required data
+- I want to confirm that a User can view a list of the existing Providers listed on the site
+- I want to confirm that all text is clearly visible for the user
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
-
+### Issues found/faced
+- GITPOD workspace was down for a day, but the ability to interact with the database within GITPOD was down for 2 days
 
 
 ## Sprint 5 - 25th October - 31st October 2021
@@ -133,8 +161,19 @@ The following list of tools have been utilised during the testing of this projec
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/30.10.21_2.png" width="600" height="400" />
 </p>
 
-### Exploratory Testing
+### Exploratory Test Session Goals
+- I want to confirm that a user can navigate between the resources subpages
+- I want to confirm that a provider can be added to the site via a specific page
+- I want to confirm that the Media subpage of the resources section loads and contains required data
+- I want to confirm that the Tools subpage of the resources section loads and contains required data
+- I want to confirm that a User can view a list of the existing Providers listed on the site
+- I want to confirm that all text is clearly visible for the user
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
+### Issues found/faced
+- Log in page restrictions broke most of the Unit tests - restrictions have been temporarily removed until further development has been completed. Additional user stories have been created.
 
 ### Initial User Testing (Alpha)
 A session was held with an end user. During this session the following occurred:
@@ -152,7 +191,6 @@ The feedback obtained from the User included:
 - The Providers new page, it would look better if the fields aligned
 - In the Providers amend page, it would be better if the current logo was displayed as an image
 - In the delet providers page, it would be good to confirm all the details, not just the title
-
 
 
 ## Sprint 6 - 1st November - 7th November 2021
