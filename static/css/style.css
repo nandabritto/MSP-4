@@ -119,6 +119,12 @@ body, html {
   .tablink:hover {
     background-color: #777;
   }
+
+  /* Media page of resources settings */
+  /* Height has been set to keep footer below content */
+  .mediabody {
+    min-height: 59vh;
+  }
   
   /* Style the tab content (and add height:100% for full page content) */
   .tabcontent {
