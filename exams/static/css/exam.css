@@ -1,6 +1,8 @@
 /* Ensure uniform display of exam topic images */
 .examimage {
     max-height: 180px;
+    min-height: 160px;
+    max-width: 400px;
   }
 
 .exambutton {
