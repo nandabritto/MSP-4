@@ -136,6 +136,24 @@ The following list of tools have been utilised during the testing of this projec
 ### Exploratory Testing
 
 
+### Initial User Testing (Alpha)
+A session was held with an end user. During this session the following occurred:
+- Demo of Sites purpose and available functions
+- Exlainations of development setup
+- Free time given to the User to "play" with the site
+
+The feedback obtained from the User included:
+- All bars on the site, ie top, middle and footer were each different shades of grey
+- The images displayed on the exam list page (within the cards) were not uniform and some appeared stretched
+- Go back button on the exam page does not work (page doesn't exist)
+- Having the pattern in the background is fine, but if it is to be removed then the card background will need to be lighter
+- On the login/register pages, the blue link to the oposite page is not very visible
+- Name when I am signed in is not very big, or properly aligned
+- The Providers new page, it would look better if the fields aligned
+- In the Providers amend page, it would be better if the current logo was displayed as an image
+- In the delet providers page, it would be good to confirm all the details, not just the title
+
+
 
 ## Sprint 6 - 1st November - 7th November 2021
 
