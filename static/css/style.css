@@ -5,7 +5,9 @@ body, html {
     background-color: white;
     /* background-image: url('../images/backgrounds/bubble.png'); */
   }
-   
+  
+/* Used when an atem needs to disappear after user interaction */
+/* Used for exam questions when results are displayed */
 .not-visible {
     display: none;
 }
@@ -15,6 +17,11 @@ body, html {
   .indexpic1 {
     display: none;
   }
+}
+
+/* Ensures the top left site name remains white */
+.studyworld {
+  color:white
 }
 
 /* formatting of the images on the index page */
