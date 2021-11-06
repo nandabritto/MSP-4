@@ -23,6 +23,9 @@ body, html {
 .studyworld {
   color:white
 }
+.headpanel {
+  background-color: rgb(40, 40, 40);
+}
 
 /* formatting of the images on the index page */
 .indexpic1, .indexpic2 {
@@ -69,6 +72,10 @@ body, html {
 /* Formatting for the Mid navigation bar */
 
 /* Used important in order to override Bootstrap defaults */
+.navbar {
+  background-color: rgb(40,40,40);
+}
+
 .nav-link {
   color: white !important;
   font-size: large;
@@ -85,7 +92,7 @@ body, html {
   /* color:#fff; */
 }
 .dropdown-menu {
-  background-color: rgb(52, 58, 64);
+  background-color: rgb(40, 40, 40);
   color: white !important;
 }
 .dropdown-item {
