@@ -1,29 +1,30 @@
 <!-- loads all the static resources -->
 {% load static %}
 
-  <nav class="navbar navbar-expand-sm">
-    <div class="container-fluid">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item px-2">
-            <a class="nav-link" href="{% url 'index' %}">Home</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" href="{% url 'providers:providers-list' %}">Cert Providers</a>
-          </li>
-          <li class="nav-item px-2">
-            <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
-          </li>
-          <li class="nav-item dropdown px-2">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Library</a>
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="{% url 'resources-media' %}">Media</a>
-              <a class="dropdown-item" href="{% url 'resources-frameworks' %}">Frameworks</a>
-              <a class="dropdown-item" href="{% url 'resources-ide' %}">IDE</a>
-              <a class="dropdown-item" href="{% url 'resources-tools' %}">Tools</a>
-              <a class="dropdown-item" href="{% url 'resources-learning' %}">Learning</a>
-              <a class="dropdown-item" href="{% url 'resources-badges' %}">Badges</a>
-            </div>
-          </li>
-        </ul>
-    </div>
-  </nav>
+<nav class="navbar navbar-expand-sm">
+  <div class="container-fluid">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item px-2">
+        <a class="nav-link" href="{% url 'index' %}">Home</a>
+      </li>
+      <li class="nav-item px-2">
+        <a class="nav-link" href="{% url 'providers:providers-list' %}">Cert Providers</a>
+      </li>
+      <li class="nav-item px-2">
+        <a class="nav-link" href="{% url 'exams:list-view' %}">Exams</a>
+      </li>
+      <!-- Dropdown options for the Resource Section -->
+      <li class="nav-item dropdown px-2">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">Library</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'resources-media' %}">Media</a>
+          <a class="dropdown-item" href="{% url 'resources-frameworks' %}">Frameworks</a>
+          <a class="dropdown-item" href="{% url 'resources-ide' %}">IDE</a>
+          <a class="dropdown-item" href="{% url 'resources-tools' %}">Tools</a>
+          <a class="dropdown-item" href="{% url 'resources-learning' %}">Learning</a>
+          <a class="dropdown-item" href="{% url 'resources-badges' %}">Badges</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
