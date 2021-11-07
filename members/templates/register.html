@@ -4,6 +4,11 @@
 <!-- loads all the static resources -->
 {% load static %}
 
+<!-- Loads page specific customised JS and CSS file(s) -->
+{% block scripts %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/members.css' %}">
+{% endblock scripts %}
+
 <!-- Updates the page title -->
 {% block title %}
 Register
@@ -12,59 +17,73 @@ Register
 <!-- The following is the unique content for this page -->
 
 {% block content %}
-
-<!-- Form which enables a new member to register  -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-10 col-xl-9 mx-auto">
-            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
-                <div class="card-img-left d-none d-md-flex">
-            <!-- Left side image - set in style.css -->
-                </div>
-                <div class="card-body p-4 p-sm-5">
-                    <h5 class="card-title text-center mb-5 fw-light fs-5">Become a member</h5>
-                    <!-- form to collect the details of a new user -->
-                    <form method = "POST" action="">
-                    {% csrf_token %}
-						<div class="row input-group mb-3">
-							<div class="col-md-5 input-group-append">
-								<span class="input-group-text form-control">Username: </span>
-							</div>
-							{{ form.username }}
-						</div>
-						<div class="row input-group mb-2">
-							<div class="col-md-5 input-group-append">
-								<span class="input-group-text form-control">Email: </span>
-							</div>
-							{{ form.email }}
-						</div>
-						<div class="row input-group mb-2">
-							<div class="col-md-5 input-group-append">
-								<span class="input-group-text form-control">Password: </span>
-							</div>
-							{{ form.password1 }}
-						</div>
-						<div class="row input-group mb-2">
-							<div class="col-md-5 input-group-append">
-								<span class="input-group-text form-control">Confirm Password: </span>
-							</div>
-							{{ form.password2 }}
-						</div>
-                        <div class="d-grid mb-2 row justify-content-end">
-                            <input class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Sign Me Up!"></input>
-                        </div>
-                        <br>
-                        <!-- Formm Error handling -->
-                        {{ form.errors}}
-
-                    <!-- link below to redirect user to sign in page -->
-                        <a class="d-block text-center mt-2 small" href="{% url 'members:member-signin' %}">Already a member? Sign In</a>
-                    </form>
-                </div>
-            </div>
-        </div>
+<!-- Jumbotron image included in HTML as it will be different on each page -->
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-3 text-center"> 
+            <strong>Welcome Back!</strong>
+        </h1>
+        <h5 class="text-center">
+            <!-- <strong>Use this page to add Certification Providers</strong> -->
+        </h5>
     </div>
 </div>
 
+<!-- Form which enables a new member to register  -->
+<div class="container py-5 memberbody">
+    <div class="row">
+        <div class="col-lg-10 mx-auto">
+			<div class="card align-items-center">
+				<div class="card-body">
+                    <h3 class="card-title text-center mb-5 fw-light fs-5">Become a member</h3>
+
+					<form method = "POST" action="">
+					{% csrf_token %}
+						<div class="row input-group mb-3">
+							<div class="col-md-6 input-group-append">
+								<span class="input-group-text form-control fieldlabel">Username: </span>
+							</div>
+							<div class="col-md-6 input-group-append">
+								{{ form.username }}
+							</div>
+						</div>
+						<div class="row input-group mb-3">
+							<div class="col-md-6 input-group-append">
+								<span class="input-group-text form-control fieldlabel">Email: </span>
+							</div>
+							<div class="col-md-6 input-group-append">
+								{{ form.email }}
+							</div>
+						</div>
+						<div class="row input-group mb-3">
+							<div class="col-md-6 input-group-append">
+								<span class="input-group-text form-control fieldlabel">Password: </span>
+							</div>
+							<div class="col-md-6 input-group-append">
+								{{ form.password1 }}
+							</div>
+						</div>
+						<div class="row input-group mb-3">
+							<div class="col-md-6 input-group-append">
+								<span class="input-group-text form-control fieldlabel">Confirm Password: </span>
+							</div>
+							<div class="col-md-6 input-group-append">
+								{{ form.password2 }}
+							</div>
+						</div>
+						<div class="d-grid mb-2 row justify-content-end">
+							<input class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit" value="Sign Me Up!"></input>
+						</div>    
+						<!-- Formm Error handling -->
+						{{ form.errors}}
+
+					<!-- link below to redirect user to sign in page -->
+						<a class="d-block text-center mt-2 medium crosslink" href="{% url 'members:member-signin' %}">Already a member? Sign In</a>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 {% endblock content %}
 <!-- FOOTER details are obtained from base template and inserted here-->
