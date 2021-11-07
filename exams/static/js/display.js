@@ -47,7 +47,7 @@ const activateTimer = (time) => {
         // Actual countdown display
         timerBox.innerHTML = `
             <div>
-                <b>${displayMinutes}:${displaySeconds}</b>
+                <b class="btn-danger btn-lg p-2 timer">${displayMinutes}:${displaySeconds}</b>
             </div>`
     }, 1000)
 }
@@ -74,7 +74,7 @@ $.ajax({
                     examBox.innerHTML += `
                     <div class="container">
                         <div class="pl-5">
-                            <input type="radio" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
+                            <input type="checkbox" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
                             <label for="${question}">${answer}</label>
                         </div>
                     </div>

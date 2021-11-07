@@ -8,3 +8,10 @@
 .exambutton {
   color: white;
 }
+
+#timerdisplay {
+  position: fixed; 
+  top: 5em; 
+  right: 10em; 
+  border: 0
+}
