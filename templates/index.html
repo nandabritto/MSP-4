@@ -34,14 +34,14 @@ Home Page
             <h5 class="text-center">
                 <strong>Welcome to studyWorld. A centralised library of all things software related...</strong>
             </h5>
-            <p><a class="btn btn-info btn-lg mr-20 float-right" href="{% url 'members:member-register' %}" role="button">Join</a></p>
+            <p><a class="btn btn-success btn-lg mr-20 float-right" href="{% url 'members:member-register' %}" role="button">Join</a></p>
         {% endif %}
     </div>
 </div>
 
 {% include "navbar.html" %}
 
-<main role="main">
+<section>
 <!-- Highlights section of the landing page -->
     <section class="pt-3 pb-4">
         <div class="col-lg-11  mx-auto py-3">
@@ -52,7 +52,6 @@ Home Page
                         <h2 class="text-gradient text-primary">
                             <span id="highlight1">One Stop Shop</span>
                         </h2>
-                        <!-- <h5 class="mt-3">Providers</h5> -->
                         <p class="text-sm">
                             Here you will find a wide selection of information to get you started as a software developer. 
                             Information on various IDE's, Frameworks, Programming Languages, Tools and various
@@ -60,26 +59,25 @@ Home Page
                         </p>
                     </div>
                 </div>
+                <!-- First Image, This image will disappear on smaller devices -->
                 <div class="col-md-6 my-auto">
                     <div class="p-3 text-center">
-                        <img src="{% static '/images/backgrounds/oneshop.jpeg' %}" class="indexpic1" alt="">
+                        <img src="{% static '/images/backgrounds/oneshop.jpeg' %}" class="indexpic1" alt="Office space filled with computers">
                     </div>
                 </div>
             </div>
             <div class="row py-3 justify-content-center">
                 <div class="col-md-6 my-auto">
                     <div class="p-3 text-center">
-                        <!-- First/Left Highlight -->
-                        <img src="{% static '/images/backgrounds/guidance.jpeg' %}" class="indexpic2 img-fluid" alt="">
+                        <img src="{% static '/images/backgrounds/guidance.jpeg' %}" class="indexpic2 img-fluid" alt="Study group with laptops on a table">
                     </div>
                 </div>
                 <div class="col-md-6 my-auto">
                     <div class="p-3 text-center">
-                        <!-- Second/Middle Highlight -->
+                        <!-- Second/Right Highlight -->
                         <h2 class="text-gradient text-primary">
-                            <span id="highlight1">Guidance</span>
+                            <span id="highlight2">Guidance</span>
                         </h2>
-                        <!-- <h5 class="mt-3">books</h5> -->
                         <p class="text-sm">
                             Discover courses and career pathways to reinforce your knowledge, along with obtaining recognised skill badges.
                             Join the community to share information and communicate with like minded people.
@@ -125,6 +123,6 @@ Home Page
             </div>
         </div>
     </div>
-</main>
+</section>
 {% endblock content %}
 <!-- FOOTER details are obtained from base template and inserted here-->
