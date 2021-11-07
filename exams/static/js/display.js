@@ -143,7 +143,7 @@ const sendData = () => {
                     if (resp=='not answered') {
                         resDiv.innerHTML += `
                         <div class="row justify-content-center">
-                            <div class="col-7">
+                            <div class="col-9">
                                 <div class="alert alert-warning" role="alert">
                                 <h4 class="alert-heading">You didn't respond</h4>
                                 <p> "Nothing" is not the correct answer for <b>${question}</b> </p>
@@ -160,7 +160,7 @@ const sendData = () => {
                         if (answer == correct) {
                             resDiv.innerHTML += `
                             <div class="row justify-content-center">
-                                <div class="col-7">
+                                <div class="col-9">
                                     <div class="alert alert-success" role="alert">
                                         <h4 class="alert-heading">Well Done</h4>
                                         <p> You are correct, the answer to <b>${question}</b></p>
@@ -172,7 +172,7 @@ const sendData = () => {
                         } else {
                             resDiv.innerHTML += `
                             <div class="row justify-content-center">
-                                <div class="col-7">
+                                <div class="col-9">
                                     <div class="alert alert-danger" role="alert">
                                         <h4 class="alert-heading">Not this time</h4>
                                         <p><b>${answer}</b> is not the correct answer for <b>${question}</b> </p>

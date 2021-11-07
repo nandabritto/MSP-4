@@ -1,7 +1,7 @@
 /* Ensure uniform display of exam topic images */
 .examimage {
     max-height: 180px;
-    min-height: 160px;
+    min-height: 170px;
     max-width: 400px;
   }
 
