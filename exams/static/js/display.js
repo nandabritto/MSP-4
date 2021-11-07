@@ -137,17 +137,27 @@ const sendData = () => {
             // prints out the overall score results
             if (response.passed) {
                 scoreDisplay.innerHTML = `
-                            <div class="row justify-content-center">
-                                <div class="col-4 text-center">
-                                    <div class="alert alert-success" role="alert">
-                                        <h4 class="alert-heading"><b>Congratulations</b></h4>
-                                        <p>With a score of ${response.score.toFixed(2)}% you passed</p>
-                                    </div>
-                                </div>
-                          </div>`
+                    <div class="row justify-content-center">
+                        <div class="col-4 text-center">
+                            <div class="alert alert-success" role="alert">
+                                <h3 class="alert-heading"><b>Congratulations</b></h3>
+                                <p>With a score of ${response.score.toFixed(2)}% you passed</p>
+                                <img src="../static/images/results/pass.png" alt="Pass icon">
+                            </div>
+                        </div>
+                    </div>`
             }
             else {
-                scoreDisplay.innerHTML = `Unfortunately your score was ${response.score.toFixed(2)}%`
+                scoreDisplay.innerHTML =  `
+                    <div class="row justify-content-center">
+                        <div class="col-4 text-center">
+                            <div class="alert alert-danger" role="alert">
+                                <h3 class="alert-heading"><b>Hard Luck!</b></h3>
+                                <p>With a score of ${response.score.toFixed(2)}% you failed</p>
+                                <img src="../static/images/results/fail.png" alt="Fail icon">
+                            </div>
+                        </div>
+                </div>`
             }            
             
             // scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops..:( '}Your result is ${response.score.toFixed(2)}%`
