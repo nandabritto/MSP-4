@@ -176,7 +176,7 @@ body, html {
     height: 100%;
 }
   
-#resourcemedia {
+.resourcemedia {
     padding-left: 20%;
     border-style: dotted;
     border-width: 0px 0px 2px 0px;
