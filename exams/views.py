@@ -33,6 +33,7 @@ def exam_data_view(request, pk):
     return JsonResponse({
         'data': questions,
         'time': exam.time,
+        'grade': exam.required_score_to_pass,
     })
 
 # displays the results

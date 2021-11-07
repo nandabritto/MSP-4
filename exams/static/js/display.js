@@ -7,6 +7,7 @@ const scoreDisplay = document.getElementById('scoredisplay')
 const resultDisplay = document.getElementById('resultsdisplay')
 const timerBox = document.getElementById('timerdisplay')
 const endButton = document.getElementById('endbutton')
+const passgrade = document.getElementById('passgrade')
 let timer;
 
 // Setting up the timer which counts down based on each individual exam limit
@@ -110,7 +111,6 @@ const sendData = () => {
             }
         }
     })
-
     // Functions to provide the "grading" of the submitted answers
     $.ajax({
         type: 'POST',
@@ -129,12 +129,28 @@ const sendData = () => {
                 </div>
                 `
             const results = response.results
-            // Once answers have been submitted, timer and questions will disappear
+            // Once answers have been submitted the timer, questions and required pass rate will disappear
             examForm.classList.add('not-visible')
             timerBox.classList.add('not-visible')
+            passgrade.classList.add('not-visible')
 
             // prints out the overall score results
-            scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops..:( '}Your result is ${response.score.toFixed(2)}%`
+            if (response.passed) {
+                scoreDisplay.innerHTML = `
+                            <div class="row justify-content-center">
+                                <div class="col-4 text-center">
+                                    <div class="alert alert-success" role="alert">
+                                        <h4 class="alert-heading"><b>Congratulations</b></h4>
+                                        <p>With a score of ${response.score.toFixed(2)}% you passed</p>
+                                    </div>
+                                </div>
+                          </div>`
+            }
+            else {
+                scoreDisplay.innerHTML = `Unfortunately your score was ${response.score.toFixed(2)}%`
+            }            
+            
+            // scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops..:( '}Your result is ${response.score.toFixed(2)}%`
 
             // The below will populate the results for each question
             results.forEach(res=>{
