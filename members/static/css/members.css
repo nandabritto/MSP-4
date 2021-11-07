@@ -1,14 +1,15 @@
 /* Formats the text to the login/signup pages */
-
+/* Ensures the links on the page display in white not blue */
 .crosslink {
     color: white;
 }
 
+/* Text formatting for field labels */
 .fieldlabel{
     font-weight: bold;
     font-size: large;
 }
-/* Height has been set to keep footer below content */
+/* Height has been set to keep footer below page content */
 .memberbody {
     min-height: 67vh;
 }
