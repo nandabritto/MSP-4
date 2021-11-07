@@ -196,9 +196,10 @@ The feedback obtained from the User included:
 ## Sprint 6 - 1st November - 7th November 2021
 
 ### User Stories Closed
--
--
--
+- As a User I want to be able to view all available Practise exams (caveat: pending JS UnitTests)
+- As a User I want to be able to partake in the chosen exam (caveat: pending JS UnitTests)
+- As a User I want to have my Submitted exam answers(results) Validated (caveat: pending JS UnitTests)
+
 ### Unit Tests conducted
 <p float="left">
 <img src="" width="600" height="400" />
@@ -207,9 +208,25 @@ The feedback obtained from the User included:
 </p>
 
 
-### Exploratory Testing
+### Exploratory Test Session Goals
+- I want to confirm that a user can view all available exams
+- I want to confirm that a user can view exam specifics when take exam button is selected, via a modal
+- I want to confirm that a user can view questions and applicable answers for a chosen exam
+- I want to confirm that a user can select a single answer for each question
+- I want to confirm that a user can submit chosen answers for grading
+- I want to confirm that a user will receive the correct response for each answer given (correct, incorrect, no answer)
+- I want to confirm that a user will receive the correct overall score for an exam (pass, fail)
+- I want to confirm a user can re-take the chosen exam
+- I want to confirm a user can choose to return to the exam list after completing an exam
+- I want to confirm a user can choose to return to the exam list instead of submitting exam answers
+- I want to confirm that all text is clearly visible for the user
+- I want to confirm that all User Stories are done to my satisfaction
+- I want to identify any edge cases
+- I want to identify any potential test cases for automation
 
-
+### Issues found/faced
+- Once an exam has been submitted, the django url shortcut is not working to return the user to the exam list view
+- Bug raised for Unit Tests which will be broken as a result of user authentification implementation
 
 ## Sprint 7 - 8th November - 15th November 2021
 

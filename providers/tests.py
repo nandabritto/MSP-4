@@ -2,6 +2,7 @@ from django.test import SimpleTestCase, TestCase
 from django.urls import reverse, resolve
 from .models import Providers
 from . import views
+from .forms import providerCreateForm
 
 # Create your tests here.
 # Tests the url for the Providers list page
