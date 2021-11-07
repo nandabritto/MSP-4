@@ -101,7 +101,7 @@ const csrf = document.getElementsByName('csrfmiddlewaretoken');
 const sendData = () => {
     const elements = [...document.getElementsByClassName('ans')];
     const data = {};
-    data['csrfmiddlewaretoken'] = csrf[0].value;
+    data.csrfmiddlewaretoken = csrf[0].value;
     elements.forEach(el=>{
         if (el.checked) {
             data[el.name] = el.value;
@@ -178,12 +178,12 @@ const sendData = () => {
                                 <p> Back to the books for you</p>
                                 </div>
                             </div>
-                        </div>`
+                        </div>`;
                     }
                     // if response received
                     else {
-                        const answer = resp['answered'];
-                        const correct = resp['correct_answer'];
+                        const answer = resp.answered;
+                        const correct = resp.correct_answer;
                         // If the answer received was correct
                         if (answer == correct) {
                             resDiv.innerHTML += `
