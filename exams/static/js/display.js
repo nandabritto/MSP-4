@@ -72,13 +72,15 @@ $.ajax({
                 // Populates the answers which are matched to the previously chosen question
                 answers.forEach(answer=>{
                     examBox.innerHTML += `
-                    <div class="container">
-                        <div class="pl-5">
-                            <input type="checkbox" class="ans" id="${question}-${answer}" name="${question}" value="${answer}">
-                            <label for="${question}">${answer}</label>
+                        <div class="container">
+                            <div class="pl-1 quiz-answer">					
+                                <label>
+                                    <input type="radio" class="ans" aria-label="Radio button for answer choice of ${answer}" id="${question}-${answer}" name="${question}" value="${answer}">
+                                    ${answer}
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                `
+                    `
                 })
             }
         });

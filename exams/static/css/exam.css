@@ -9,9 +9,18 @@
   color: white;
 }
 
+/* Sticks countdown timer to top right of users screen */
 #timerdisplay {
   position: fixed; 
   top: 5em; 
   right: 10em; 
   border: 0
 }
+
+.quiz-answer {
+  background-color: rgb(209, 209, 209);
+  margin: 0.5rem;
+}
+
+
+
