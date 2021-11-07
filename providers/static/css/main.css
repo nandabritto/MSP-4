@@ -6,3 +6,14 @@
     height: 200px;
     object-fit: contain;
 }
+
+/* Height has been set to keep footer below content */
+.addproviderbody {
+    min-height: 56vh;
+}
+
+.fieldname {
+    font-weight: bold;
+    font-size: large;
+}
+
