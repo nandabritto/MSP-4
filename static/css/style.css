@@ -34,7 +34,8 @@ body, html {
 /* Formats the User Greeting text*/
 #greeting {
 	color: white;
-	font-size: large;
+	font-size: larger;
+    font-weight: bold;
 }
 
 /* Removing the default text underline on username */
