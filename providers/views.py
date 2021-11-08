@@ -15,43 +15,51 @@ class ProvidersListView(ListView):
 # View for creating a New Provider on the site
 
 def providers_create(request):
-    if request.method == 'POST':
-        form = providerCreateForm(request.POST, request.FILES)
-  
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'New Provider Created Successfully')
+    if request.user.is_staff:
+        if request.method == 'POST':
+            form = providerCreateForm(request.POST, request.FILES)
+    
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'New Provider Created Successfully')
+                form = providerCreateForm()
+                return redirect('providers:providers-list')
+        else:
             form = providerCreateForm()
-            return redirect('providers:providers-list')
-    else:
-        form = providerCreateForm()
 
-    return render(request, 'create.html', {'form' : form})
+        return render(request, 'create.html', {'form' : form})
+    else:
+        return redirect('index')
 
 # View for Updating an existing Provider
 def providers_update(request, pk):
+    if request.user.is_staff:
+        provider = Providers.objects.get(id=pk)
+        form = providerCreateForm(instance=provider)
 
-    provider = Providers.objects.get(id=pk)
-    form = providerCreateForm(instance=provider)
+        if request.method == 'POST':
+            form = providerCreateForm(request.POST, instance=provider)
+    
+            if form.is_valid():
+                form.save()
+                messages.success(request, 'Provider Updated Successfully')
+                form = providerCreateForm()
+                return redirect('providers:providers-list')
 
-    if request.method == 'POST':
-        form = providerCreateForm(request.POST, instance=provider)
-  
-        if form.is_valid():
-            form.save()
-            messages.success(request, 'Provider Updated Successfully')
-            form = providerCreateForm()
-            return redirect('providers:providers-list')
-
-    context = {'form':form}
-    return render(request, 'update.html', context)
+        context = {'form':form}
+        return render(request, 'update.html', context)
+    else:
+        return redirect('index')
 
 # Vie to delete an existing Provider
 def providers_delete(request, pk):
-    provider = Providers.objects.get(id=pk)
-    if request.method == "POST":
-        provider.delete()
-        return redirect('providers:providers-list')
-    providers = providerCreateForm(instance=provider)
-    context = {'providers':provider}
-    return render(request, 'delete.html', context)
+    if request.user.is_staff:
+        provider = Providers.objects.get(id=pk)
+        if request.method == "POST":
+            provider.delete()
+            return redirect('providers:providers-list')
+        providers = providerCreateForm(instance=provider)
+        context = {'providers':provider}
+        return render(request, 'delete.html', context)
+    else:
+        return redirect('index')

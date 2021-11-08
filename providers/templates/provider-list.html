@@ -33,33 +33,33 @@ Providers List
 <br>
 
 <!-- Create New Provider button, only visible to Admin User -->
-<div class="row justify-content-center">
-    <div class="col-lg-9">
-        <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">
-            Add New Provider
-        </a>
+{% if request.user.is_staff %}
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">
+                Add New Provider
+            </a>
+        </div>
     </div>
-</div>
-<br>
-
+    <br>
 <!-- Confirmation message will appear here after successfully creating a new provider  -->
 <!-- Error message will also appear if connectivity issues cause Creation to fail -->
-{% if messages %}
-<div class="container">
-    <div class="row">
-        <div class="col align-self-center pb-0">
-            <div class="alert alert-success messages" role="alert">
-                {% for message in messages %}
-                <p  {% if message.tags %} class=" {{ message.tags }} text-center" {% endif %}>
-                    {{ message }}
-                </p>
-                {% endfor %}
+    {% if messages %}
+    <div class="container">
+        <div class="row">
+            <div class="col align-self-center pb-0">
+                <div class="alert alert-success messages" role="alert">
+                    {% for message in messages %}
+                    <p  {% if message.tags %} class=" {{ message.tags }} text-center" {% endif %}>
+                        {{ message }}
+                    </p>
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-</div>
+    {% endif %}
 {% endif %}
-
 <!-- Displays the available providers as cards on the page -->
 <!-- Will display single card for each provider -->
 <div class="provider-list px-5">
@@ -89,14 +89,16 @@ Providers List
                         </div>
                         <br>
                         <!-- Buttons to allow Admin to Update/Delete existing provider -->
-                        <div class=" p-0">
-                            <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="align-self-end btn btn-dark mt-auto m-2">
-                                Edit Provider
-                            </a>
-                            <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="align-self-end float-right btn btn-dark mt-auto m-2">
-                                Delete Provider
-                            </a>
-                        </div>
+                        {% if request.user.is_staff %}
+                            <div class=" p-0">
+                                <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="align-self-end btn btn-dark mt-auto m-2">
+                                    Edit Provider
+                                </a>
+                                <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="align-self-end float-right btn btn-dark mt-auto m-2">
+                                    Delete Provider
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
