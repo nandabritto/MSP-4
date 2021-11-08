@@ -155,8 +155,8 @@ Full details and evidence of testing conducted throughout the software developme
 At a high level testing will include:
 - Automated JavaScript Unit Tests
 - Automated Python Unit Tests 
-- Automated functional tests using Cypress
-- Manual exploratory test sessions (with Test Charters) 
+- Automated functional tests
+- Manual exploratory test sessions
 - User Acceptance testing (both Alpha and Beta test cycles)
 - Performance Testing
 - Security Review
@@ -230,7 +230,26 @@ Exam Category images
 - https://unsplash.com/
 - 
 
-## Django third party apps
+## Technology
+Django
+tinypgn
+HTML Validator
+CSS Validator
+Javascript Validator
+Python Validator
+WAVE Web Accessibility Tool
+WAI Color Validator
+Favicon Creation
+Screen to GIF
+Gitpod (replaced by PyCharm)
+Chrome Dev Tools
+Browsers - Chrome, Firefox, Edge
+JIRA
+Bootstrap
+Snipping Tool
+
+
+
 - django-decouple
 - Pillow
 
