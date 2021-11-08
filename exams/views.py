@@ -6,8 +6,8 @@ from django.contrib import messages
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
+from members import urls
 
-from django.contrib.auth.decorators import login_required
 
 # Displays all currently available exams
 
@@ -17,11 +17,13 @@ class ExamListView(ListView):
     template_name = 'exam-list.html'
 
 # displays the individual exam page to the user
+@login_required()
 def exam_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     return render(request, 'exam-display.html', {'obj': exam})
 
 # shows each question that is available for that particular exam
+@login_required()
 def exam_data_view(request, pk):
     exam = Exam.objects.get(pk=pk)
     questions = []
@@ -37,6 +39,7 @@ def exam_data_view(request, pk):
     })
 
 # displays the results
+@login_required()
 def save_exam_view(request, pk):
     # The following details the actual exam
     # Because of the use of randomisation in the models.py,

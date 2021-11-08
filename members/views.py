@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 
 # View for basic display of the registration page
 def member_registration(request):
+    # the below if will ensure page is not displayed to logged in user
     if request.user.is_authenticated:
         return redirect('index')
     else:
@@ -25,6 +26,7 @@ def member_registration(request):
 
 # View for basic display of the login page
 def member_signin(request):
+    # the below if will ensure page is not displayed to logged in user
     if request.user.is_authenticated:
         return redirect('index')
     else:
@@ -37,12 +39,13 @@ def member_signin(request):
                 login(request, user)
                 return redirect('index')
             else:
-                messages.info(request, 'Username or Password is incorrect')
+                messages.info(request, 'The entered details are incorrect')
         context = {}
         return render(request, 'signin.html', context)
 
 
 # View to enable member to signout
+@login_required(login_url='member-signin')
 def member_signout(request):
     logout(request)
     return redirect('index')
