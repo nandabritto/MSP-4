@@ -3,9 +3,8 @@ from django.urls import reverse, resolve
 from . import views
 
 
-# Status check of the websites landing page
 class HomePageTests(SimpleTestCase):
-
+    # Status check of the websites landing page
     def test_home_status(self):
         response = self.client.get('/')
         self.assertEquals(response.status_code, 200)
@@ -19,9 +18,9 @@ class HomePageTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'index.html')
 
-# Status check of the websites resources list page
-class ResourceListTests(SimpleTestCase):
 
+class ResourceListTests(SimpleTestCase):
+    # Status check of the websites resources list page
     def test_resources_status(self):
         response = self.client.get('/resources/')
         self.assertEquals(response.status_code, 200)
@@ -35,9 +34,9 @@ class ResourceListTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/resources.html')
 
-# Status check of the media page for the resources section of the site
-class ResourceMediaTests(SimpleTestCase):
 
+class ResourceMediaTests(SimpleTestCase):
+    # Status check of the media page for the resources section of the site
     def test_media_status(self):
         response = self.client.get('/resources/media')
         self.assertEquals(response.status_code, 200)
@@ -51,9 +50,9 @@ class ResourceMediaTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/media.html')
 
-# Status check of the IDE page for the resources section of the site
-class ResourceIDETests(SimpleTestCase):
 
+class ResourceIDETests(SimpleTestCase):
+    # Status check of the IDE page for the resources section of the site
     def test_ide_status(self):
         response = self.client.get('/resources/ide')
         self.assertEquals(response.status_code, 200)
@@ -67,9 +66,9 @@ class ResourceIDETests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/ide.html')
 
-# Status check of the Frameworks page for the resources section of the site
-class ResourceFrameworksTests(SimpleTestCase):
 
+class ResourceFrameworksTests(SimpleTestCase):
+    # Status check of the Frameworks page for the resources section of the site
     def test_frameworks_status(self):
         response = self.client.get('/resources/frameworks')
         self.assertEquals(response.status_code, 200)
@@ -83,9 +82,9 @@ class ResourceFrameworksTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/frameworks.html')
 
-# Status check of the badges page for the resources section of the site
-class ResourceBadgesTests(SimpleTestCase):
 
+class ResourceBadgesTests(SimpleTestCase):
+    # Status check of the badges page for the resources section of the site
     def test_badges_status(self):
         response = self.client.get('/resources/badges')
         self.assertEquals(response.status_code, 200)
@@ -99,9 +98,9 @@ class ResourceBadgesTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/badges.html')
 
-# Status check of the learning page for the resources section of the site
-class ResourceLearningTests(SimpleTestCase):
 
+class ResourceLearningTests(SimpleTestCase):
+    # Status check of the learning page for the resources section of the site
     def test_learning_status(self):
         response = self.client.get('/resources/learning')
         self.assertEquals(response.status_code, 200)
@@ -115,9 +114,9 @@ class ResourceLearningTests(SimpleTestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'resources/learning.html')
 
-# Status check of the tools page for the resources section of the site
-class ResourceToolsTests(SimpleTestCase):
 
+class ResourceToolsTests(SimpleTestCase):
+    # Status check of the tools page for the resources section of the site
     def test_tools_status(self):
         response = self.client.get('/resources/tools')
         self.assertEquals(response.status_code, 200)
