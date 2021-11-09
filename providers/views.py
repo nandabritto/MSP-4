@@ -6,19 +6,19 @@ from .models import Providers
 from .forms import providerCreateForm
 
 
-# Displays all currently available Providers
 class ProvidersListView(ListView):
+    # Displays all currently available Providers
     paginate_by = 6
     model = Providers
     template_name = 'provider-list.html'
 
-# View for creating a New Provider on the site
 
 def providers_create(request):
+    # Ensuring only staff can view create page
     if request.user.is_staff:
+        # View for creating a New Provider on the site
         if request.method == 'POST':
             form = providerCreateForm(request.POST, request.FILES)
-    
             if form.is_valid():
                 form.save()
                 messages.success(request, 'New Provider Created Successfully')
@@ -26,40 +26,40 @@ def providers_create(request):
                 return redirect('providers:providers-list')
         else:
             form = providerCreateForm()
-
-        return render(request, 'create.html', {'form' : form})
+        return render(request, 'create.html', {'form': form})
     else:
         return redirect('index')
 
-# View for Updating an existing Provider
+
 def providers_update(request, pk):
+    # Ensuring only staff can view amend page
     if request.user.is_staff:
+        # View for Updating an existing Provider
         provider = Providers.objects.get(id=pk)
         form = providerCreateForm(instance=provider)
-
         if request.method == 'POST':
             form = providerCreateForm(request.POST, instance=provider)
-    
             if form.is_valid():
                 form.save()
                 messages.success(request, 'Provider Updated Successfully')
                 form = providerCreateForm()
                 return redirect('providers:providers-list')
-
-        context = {'form':form}
+        context = {'form': form}
         return render(request, 'update.html', context)
     else:
         return redirect('index')
 
-# Vie to delete an existing Provider
+
 def providers_delete(request, pk):
+    # Ensuring only staff can view delete page
     if request.user.is_staff:
+        # View to delete an existing Provider
         provider = Providers.objects.get(id=pk)
         if request.method == "POST":
             provider.delete()
             return redirect('providers:providers-list')
         providers = providerCreateForm(instance=provider)
-        context = {'providers':provider}
+        context = {'providers': provider}
         return render(request, 'delete.html', context)
     else:
         return redirect('index')

@@ -3,11 +3,14 @@ from crispy_forms.helper import FormHelper
 from .models import Providers
 
 
-# Form to Create a new provider
 class providerCreateForm(forms.ModelForm):
-    name = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Provider Name'}))
-    description = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Provider description'}))
-    url = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'url'}))
+    # Form to Create a new provider
+    name = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'Provider Name'}))
+    description = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'Provider description'}))
+    url = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'url'}))
     logo = forms.ImageField()
 
     def __init__(self, *args, **kwargs):

@@ -1,9 +1,8 @@
 from django.db import models
 
-# Create your models here.
 
-# Model for Provider section
 class Providers(models.Model):
+    # Model for Provider section
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200)
     url = models.CharField(max_length=50)
@@ -12,6 +11,6 @@ class Providers(models.Model):
 
     def __str__(self):
         return str(self.text)
-    
+
     class Meta:
         ordering = ['created']
