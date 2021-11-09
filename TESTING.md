@@ -186,11 +186,11 @@ The feedback obtained from the User included:
 - The images displayed on the exam list page (within the cards) were not uniform and some appeared stretched
 - Go back button on the exam page does not work (page doesn't exist)
 - Having the pattern in the background is fine, but if it is to be removed then the card background will need to be lighter
-- On the login/register pages, the blue link to the oposite page is not very visible
+- On the login/register pages, the blue link to the opposite page is not very visible
 - Name when I am signed in is not very big, or properly aligned
 - The Providers new page, it would look better if the fields aligned
 - In the Providers amend page, it would be better if the current logo was displayed as an image
-- In the delet providers page, it would be good to confirm all the details, not just the title
+- In the delete providers page, it would be good to confirm all the details, not just the title
 
 
 ## Sprint 6 - 1st November - 7th November 2021
@@ -241,8 +241,66 @@ The feedback obtained from the User included:
 <img src="" width="600" height="400" />
 </p>
 
+### Code Validation Testing
+
 
 ### Exploratory Testing
+
+
+
+### Initial User Testing on full MVP (Alpha)
+A session was held with an end user. During this session the following occurred:
+- Demo of Sites purpose and available functions
+- Exlainations of development setup
+- Free time given to the User to "play" with the site
+
+_Note: User is different to the previous User conducting Alpha UAT_
+
+The feedback obtained from the User included:
+1. Providers List Page
+    1. Change the delete buttons to Red
+    1. Change the amend buttons to Orange/yellow
+    1. Increase the header and description text size
+    1. Center the description text
+    1. Increase the icon size
+    1. Change the color of the page buttons
+    1. Change the colour of the visit site button
+1. Add Providers Page
+    1. Increase the description field size, can the text be wrapped?
+    1. Correct the jumbotro text/buttons
+1. Amend Providers Page
+    1. Refactor the description field. 
+    1. Show the existing logo as an image, not a link 
+1. Delete Providers Page
+    1. Change the buttons size and colours
+    1. Change provider name to bold
+    1. Move the fotter to the base of the page
+1. Exam List Page
+    1. Change the colour of the "take exam" button
+    1. Center the text
+    1. Increase size for larger devices
+1. Take exam / display page
+    1. Increase text size for larger screens
+    1. soften the colour of the answer boxes
+    1. Thicken the border between questions
+    1. The timer acts straingely on smaller devices
+1. Exam Results page
+    1. Got to list page button broken
+    1. Increase the text sixe for larger screens
+    1. The total results section overhangs the width of the page
+1. Resources List page
+    1. Tweek the icons, not all display nicely on a dark background
+1. Resources - Media page
+    1. Make backgrounds "smaller" as they dont load straight away on first page visit for the tabs
+    1. Remove the empty block at the base of each tab
+    1. Increase the intro paragraph size on bigger screens
+1. Resources - IDE/Tools?frameworks etc
+    1. Center the pictures
+    1. Change the link button colors 
+    1. Increase the intro paragraph size on bigger screens
+
+
+
 
 
 
