@@ -1,33 +1,41 @@
 from django.shortcuts import render
 
-# View for displaying the landing page
+
 def index(request):
+    # View for displaying the landing page
     return render(request, 'index.html')
 
-# View for displaying the resource list page
+
 def resourcesList(request):
+    # View for displaying the resource list page
     return render(request, 'resources/resources.html')
 
-# View for displaying the IDE page of the resource section
+
 def resourcesIDE(request):
+    # View for displaying the IDE page of the resource section
     return render(request, 'resources/ide.html')
 
-# View for displaying the media page of the resource section
+
 def resourcesMedia(request):
+    # View for displaying the media page of the resource section
     return render(request, 'resources/media.html')
 
-# View for displaying the framework page of the resource section
+
 def resourcesFrameworks(request):
+    # View for displaying the framework page of the resource section
     return render(request, 'resources/frameworks.html')
 
-# View for displaying the badges page of the resource section
+
 def resourcesBadges(request):
+    # View for displaying the badges page of the resource section
     return render(request, 'resources/badges.html')
 
-# View for displaying the learning page of the resource section
+
 def resourcesLearning(request):
+    # View for displaying the learning page of the resource section
     return render(request, 'resources/learning.html')
 
-# View for displaying the tools page of the resource section
+
 def resourcesTools(request):
+    # View for displaying the tools page of the resource section
     return render(request, 'resources/tools.html')
