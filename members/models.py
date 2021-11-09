@@ -1,3 +1,3 @@
 from django.db import models
 
-# Models for users utilise the django default models
+# Models for users utilises the django default models
