@@ -9,22 +9,25 @@ from django.contrib.auth import authenticate, login, logout
 from members import urls
 
 
-# Displays all currently available exams
-
 class ExamListView(ListView):
+    # Displays all currently available exams
     paginate_by = 6
-    model = Exam 
+    model = Exam
     template_name = 'exam-list.html'
 
-# displays the individual exam page to the user
+
 @login_required()
+# Ensures only available to logged in Users
 def exam_view(request, pk):
+    # displays the individual exam page to a logged in user
     exam = Exam.objects.get(pk=pk)
     return render(request, 'exam-display.html', {'obj': exam})
 
-# shows each question that is available for that particular exam
+
 @login_required()
+# Ensures only available to logged in Users
 def exam_data_view(request, pk):
+    # Shows each question that is available for that particular exam
     exam = Exam.objects.get(pk=pk)
     questions = []
     for q in exam.get_questions():
@@ -35,14 +38,14 @@ def exam_data_view(request, pk):
     return JsonResponse({
         'data': questions,
         'time': exam.time,
-        'grade': exam.required_score_to_pass,
     })
 
-# displays the results
+
 @login_required()
+# Ensures only available to logged in Users
 def save_exam_view(request, pk):
     # The following details the actual exam
-    # Because of the use of randomisation in the models.py,
+    # Question randomisation in the models.py,
     if request.is_ajax():
         questions = []
         data = request.POST
@@ -56,16 +59,15 @@ def save_exam_view(request, pk):
         user = request.user
         exam = Exam.objects.get(pk=pk)
 
-    # The following will confirm the overall results    
+        # The following will confirm the overall results
         score = 0
         multiplier = 100 / exam.number_of_questions
         results = []
         correct_answer = None
 
-        # obtains the users selected answer
         for q in questions:
+            # obtains the users selected answer
             a_selected = request.POST.get(str(q))
-            
             # determining behaviour if answer provided
             if a_selected != "":
                 question_answers = Answer.objects.filter(question=q)
@@ -75,29 +77,29 @@ def save_exam_view(request, pk):
                         if a.correct:
                             score += 1
                             correct_answer = a.text
-                    # if not correct, obtain correct to display
+                    # if not correct, obtain correct answer
                     else:
                         if a.correct:
                             correct_answer = a.text
 
                 results.append({str(q): {
                     'correct_answer': correct_answer,
-                     'answered': a_selected}})
-            # Response if no answer received from user
+                    'answered': a_selected}})
             else:
+                # Response if no answer received from user
                 results.append({str(q): 'not answered'})
-            
+
         score_ = score * multiplier
         Result.objects.create(exam=exam, user=user, score=score_)
 
         # Pass exam logic
         if score_ >= exam.required_score_to_pass:
             return JsonResponse({
-                'passed': True, 
-                'score': score_, 
+                'passed': True,
+                'score': score_,
                 'results': results})
         else:
             return JsonResponse({
-                'passed': False, 
-                'score': score_, 
+                'passed': False,
+                'score': score_,
                 'results': results})

@@ -3,9 +3,9 @@ from django.urls import reverse, resolve
 from .models import *
 from . import views
 
-# Tests the url for the exam list page
-class ExamListPageTests(TestCase):
 
+class ExamListPageTests(TestCase):
+    # Tests the url for the exam list page
     def test_exam_list_page_status_code(self):
         response = self.client.get('/exams')
         self.assertEquals(response.status_code, 200)
@@ -19,10 +19,10 @@ class ExamListPageTests(TestCase):
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'exam-list.html')
 
-# Tests the url for the page when a specific exam is selected
-# And the questions have been displayed and/or submitted
-class ExamDisplayPageTests(TestCase):
 
+class ExamDisplayPageTests(TestCase):
+    # Tests the url for the page when a specific exam is selected
+    # And the questions have been displayed and/or submitted
     def setUp(self):
         Exam.objects.create(
             name='Test Exam',
@@ -35,7 +35,7 @@ class ExamDisplayPageTests(TestCase):
         )
 
     def test_exam_display_status_code(self):
-        response = self.client.get('/exams',args=[1])
+        response = self.client.get('/exams', args=[1])
         self.assertEquals(response.status_code, 200)
 
     def test_view_url_by_name(self):
