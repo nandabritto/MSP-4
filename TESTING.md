@@ -236,13 +236,54 @@ The feedback obtained from the User included:
 -
 ### Unit Tests conducted
 <p float="left">
-<img src="" width="600" height="400" />
-<img src="" width="600" height="400" />
-<img src="" width="600" height="400" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
 </p>
 
 ### Code Validation Testing
 
+#### Python (PEP8) Validation - Base studyWorld App
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
+
+#### Python (PEP8) Validation - Providers App
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
+
+#### Python (PEP8) Validation - Members App
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
+
+#### Python (PEP8) Validation - Exams App
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
+
+#### CSS Code Validation
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
+
+#### JavaScript Code Validation
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
 
 ### Exploratory Testing
 
