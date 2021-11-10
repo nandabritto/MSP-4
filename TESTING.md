@@ -52,7 +52,7 @@ The following list of tools have been utilised during the testing of this projec
 
 ### Unit Tests conducted
 <p float="left">
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/01.10.21_1.png" width="600" height="400" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/01.10.21_1.png" width="300" height="200" />
 </p>
 
 ### Exploratory Test Session Goals
@@ -76,8 +76,8 @@ The following list of tools have been utilised during the testing of this projec
 
 ### Unit Tests conducted
 <p float="left">
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/10.10.21_1.png" width="600" height="400" />
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/10.10.21_2.png" width="600" height="400" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/10.10.21_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/10.10.21_2.png" width="300" height="200" />
 </p>
 
 ### Exploratory Test Session Goals
@@ -100,7 +100,7 @@ The following list of tools have been utilised during the testing of this projec
 
 ### Unit Tests conducted
 <p float="left">
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/16.10.21_1.png" width="600" height="400" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/16.10.21_1.png" width="300" height="200" />
 </p>
 
 ### Exploratory Test Session Goals
@@ -125,8 +125,8 @@ The following list of tools have been utilised during the testing of this projec
 ### Unit Tests conducted
 <p float="left">
 <img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/21.10.21_1.png" width="600" height="400" />
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/21.10.21_2.png" width="600" height="400" />
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/23.10.21_1.png" width="600" height="400" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/21.10.21_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/unit_tests/23.10.21_1.png" width="300" height="200" />
 </p>
 
 ### Exploratory Test Session Goals
@@ -201,11 +201,7 @@ The feedback obtained from the User included:
 - As a User I want to have my Submitted exam answers(results) Validated (caveat: pending JS UnitTests)
 
 ### Unit Tests conducted
-<p float="left">
-<img src="" width="600" height="400" />
-<img src="" width="600" height="400" />
-<img src="" width="600" height="400" />
-</p>
+No specific Unit Tests were created during this sprint.
 
 
 ### Exploratory Test Session Goals
@@ -223,6 +219,12 @@ The feedback obtained from the User included:
 - I want to confirm that all User Stories are done to my satisfaction
 - I want to identify any edge cases
 - I want to identify any potential test cases for automation
+
+<p float="left">
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+</p>
 
 ### Issues found/faced
 - Once an exam has been submitted, the django url shortcut is not working to return the user to the exam list view
