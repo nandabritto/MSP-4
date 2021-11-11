@@ -221,9 +221,14 @@ No specific Unit Tests were created during this sprint.
 - I want to identify any potential test cases for automation
 
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/resources_list.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/resources_audio.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/resource_landing_page.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/exam_list.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/exam_modal.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/exam_questions.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/exam_questions2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/exploratory/exam_results.png" width="300" height="200" />
 </p>
 
 ### Issues found/faced
@@ -236,6 +241,11 @@ No specific Unit Tests were created during this sprint.
 -
 -
 -
+
+### Issues fixed
+- Once an exam has been submitted, the django url shortcut is not working to return the user to the exam list view
+- Bug raised for Unit Tests which will be broken as a result of user authentification implementation
+
 ### Unit Tests conducted
 <p float="left">
 <img src="" width="300" height="200" />
@@ -275,6 +285,9 @@ No specific Unit Tests were created during this sprint.
 
 #### CSS Code Validation
 <p float="left">
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examcss_test_7.11.21.png" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
@@ -282,6 +295,9 @@ No specific Unit Tests were created during this sprint.
 
 #### JavaScript Code Validation
 <p float="left">
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js%20test%207.11.21_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js%20test%207.11.21_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examlist.js%20test%207.11.21_1.png" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />

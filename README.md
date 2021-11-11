@@ -150,16 +150,18 @@ place holder text ...
 
 # Testing 
 
-Full details and evidence of testing conducted throughout the software development life cycle of this project will be maintained in a seperate document called testing.md
+Full details and evidence of testing conducted throughout the software development life cycle of this project will be maintained in a seperate document called [testing.md](https://github.com/Sphere42/MSP-4/blob/master/TESTING.md)
 
 At a high level testing will include:
-- Automated JavaScript Unit Tests
-- Automated Python Unit Tests 
-- Automated functional tests
+- ~~Automated JavaScript Unit Tests~~ [^1]
+- ~~Automated Python Unit Tests~~ [^1]
+- ~~Automated functional tests~~ [^1]
 - Manual exploratory test sessions
 - User Acceptance testing (both Alpha and Beta test cycles)
 - Performance Testing
 - Security Review
+
+[^1]: Scope of the assessment was amended to exclude these requirements, Although automated python unit tests have already been implemented.
 
 
 ## Production Shakedown Testing Results (Pre Submission)
