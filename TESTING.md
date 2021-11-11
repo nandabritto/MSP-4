@@ -285,7 +285,7 @@ No specific Unit Tests were created during this sprint.
 
 #### CSS Code Validation
 <p float="left">
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examcss_test_7.11.21.png" width="300" height="200" />
+<img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
@@ -295,9 +295,9 @@ No specific Unit Tests were created during this sprint.
 
 #### JavaScript Code Validation
 <p float="left">
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js%20test%207.11.21_1.png" width="300" height="200" />
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js%20test%207.11.21_2.png" width="300" height="200" />
-<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examlist.js%20test%207.11.21_1.png" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
+<img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
 <img src="" width="300" height="200" />
