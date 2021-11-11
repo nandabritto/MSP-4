@@ -257,51 +257,59 @@ No specific Unit Tests were created during this sprint.
 
 #### Python (PEP8) Validation - Base studyWorld App
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/studyworld_testspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/studyworld_testspy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/studyworld_urlspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/studyworld_urlspy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/studyworld_viewspy_pep8.png" width="300" height="200" />
 </p>
 
 #### Python (PEP8) Validation - Providers App
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersformspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersmodelsspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersmodelsspy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providerstestspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providerstestspy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersurlspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersviewspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/providersviewspy_pep8_2.png" width="300" height="200" />
 </p>
 
 #### Python (PEP8) Validation - Members App
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/membersformspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/memberstestspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/memberstestspy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/membersurlspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/membersviewspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/membersviewspy_pep8_2.png" width="300" height="200" />
 </p>
 
 #### Python (PEP8) Validation - Exams App
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examsadminpy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examsmodelspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examstestpy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examstestpy_pep8_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examsurlspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examsviewspy_pep8_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examsviewspy_pep8_2.png" width="300" height="200" />
 </p>
 
 #### CSS Code Validation
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examcss_test_7.11.21.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/maincss_test_7.11.21.png" width="300" height="200" />
 </p>
 
 #### JavaScript Code Validation
 <p float="left">
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
-<img src="" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js_test_7.11.21_1.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/display.js_test_7.11.21_2.png" width="300" height="200" />
+<img src="https://github.com/Sphere42/MSP-4/blob/master/static/images/testing/code_validation/examlist.js_test_7.11.21_1.png" width="300" height="200" />
 </p>
+
 
 ### Exploratory Testing
 
