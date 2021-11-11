@@ -36,7 +36,7 @@ Providers List
 {% if request.user.is_staff %}
     <div class="row justify-content-center">
         <div class="col-lg-9">
-            <a href="{% url 'providers:providers-create' %}" class="btn btn-secondary btn-lg btn-block">
+            <a href="{% url 'providers:providers-create' %}" class="btn alert-primary btn-lg btn-block">
                 Add New Provider
             </a>
         </div>
@@ -76,14 +76,14 @@ Providers List
                                 </u>
                             </strong>
                         </h5>
-                        <p class="card-text">
+                        <p class="card-text text-center">
                             {{obj.description}}
                         </p>
 
                     </div>
                     <div>
                         <div class="d-flex justify-content-center">
-                            <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-lg btn-dark mt-auto">
+                            <a  href="https://{{ obj.url }}" target="_blank" class="btn btn-lg btn-info mt-auto">
                                 Visit Site
                             </a>
                         </div>
@@ -91,10 +91,10 @@ Providers List
                         <!-- Buttons to allow Admin to Update/Delete existing provider -->
                         {% if request.user.is_staff %}
                             <div class=" p-0">
-                                <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="align-self-end btn btn-dark mt-auto m-2">
+                                <a  href="{% url 'providers:providers-update' pk=obj.pk %}" class="align-self-end btn btn-warning mt-auto m-2">
                                     Edit Provider
                                 </a>
-                                <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="align-self-end float-right btn btn-dark mt-auto m-2">
+                                <a  href="{% url 'providers:providers-delete' pk=obj.pk %}" class="align-self-end float-right btn btn-danger mt-auto m-2">
                                     Delete Provider
                                 </a>
                             </div>
