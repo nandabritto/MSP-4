@@ -21,3 +21,10 @@
   background-color: rgb(209, 209, 209);
   margin: 0.5rem;
 }
+
+/* Adjust for mobile phone devices */
+@media (max-width: 760px) {
+  .examlist {
+      padding: 0px !important;
+  }
+}
