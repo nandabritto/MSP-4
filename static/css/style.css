@@ -95,9 +95,9 @@ body, html {
 }
 
 
-/* ---------------------------------------------------- */
-/* Generic changes to all card classes to hide features */
-/* ---------------------------------------------------- */
+/* ----------------------------------- */
+/* Generic changes to all card classes */
+/* ----------------------------------- */
 
 .indexcard {
 	color: white !important;
@@ -173,7 +173,7 @@ body, html {
 .tabcontent {
     color: white;
     display: none;
-    padding: 100px 20px;
+    padding: 20px;
     height: 100%;
 }
   
@@ -214,10 +214,10 @@ body, html {
 }
 
 /* Image size on the media page */
-.icon {
+/* .icon {
   max-width: 50%;
   max-height: 50%;
-}
+} */
 
 
 
