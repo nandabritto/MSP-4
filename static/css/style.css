@@ -1,6 +1,7 @@
 body, html {
 	height: 100%;
     margin: 0;
+    font-size: large;
     font-family: Arial;
     background-color: white;
     background-image: url('../images/backgrounds/bubble.png');
