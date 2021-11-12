@@ -295,22 +295,3 @@ body, html {
 .item-name {
     text-decoration: underline;
 }
-
-/* Image size on the resources pages */
-.resourceicon {
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-}
-
-
-
-
- 
-
-
-
-
-
-
