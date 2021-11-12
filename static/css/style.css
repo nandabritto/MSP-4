@@ -111,7 +111,7 @@ body, html {
 @media (max-width: 760px) {
     .nav-link {
         color: white !important;
-        font-size: medium;
+        font-size: small;
     }
 }
 
@@ -145,9 +145,17 @@ body, html {
 
 /* Remove additional image on the Index Page for smaller devices */
 @media (max-width: 760px) {
-  .indexpic1 {
-    display: none;
-  }
+    .indexpic1 {
+        display: none;
+    }
+    /* Shrink the picture for mobile display */
+    .indexpic2 {
+        max-width: 250px;
+	    max-height: 250px;
+    }
+    .indextext {
+        font-size: medium;
+    }
 }
 
 .indextext {
