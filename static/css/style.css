@@ -43,6 +43,9 @@ body, html {
         font-size: medium;
         text-align: center;
     }
+    .medialogo {
+        display: none;
+    }
 }
 
 /* Removing the default text underline on username */
@@ -221,6 +224,7 @@ body, html {
 @media(max-width: 760px){
     .tablink{
         font-size: small!important;
+        padding: 0px!important;
     }
 }
   
@@ -248,19 +252,16 @@ body, html {
     border-width: 0px 0px 2px 0px;
 }
 
-.media-url, .media-des {
+.media-url {
     color: white;
 }
 
 /* Tweaks for mobile devices */
-@media(max-width: 760px){
+@media(max-width: 500px){
     .resourcemedia {
         padding-left: 2%;
     }
     .media-url {
-        font-size: large;
-    }
-    .media-des {
         font-size: large;
     }
 }
