@@ -30,11 +30,11 @@
           <div class="col-8"><a class="navbar-brand mx-2 my-1 studyworld" href="{% url 'index' %}">studyWorld</a></div>
           <div class="col-4 align-self-center px-2">
             {% if user.is_authenticated %}
-              <a class="btn btn-md btn-danger fw-bold float-right" href="{% url 'members:member-signout' %}" type="submit">Sign Out</a>
+              <a class="btn btn-sm btn-danger fw-bold float-right" href="{% url 'members:member-signout' %}" type="submit">Sign Out</a>
               <a class="text-wrap pr-2 float-right" id="greeting"> Hello {{request.user}}</a>
             {% else %}
-              <a class="btn btn-md btn-success fw-bold float-right" href="{% url 'members:member-register' %}" type="submit">Join</a>
-              <a class="btn btn-md btn-success fw-bold float-right mx-2" href="{% url 'members:member-signin' %}" type="submit">Sign In</a>
+              <a class="btn btn-sm btn-success fw-bold float-right" href="{% url 'members:member-register' %}" type="submit">Join</a>
+              <a class="btn btn-sm btn-success fw-bold float-right mx-2" href="{% url 'members:member-signin' %}" type="submit">Sign In</a>
             {% endif %}
           </div>
         </div>

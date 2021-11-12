@@ -43,14 +43,14 @@ Home Page
 
 <section>
 <!-- Highlights section of the landing page -->
-    <section class="pt-3 pb-4">
-        <div class="col-lg-11  mx-auto py-3">
+    <section class="pt-3 pb-4 mobile">
+        <div class="col-lg-11 mx-auto py-3">
             <div class="row py-3">
-                <div class="col-md-6 my-auto">
-                    <div class="p-3 text-center">
+                <div class="col-md-6 my-auto mobile">
+                    <div class="p-2 text-center">
                         <!-- First/Left Highlight -->
                         <h2 class="text-gradient text-primary">
-                            <span id="highlight1">One Stop Shop</span>
+                            <span class="highlight1">One Stop Shop</span>
                         </h2>
                         <p class="indextext">
                             Here you will find a wide selection of information to get you started as a software developer. 
@@ -61,13 +61,13 @@ Home Page
                 </div>
                 <!-- First Image, This image will disappear on smaller devices -->
                 <div class="col-md-6 my-auto">
-                    <div class="p-3 text-center">
+                    <div class="p-1 text-center">
                         <img src="{% static '/images/backgrounds/oneshop.jpeg' %}" class="indexpic1" alt="Office space filled with computers">
                     </div>
                 </div>
             </div>
             <div class="row py-3 justify-content-center">
-                <div class="col-md-6 my-auto">
+                <div class="col-md-6 my-auto mobile">
                     <div class="p-3 text-center">
                         <img src="{% static '/images/backgrounds/guidance.jpeg' %}" class="indexpic2 img-fluid" alt="Study group with laptops on a table">
                     </div>
@@ -76,7 +76,7 @@ Home Page
                     <div class="p-3 text-center">
                         <!-- Second/Right Highlight -->
                         <h2 class="text-gradient text-primary">
-                            <span id="highlight2">Guidance</span>
+                            <span class="highlight1">Guidance</span>
                         </h2>
                         <p class="indextext">
                             Discover courses and career pathways to reinforce your knowledge, along with obtaining recognised skill badges.
@@ -94,7 +94,7 @@ Home Page
             <!-- First/Left Card -->
             <div class="col-md-4 pb-3">
                 <div class="card custom-card border-0">
-                    <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="certificate icon">
+                    <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block index-icon" alt="certificate icon">
                     <div class="card-body">
                         <a href="{% url 'providers:providers-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Certification</u></strong></h5></a>
                         <p class="card-text text-center">Information on Companies that provide industry standard certifications to help progress your career in development</p>
@@ -104,7 +104,7 @@ Home Page
             <!-- Second/Middle Card -->
             <div class="col-md-4 pb-3">
                 <div class="card custom-card border-0">
-                    <img src="{% static '/images/resources/library.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="library icon">
+                    <img src="{% static '/images/resources/library.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block index-icon" alt="library icon">
                     <div class="card-body">
                         <a href="{% url 'resources-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Resources</u></strong></h5></a>
                         <p class="card-text text-center">A handy little library of hints, tips and tricks to help you simplify your development process and create your projects</p>
@@ -114,7 +114,7 @@ Home Page
             <!-- Third/Right Card -->
             <div class="col-md-4 pb-3">
                 <div class="card custom-card border-0">
-                    <img src="{% static '/images/resources/testing.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block" alt="test icon">
+                    <img src="{% static '/images/resources/testing.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block index-icon" alt="test icon">
                     <div class="card-body">
                         <a href="{% url 'exams:list-view' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Practise Exams</u></strong></h5></a>
                         <p class="card-text text-center">Use these mini tests to help reinforce your knowledge, understand your limitations and prepare for the real thing</p>
