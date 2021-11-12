@@ -59,6 +59,19 @@ body, html {
 	background-color: rgb(65, 65, 65);
 }
 
+/* Reduce jumbotron size for mobile phone sized devices */
+@media (max-width: 760px) {
+    .jumbotron h1 {
+        font-size: xx-large;
+    }
+    .jumbotron h5 {
+        font-size: large;
+    }
+    .jumbotron {
+        padding: 3rem 1rem;
+    }
+}
+
 
 /* ------------------------------ */
 /* Middle Navigation bar settings */
@@ -94,6 +107,13 @@ body, html {
 	color: white !important;
 }
 
+/* Reduce mid size for mobile phone sized devices */
+@media (max-width: 760px) {
+    .nav-link {
+        color: white !important;
+        font-size: medium;
+    }
+}
 
 /* ----------------------------------- */
 /* Generic changes to all card classes */
