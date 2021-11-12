@@ -296,11 +296,13 @@ body, html {
     text-decoration: underline;
 }
 
-/* Image size on the media page */
-/* .icon {
-  max-width: 50%;
-  max-height: 50%;
-} */
+/* Image size on the resources pages */
+.resourceicon {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
 
 
 
