@@ -147,6 +147,19 @@ body, html {
 /* Settings for the Media page of the resources section  */
 /* ----------------------------------------------------- */
 
+/* Text size of the introduction */
+.media-description {
+    font-size: larger;
+}
+
+/* Tweaks for mobile devices */
+@media (max-width: 760px) {
+    .media-description {
+        font-size: large;
+    }
+}
+
+
 /* Styling required for the media page within the resources section */
 /* Style tab links */
 .tablink {
@@ -157,6 +170,13 @@ body, html {
     padding: 14px 16px;
     font-size: 17px;
     width: 20%;
+}
+
+/* Tweaks for mobile devices */
+@media(max-width: 760px){
+    .tablink{
+        font-size: small!important;
+    }
 }
   
 .tablink:hover {
@@ -181,6 +201,23 @@ body, html {
     padding-left: 20%;
     border-style: dotted;
     border-width: 0px 0px 2px 0px;
+}
+
+.media-url, .media-des {
+    color: white;
+}
+
+/* Tweaks for mobile devices */
+@media(max-width: 760px){
+    .resourcemedia {
+        padding-left: 2%;
+    }
+    .media-url {
+        font-size: large;
+    }
+    .media-des {
+        font-size: large;
+    }
 }
 
 /* Background details for the expanded Media Tabs */
