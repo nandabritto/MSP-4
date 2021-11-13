@@ -21,3 +21,13 @@
         padding: 0px !important;
     }
 }
+
+/* Pagination color changes */
+.currentpage {
+    background-color: black!important;
+    border: none!important;
+}
+
+.otherpage {
+    color: black!important;
+}

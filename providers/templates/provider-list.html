@@ -113,21 +113,21 @@ Providers List
             <ul class="pagination">
             {% if page_obj.has_previous %}
                 <li class="page-item">
-                    <a class="page-link" href="?page=1" aria-label="Start">
+                    <a class="page-link otherpage" href="?page=1" aria-label="Start">
                         <span aria-hidden="true">
                             &laquo;
                         </span>
                     </a>
                 </li>
                 <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+                    <a class="page-link otherpage" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous Page">
                         {{ page_obj.previous_page_number }}
                     </a>
                 </li>
             {% else %}
                 <!-- The below section disables the "to start" button if user is on first page -->
                 <li class="page-item disabled">
-                    <a class="page-link" href="?page=1" aria-label="Start">
+                    <a class="page-link" href="?page=1" aria-label="Page 1">
                         <span aria-hidden="true">
                             &laquo;
                         </span>
@@ -135,18 +135,18 @@ Providers List
                 </li>
             {% endif %}
                 <li class="page-item active">
-                    <a class="page-link" href="?page={{ page_obj.number }}">
+                    <a class="page-link currentpage" href="?page={{ page_obj.number }}" aria-label="Current Page">
                         {{ page_obj.number }}
                     </a>
                 </li>
             {% if page_obj.has_next %}
                 <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+                    <a class="page-link otherpage" href="?page={{ page_obj.next_page_number }}" aria-label="Next Page">
                         {{ page_obj.next_page_number }}
                     </a>
                 </li>
                 <li class="page-item">
-                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+                    <a class="page-link otherpage" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Last Page">
                         <span aria-hidden="true">
                             &raquo;
                         </span>
@@ -155,7 +155,7 @@ Providers List
                 <!-- The below disables the "to end" button if there are no more pages -->
             {% else %}
                 <li class="page-item disabled">
-                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next Page disabled">
                         <span aria-hidden="true">
                             &raquo;
                         </span>
