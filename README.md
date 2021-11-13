@@ -217,7 +217,7 @@ Navigation bar based on the following example
 - https://codepen.io/kesavaraj/pen/MWWPXLa
 
 ## API
-
+- No external APIs were used within this project
 
 ## Media
 Background Images

@@ -34,10 +34,9 @@ Exam {{obj.name}}
             </p>
         </div>
         <!-- Display countdown clock -->
-        <div class="col text-right" id="timerdisplay"></div>
+        <div class="col text-center" id="timerdisplay"></div>
     </div>
 </div>
-
 <!-- Section which will display the individual exam questions and answers for that question -->
 <div class="row justify-content-center exammobile">
     <div class="col-8">
@@ -55,12 +54,13 @@ Exam {{obj.name}}
                     Submit
                 </button>
             </div>
+            <br>
         </form>
     </div>
 </div>
 <!-- Divs required for the population of results once exam has been submitted -->
+
 <div id="scoredisplay"></div>
 <div id="resultsdisplay"></div>
 <div id="endbutton"></div>
-<br>
 {% endblock content %}

@@ -1,4 +1,8 @@
 /*jshint esversion: 6 */
+
+// Initial JavaScript on this page was learnt from Pyplane tutorial.
+// This has been updated and amended for this project
+
 // setting the window url for use in the ajax queries
 const url = window.location.href;
 
@@ -127,6 +131,7 @@ const sendData = () => {
                         <button class="btn btn-success float-right" onClick="window.location.reload();">Try Again</button>
                     </div>
                 </div>
+                <br>
                 `;
             const results = response.results;
             // Once answers have been submitted the timer, questions and required pass rate will disappear
@@ -137,8 +142,8 @@ const sendData = () => {
             // prints out the overall score results
             if (response.passed) {
                 scoreDisplay.innerHTML = `
-                    <div class="row justify-content-center">
-                        <div class="col-4 text-center">
+                    <div class="row justify-content-center mobileresult">
+                        <div class="col-7 text-center">
                             <div class="alert alert-success" role="alert">
                                 <h3 class="alert-heading"><b>Congratulations</b></h3>
                                 <p>With a score of ${response.score.toFixed(2)}% you passed</p>
@@ -149,8 +154,8 @@ const sendData = () => {
             }
             else {
                 scoreDisplay.innerHTML =  `
-                    <div class="row justify-content-center">
-                        <div class="col-4 text-center">
+                    <div class="row justify-content-center mobileresult">
+                        <div class="col-7 text-center">
                             <div class="alert alert-danger" role="alert">
                                 <h3 class="alert-heading"><b>Hard Luck!</b></h3>
                                 <p>With a score of ${response.score.toFixed(2)}% you failed</p>
@@ -160,8 +165,6 @@ const sendData = () => {
                 </div>`;
             }            
             
-            // scoreDisplay.innerHTML = `${response.passed ? 'Congratulations! ' : 'Oops..:( '}Your result is ${response.score.toFixed(2)}%`
-
             // The below will populate the results for each question
             results.forEach(res=>{
                 const resDiv = document.createElement("div");
@@ -170,7 +173,7 @@ const sendData = () => {
                     // if no repose received - Correct answer is not displayed
                     if (resp=='not answered') {
                         resDiv.innerHTML += `
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center outcome">
                             <div class="col-9">
                                 <div class="alert alert-warning" role="alert">
                                 <h4 class="alert-heading">You didn't respond</h4>
@@ -187,7 +190,7 @@ const sendData = () => {
                         // If the answer received was correct
                         if (answer == correct) {
                             resDiv.innerHTML += `
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center outcome">
                                 <div class="col-9">
                                     <div class="alert alert-success" role="alert">
                                         <h4 class="alert-heading">Well Done</h4>
@@ -199,7 +202,7 @@ const sendData = () => {
                         // If the answer received was incorrect
                         } else {
                             resDiv.innerHTML += `
-                            <div class="row justify-content-center">
+                            <div class="row justify-content-center outcome">
                                 <div class="col-9">
                                     <div class="alert alert-danger" role="alert">
                                         <h4 class="alert-heading">Not this time</h4>

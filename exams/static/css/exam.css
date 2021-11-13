@@ -9,12 +9,8 @@
   color: white;
 }
 
-/* Sticks countdown timer to top right of users screen */
-#timerdisplay {
-  position: fixed; 
-  top: 5em; 
-  right: 10em; 
-  border: 0
+.not-visible {
+  display: none;
 }
 
 .quiz-answer {
@@ -35,15 +31,20 @@
 /* Adjust for mobile phone devices */
 @media (max-width: 760px) {
   .examlist {
-      padding: 0px !important;
+    padding: 0px !important;
   }
+  /* .mobileresult {
+    padding-top: 6rem !important;
+  } */
 }
 
 @media (max-width: 500px) {
   .exammobile {
       margin: -70px !important;
+      height: auto;
+      padding-top: 2rem; 
   }
   .questiontext{
     font-size: medium;
-  }
+  } 
 }
