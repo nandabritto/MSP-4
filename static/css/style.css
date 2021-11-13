@@ -38,15 +38,6 @@ body, html {
 	font-size: larger;
     font-weight: bold;
 }
-@media (max-width: 760px) {
-    #greeting {
-        font-size: medium;
-        text-align: center;
-    }
-    .medialogo {
-        display: none;
-    }
-}
 
 /* Removing the default text underline on username */
 #greeting:hover {
@@ -68,26 +59,12 @@ body, html {
 	background-color: rgb(65, 65, 65);
 }
 
-/* Reduce jumbotron size for mobile phone sized devices */
-@media (max-width: 760px) {
-    .jumbotron h1 {
-        font-size: xx-large;
-    }
-    .jumbotron h5 {
-        font-size: large;
-    }
-    .jumbotron {
-        padding: 3rem 1rem;
-    }
-}
-
 
 /* ------------------------------ */
 /* Middle Navigation bar settings */
 /* ------------------------------ */
 
 /* Used important in order to override Bootstrap default settings */
-
 .navbar {
 	background-color: rgb(40,40,40);
 }
@@ -116,14 +93,6 @@ body, html {
 	color: white !important;
 }
 
-/* Reduce mid size for mobile phone sized devices */
-@media (max-width: 760px) {
-    .nav-link {
-        color: white !important;
-        font-size: small;
-        text-align: center;
-    }
-}
 
 /* ----------------------------------- */
 /* Generic changes to all card classes */
@@ -153,34 +122,11 @@ body, html {
 	border-radius: 70% !important;
 }
 
-/* Remove additional image on the Index Page for smaller devices */
-@media (max-width: 760px) {
-    .indexpic1 {
-        display: none;
-    }
-    /* Shrink the picture for mobile display */
-    .indexpic2 {
-        max-width: 250px;
-	    max-height: 250px;
-    }
-    .indextext {
-        font-size: medium !important;
-    }
-    .highlight1 {
-        font-size: x-large !important;
-    }
-    .mobile {
-        padding: 0px !important;
-    }
-    .index-icon {
-        max-width: 200px;
-        max-height: 200px;
-    }
-}
-
+/* increase font size on larger devices */
 .indextext {
     font-size: larger;
 }
+
 
 /* ----------------------------------------------------- */
 /* Generic size to all images on the resources list page */
@@ -191,6 +137,7 @@ body, html {
     max-width: 200px;
 }
 
+
 /* ----------------------------------------------------- */
 /* Settings for the Media page of the resources section  */
 /* ----------------------------------------------------- */
@@ -200,15 +147,6 @@ body, html {
     font-size: larger;
 }
 
-/* Tweaks for mobile devices */
-@media (max-width: 760px) {
-    .media-description {
-        font-size: large;
-    }
-}
-
-
-/* Styling required for the media page within the resources section */
 /* Style tab links */
 .tablink {
     background-color: rgb(65, 65, 65);
@@ -219,15 +157,7 @@ body, html {
     font-size: 17px;
     width: 20%;
 }
-
-/* Tweaks for mobile devices */
-@media(max-width: 760px){
-    .tablink{
-        font-size: small!important;
-        padding: 0px!important;
-    }
-}
-  
+ 
 .tablink:hover {
     background-color: #777;
 }
@@ -254,16 +184,6 @@ body, html {
 
 .media-url {
     color: white;
-}
-
-/* Tweaks for mobile devices */
-@media(max-width: 500px){
-    .resourcemedia {
-        padding-left: 2%;
-    }
-    .media-url {
-        font-size: large;
-    }
 }
 
 /* Background details for the expanded Media Tabs */
@@ -294,4 +214,114 @@ body, html {
 
 .item-name {
     text-decoration: underline;
+}
+
+/* ----------------- FORMATTING FOR SMALL DEVICE SCREENS ----------------- */
+
+/* ----------------------------- */
+/* Formatting of the Top Nav Bar */
+/* ----------------------------- */
+
+/* Formats the User Greeting text for mobile devices*/
+
+@media (max-width: 760px) {
+    #greeting {
+        font-size: medium;
+        text-align: center;
+    }
+    .medialogo {
+        display: none;
+    }
+}
+
+/* ----------------------------- */
+/* Jumbotron customised settings */
+/* ----------------------------- */
+
+/* Reduce jumbotron size for mobile phone sized devices */
+@media (max-width: 760px) {
+    .jumbotron h1 {
+        font-size: xx-large;
+    }
+    .jumbotron h5 {
+        font-size: large;
+    }
+    .jumbotron {
+        padding: 3rem 1rem;
+    }
+}
+
+/* ------------------------------ */
+/* Middle Navigation bar settings */
+/* ------------------------------ */
+
+/* Reduce size for mobile phone sized devices */
+@media (max-width: 760px) {
+    .nav-link {
+        color: white !important;
+        font-size: small;
+        text-align: center;
+    }
+}
+
+/* ------------------- */
+/* Index Page specific */
+/* ------------------- */
+
+/* Remove additional image on the Index Page for smaller devices */
+@media (max-width: 760px) {
+    .indexpic1 {
+        display: none;
+    }
+    /* Shrink the picture for mobile display */
+    .indexpic2 {
+        max-width: 250px;
+	    max-height: 250px;
+    }
+	/* Reduce text size on small devices */
+    .indextext {
+        font-size: medium !important;
+    }
+	/* Reduce header size on small devices */
+    .highlight1 {
+        font-size: x-large !important;
+    }
+	/* Remove card padding on small devices */
+    .mobile {
+        padding: 0px !important;
+    }
+	/* Reduce card picture size on small devices */
+    .index-icon {
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+
+/* ----------------------------------------------------- */
+/* Settings for the Media page of the resources section  */
+/* ----------------------------------------------------- */
+
+/* Adjust text for mobile devices */
+@media (max-width: 760px) {
+    .media-description {
+        font-size: large;
+    }
+}
+
+/* Styling required for the media page within the resources section */
+/* Tweaks for mobile devices */
+@media(max-width: 760px){
+    .tablink{
+        font-size: small!important;
+        padding: 0px!important;
+    }
+}
+/* Style the tab content for smaller devices */
+@media(max-width: 500px){
+    .resourcemedia {
+        padding-left: 2%;
+    }
+    .media-url {
+        font-size: large;
+    }
 }

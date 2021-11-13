@@ -67,7 +67,7 @@ $.ajax({
                     <hr>
                     <div class="container"
                         <div class="row pl-5">
-                            <h5><b>Question: ${question}</b></h5>
+                            <h5 class="questiontext"><b>Question: ${question}</b></h5>
                         </div>
                     </div>
                 `;
