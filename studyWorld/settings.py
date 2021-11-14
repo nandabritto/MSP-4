@@ -15,7 +15,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['studyworld-msp4.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['studyworld-msp4.herokuapp.com', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -113,19 +113,24 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-# AWS Configuration for static files
-AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
-AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
+# AWS Configuration
+AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
 AWS_STORAGE_BUCKET_NAME = 'studyworld-msp4'
-AWS_S3_CUSTOM_DOMAIN = 'studyworld-msp4s.s3.amazonaws.com' 
+
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_CUSTOM_DOMAIN = 'studyworld-msp4.s3.amazonaws.com' 
+
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
 AWS_LOCATION = 'static'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+STATIC_URL = 'studyworld-msp4.s3.amazonaws.com/eu-west-1/'
 
-STATIC_URL = 'https://studyworld-msp4s.s3.amazonaws.com/eu-west-1/'
-
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# Static files (CSS, JavaScript, Images)
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -134,6 +139,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'members/static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# WHITENOISE_USE_FINDERS = True
 
 DISABLE_COLLECTSTATIC=0
 
@@ -151,5 +158,3 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'members:member-signin'
-
-WSGI_APPLICATION = 'studyWorld.wsgi.application'

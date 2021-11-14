@@ -1,0 +1,56 @@
+/* Ensure uniform display of exam topic images */
+.examimage {
+    max-height: 180px;
+    min-height: 170px;
+    max-width: 400px;
+  }
+
+.exambutton {
+  color: white;
+}
+
+.not-visible {
+  display: none;
+}
+
+.quiz-answer {
+  background-color: rgb(209, 209, 209);
+  margin: 0.5rem;
+}
+
+/* Pagination color changes */
+.currentpage {
+  background-color: black!important;
+  border: none!important;
+}
+
+.otherpage {
+  color: black!important;
+}
+.examrow{
+  margin-right: 0% !important;
+  margin-left: 0% !important;
+}
+
+/* Adjust for mobile phone devices */
+@media (max-width: 760px) {
+  .examlist {
+    padding: 0px !important;
+  }
+  /* .mobileresult {
+    padding-top: 6rem !important;
+  } */
+}
+
+@media (max-width: 500px) {
+  .exammobile {
+      margin: 0% !important;
+      padding: 0% !important; 
+  }
+  .questiontext {
+    font-size: medium;
+  }
+  .answertext {
+    font-size: small;
+  }
+}
