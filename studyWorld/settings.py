@@ -127,8 +127,6 @@ STATIC_URL = 'https://studyworld-msp4s.s3.amazonaws.com/eu-west-1/'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-DEFAULT_FILE_STORAGE = 'studyWorld.storage_backends.MediaStorage'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'exams/static'),
@@ -140,7 +138,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DISABLE_COLLECTSTATIC=0
 
 # Uploaded media via FE
-MEDIA_URL = 'https://studyworld-msp4s.s3.amazonaws.com/eu-west-1/'
+MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
