@@ -331,3 +331,12 @@ body, html {
         font-size: large;
     }
 }
+
+@media (max-width: 760px) {
+    .resourcelist {
+      padding: 0px !important;
+    }
+    .resourcerow{
+        margin: 0 !important;
+    }
+}
