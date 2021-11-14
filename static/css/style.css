@@ -232,6 +232,9 @@ body, html {
     .medialogo {
         display: none;
     }
+    .headbtn {
+        margin: 2px;
+    }
 }
 
 /* ----------------------------- */
@@ -249,6 +252,9 @@ body, html {
     .jumbotron {
         padding: 3rem 1rem;
     }
+    .registerbtn {
+        display: none;
+    }
 }
 
 /* ------------------------------ */
@@ -259,7 +265,7 @@ body, html {
 @media (max-width: 760px) {
     .nav-link {
         color: white !important;
-        font-size: small;
+        font-size: smaller;
         text-align: center;
     }
 }

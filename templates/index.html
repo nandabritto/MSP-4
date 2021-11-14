@@ -34,7 +34,7 @@ Home Page
             <h5 class="text-center">
                 <strong>Welcome to studyWorld. A centralised library of all things software related...</strong>
             </h5>
-            <p><a class="btn btn-success btn-lg mr-20 float-right" href="{% url 'members:member-register' %}" role="button">Join</a></p>
+            <p><a class="btn btn-success btn-lg mr-20 float-right registerbtn" href="{% url 'members:member-register' %}" role="button">Join</a></p>
         {% endif %}
     </div>
 </div>
@@ -96,7 +96,7 @@ Home Page
                 <div class="card custom-card border-0">
                     <img src="{% static '/images/resources/certificate.png' %}" class="card-img-top mt-2 icon rounded mx-auto d-block index-icon" alt="certificate icon">
                     <div class="card-body">
-                        <a href="{% url 'providers:providers-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Certification</u></strong></h5></a>
+                        <a href="{% url 'providers:providers-list' %}"><h5 class="card-title text-center text-dark indexcard"><strong><u>Certification Providers</u></strong></h5></a>
                         <p class="card-text text-center">Information on Companies that provide industry standard certifications to help progress your career in development</p>
                     </div>
                 </div>
