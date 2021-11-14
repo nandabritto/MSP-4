@@ -111,7 +111,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/3.2/howto/static-files/
 # AWS Configuration for static files
 AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
@@ -126,11 +127,7 @@ STATIC_URL = 'https://studyworld-msp4s.s3.amazonaws.com/eu-west-1/'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-DEFAULT_FILE_STORAGE = 'mysite.storage_backends.MediaStorage'
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
-
+DEFAULT_FILE_STORAGE = 'studyWorld.storage_backends.MediaStorage'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
@@ -142,7 +139,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DISABLE_COLLECTSTATIC=0
 
-# AWS Configuration for static files
+# AWS Configuration for media (uploaded files) files
 AWS_ACCESS_KEY_ID = config("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = config("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = 'studyworld-msp4-assets'
@@ -152,7 +149,7 @@ AWS_S3_OBJECT_PARAMETERS = {
 }
 
 # Uploaded media via FE
-MEDIA_URL = '/media/'
+MEDIA_URL = 'https://studyworld-msp4s-assets.s3.amazonaws.com/eu-west-1/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
