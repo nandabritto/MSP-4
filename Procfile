@@ -1,0 +1,1 @@
+web: gunicorn studyWorld.wsgi --log-file -
