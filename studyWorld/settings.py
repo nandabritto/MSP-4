@@ -15,7 +15,7 @@ SECRET_KEY = config("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://studyworld-msp4.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['studyworld-msp4.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -123,6 +123,8 @@ STATICFILES_DIRS = (
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+DISABLE_COLLECTSTATIC=0
+
 # Uploaded media via FE
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -137,3 +139,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'index'
 LOGOUT_REDIRECT_URL = 'index'
 LOGIN_URL = 'members:member-signin'
+
+WSGI_APPLICATION = 'studyWorld.wsgi.application'
