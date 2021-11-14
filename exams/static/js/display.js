@@ -80,7 +80,7 @@ $.ajax({
                     examBox.innerHTML += `
                         <div class="container">
                             <div class="pl-1 quiz-answer">					
-                                <label>
+                                <label class="answertext">
                                     <input type="radio" class="ans" aria-label="Radio button for answer choice of ${answer}" id="${question}-${answer}" name="${question}" value="${answer}">
                                     ${answer}
                                 </label>
