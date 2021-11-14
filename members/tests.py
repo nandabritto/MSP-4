@@ -33,3 +33,4 @@ class MemberSigninPageTests(TestCase):
         response = self.client.get(reverse('members:member-signin'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'signin.html')
+
